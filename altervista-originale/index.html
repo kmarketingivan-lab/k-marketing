@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Marketing | Consulente Digital Marketing Brescia | SEO, Web Design, Advertising</title>
+  <meta name="description" content="K-Marketing | Consulente Digital Marketing a Brescia. Strategie SEO, Web Design, Advertising su Google e Meta. Trasformo la tua visibilità online in clienti reali.">
+  <meta name="keywords" content="digital marketing brescia, consulente marketing brescia, seo brescia, web design brescia, social media marketing brescia, google ads brescia">
+  <meta name="author" content="Ivan Crescini">
+  <meta name="geo.region" content="IT-BS">
+  <meta name="geo.placename" content="Brescia">
+  <link rel="canonical" href="https://kmarketing.altervista.org/">
+  
+  <meta property="og:title" content="K-Marketing | Digital Marketing Specialist Brescia">
+  <meta property="og:description" content="Strategie digitali che convertono. SEO, Web Design, Advertising. Prima consulenza gratuita.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Page-specific styles */
+    .hero-pattern { background-image: radial-gradient(circle at 20% 20%, rgba(99,102,241,0.15) 0%, transparent 40%), radial-gradient(circle at 80% 80%, rgba(14,165,233,0.1) 0%, transparent 40%); }
+    .grid-pattern { background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; }
+    
+    /* Particles */
+    #particles-container { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .particle { position: absolute; border-radius: 50%; pointer-events: none; opacity: 0.3; }
+    
+    /* Reveals - visibili di default, animazione al caricamento */
+    .reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; transition: all 0.6s ease-out; }
+    
+    /* Counter animation */
+    .counter { font-family: 'Space Grotesk', sans-serif; }
+    
+    /* Service cards */
+    .service-card { background: var(--dark-800); border: 1px solid var(--white-10); border-radius: 1.5rem; padding: 2rem; transition: all 0.3s ease; }
+    .service-card:hover { transform: translateY(-8px); border-color: rgba(99,102,241,0.5); background: var(--dark-700); }
+    .service-icon { width: 3.5rem; height: 3.5rem; border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+    
+    /* Portfolio cards */
+    .portfolio-card { position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; }
+    .portfolio-card img, .portfolio-card video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .portfolio-card:hover img, .portfolio-card:hover video { transform: scale(1.1); }
+    .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(3,7,18,0.9), rgba(3,7,18,0.2), transparent); opacity: 0.6; transition: opacity 0.3s; }
+    .portfolio-card:hover .portfolio-overlay { opacity: 0.9; }
+    .portfolio-content { position: absolute; inset: 0; padding: 2rem; display: flex; flex-direction: column; justify-content: flex-end; }
+    .portfolio-cta { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-400); font-weight: 700; font-size: 0.875rem; opacity: 0; transition: opacity 0.3s; }
+    .portfolio-card:hover .portfolio-cta { opacity: 1; }
+    
+    /* Comparison section */
+    .comparison-card { background: var(--dark-800); border: 1px solid var(--white-10); border-radius: 1.5rem; padding: 2rem; }
+    .comparison-card.highlight { border-color: var(--primary-500); box-shadow: 0 0 40px rgba(99,102,241,0.2); }
+    .check-icon { color: #10b981; }
+    .x-icon { color: #ef4444; }
+    
+    /* Process steps */
+    .process-step { text-align: center; }
+    .process-number { width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(135deg, var(--primary-600), var(--primary-500)); display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1rem; box-shadow: 0 0 30px rgba(99,102,241,0.3); }
+    
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--white-10); }
+    .faq-question { width: 100%; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: none; border: none; color: var(--white); text-align: left; font-size: 1.125rem; font-weight: 600; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-answer p { padding-bottom: 1.5rem; color: var(--white-60); }
+    .faq-item.active .faq-answer { max-height: 200px; }
+    .faq-icon { transition: transform 0.3s; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    
+    /* Mobile menu */
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px; height: 100vh; background: var(--dark-900); z-index: 100; transition: right 0.3s ease; padding: 6rem 2rem 2rem; }
+    .mobile-menu.active { right: 0; }
+    .mobile-menu-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 99; opacity: 0; visibility: hidden; transition: all 0.3s; }
+    .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+    .mobile-menu a { display: block; padding: 1rem 0; font-size: 1.25rem; font-weight: 600; color: var(--white-70); border-bottom: 1px solid var(--white-10); }
+    .mobile-menu a:hover { color: var(--white); }
+    
+    /* Form messages */
+    .form-message { padding: 1rem; border-radius: 0.75rem; margin-top: 1rem; display: none; }
+    .form-message.success { background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #10b981; display: block; }
+    .form-message.error { background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #ef4444; display: block; }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "K-Marketing",
+    "description": "Consulente Digital Marketing a Brescia specializzato in SEO, Web Design e Advertising",
+    "url": "https://kmarketing.altervista.org",
+    "telephone": "+39 392 035 9839",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brescia",
+      "addressRegion": "Lombardia",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "45.5416",
+      "longitude": "10.2118"
+    },
+    "priceRange": "€€",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "sameAs": [
+      "https://www.linkedin.com/in/ivan-crescini",
+      "https://www.instagram.com/kmarketing.it"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- PARTICLES -->
+  <div id="particles-container"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <div class="logo-icon">K</div>
+        <span class="logo-text">Marketing</span>
+      </a>
+      
+      <nav class="nav-desktop">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#servizi" class="nav-link">Servizi</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#chi-sono" class="nav-link">Chi Sono</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="#contatti" class="btn btn-primary btn-shine">Iniziamo</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu">
+    <a href="#home" onclick="toggleMobileMenu()">Home</a>
+    <a href="#servizi" onclick="toggleMobileMenu()">Servizi</a>
+    <a href="#portfolio" onclick="toggleMobileMenu()">Portfolio</a>
+    <a href="#chi-sono" onclick="toggleMobileMenu()">Chi Sono</a>
+    <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero hero-pattern" style="min-height:100vh;display:flex;align-items:center;position:relative;">
+    <div class="grid-pattern" style="position:absolute;inset:0;"></div>
+    <div class="container" style="position:relative;z-index:10;">
+      <div style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:center;" class="hero-grid">
+        
+        <div class="reveal" style="text-align:center;">
+          
+          <h1 style="margin-bottom:1.5rem;">
+            Trasformo la Tua Visibilità Online in <span class="gradient-text">Clienti Reali</span>
+          </h1>
+          
+          <p style="font-size:1.25rem;color:var(--white-60);max-width:36rem;margin:0 auto 2rem;">
+            Digital Marketing Specialist a Brescia. Strategie SEO, Web Design e Advertising che generano risultati misurabili per PMI e professionisti.
+          </p>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="#contatti" class="btn btn-primary btn-lg btn-shine">
+              Richiedi Consulenza Gratuita
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#portfolio" class="btn btn-outline btn-lg">
+              Vedi i Risultati
+            </a>
+          </div>
+          
+          <!-- Stats -->
+          <div style="display:flex;justify-content:center;gap:3rem;margin-top:4rem;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div style="font-size:2.5rem;font-weight:700;color:var(--primary-400);">+<span class="counter" data-target="20">0</span></div>
+              <div style="font-size:0.75rem;color:var(--white-50);text-transform:uppercase;letter-spacing:0.1em;">Progetti Completati</div>
+            </div>
+            <div style="text-align:center;">
+              <div class="counter" style="font-size:2.5rem;font-weight:700;color:var(--secondary-400);" data-target="180">0</div>
+              <div style="font-size:0.75rem;color:var(--white-50);text-transform:uppercase;letter-spacing:0.1em;">% ROI Medio</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:2.5rem;font-weight:700;color:var(--primary-400);">2020</div>
+              <div style="font-size:0.75rem;color:var(--white-50);text-transform:uppercase;letter-spacing:0.1em;">Aiutiamo Aziende Dal</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="servizi" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;max-width:42rem;margin:0 auto 4rem;">
+        <h2>Soluzioni <span class="gradient-text">Complete</span> per il Tuo Business</h2>
+        <p style="color:var(--white-60);margin-top:1rem;">Ogni strategia è costruita su misura per i tuoi obiettivi. Niente pacchetti preconfezionati, solo soluzioni che funzionano.</p>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+        
+        <!-- SEO -->
+        <div class="service-card reveal">
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(99,102,241,0.1));">
+            <svg width="28" height="28" fill="none" stroke="var(--primary-400)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3 style="margin-bottom:0.75rem;">SEO & Posizionamento</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;line-height:1.7;">Fatti trovare da chi ti cerca. Ottimizzazione tecnica, contenuti strategici e link building per scalare Google.</p>
+        </div>
+        
+        <!-- Web Design -->
+        <div class="service-card reveal" style="transition-delay:0.1s;">
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(34,211,238,0.2),rgba(34,211,238,0.1));">
+            <svg width="28" height="28" fill="none" stroke="var(--secondary-400)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 style="margin-bottom:0.75rem;">Web Design & Sviluppo</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;line-height:1.7;">Siti web che convertono. Design moderno, velocità ottimizzata e user experience studiata per vendere.</p>
+        </div>
+        
+        <!-- Advertising -->
+        <div class="service-card reveal" style="transition-delay:0.2s;">
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(34,211,238,0.1));">
+            <svg width="28" height="28" fill="none" stroke="var(--primary-400)" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h3 style="margin-bottom:0.75rem;">Google & Meta Ads</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;line-height:1.7;">Campagne pubblicitarie che portano clienti. Targeting preciso, budget ottimizzato, ROI misurabile.</p>
+        </div>
+        
+        <!-- Social Media -->
+        <div class="service-card reveal" style="transition-delay:0.3s;">
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(34,211,238,0.2),rgba(34,211,238,0.1));">
+            <svg width="28" height="28" fill="none" stroke="var(--secondary-400)" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3 style="margin-bottom:0.75rem;">Social Media Marketing</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;line-height:1.7;">Presenza social che crea connessioni. Contenuti strategici, community management e brand awareness.</p>
+        </div>
+        
+        <!-- App & Webapp -->
+        <div class="service-card reveal" style="transition-delay:0.4s;">
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(168,85,247,0.2),rgba(168,85,247,0.1));">
+            <svg width="28" height="28" fill="none" stroke="#a855f7" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3 style="margin-bottom:0.75rem;">App & Webapp</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;line-height:1.7;">Sviluppo di applicazioni web e mobile su misura. Soluzioni digitali che semplificano il tuo business.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="section" style="background:var(--dark-950);">
+    <div class="container">
+      <div style="margin-bottom:3rem;">
+        <h2 class="reveal">I Miei Progetti</h2>
+        <p class="reveal" style="color:var(--white-60);margin-top:1rem;">I numeri parlano più delle parole. Ecco come ho aiutato aziende locali a dominare il mercato digitale.</p>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;" class="portfolio-grid">
+        
+        <!-- I Peruvià -->
+        <a href="storia-peruvia.html" class="portfolio-card reveal-scale" style="grid-column:span 2;aspect-ratio:21/9;background:linear-gradient(135deg,var(--dark-800),var(--dark-900));display:flex;align-items:center;padding:2rem;">
+          <div style="flex:1;text-align:center;">
+            <p style="color:var(--secondary-400);font-weight:700;font-size:0.875rem;margin-bottom:0.5rem;">+340% Engagement</p>
+            <h3 style="font-size:1.75rem;margin-bottom:0.5rem;">I Peruvià</h3>
+            <p style="color:var(--white-70);margin-bottom:1rem;">Social Media Strategy — Un caso di successo nel territorio di Brescia.</p>
+            <span class="portfolio-cta" style="opacity:1;">Scopri la storia <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-end;">
+            <div class="phone phone-small" style="width:5rem;transform:rotate(-6deg);animation:float 4s ease-in-out infinite;">
+              <div class="phone-frame"><div class="phone-notch"></div><div class="phone-screen"><img src="media/Peruvia/10.png" alt="I Peruvià"></div></div>
+            </div>
+            <div class="phone phone-large" style="width:7rem;animation:float 4s ease-in-out infinite 0.5s;">
+              <div class="phone-frame shadow-glow"><div class="phone-notch"></div><div class="phone-screen"><img src="media/Peruvia/11.png" alt="I Peruvià"></div></div>
+            </div>
+            <div class="phone phone-small" style="width:5rem;transform:rotate(6deg);animation:float 4s ease-in-out infinite 1s;">
+              <div class="phone-frame"><div class="phone-notch"></div><div class="phone-screen"><img src="media/Peruvia/12.png" alt="I Peruvià"></div></div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Charme -->
+        <a href="storia-charme.html" class="portfolio-card reveal-left" style="aspect-ratio:16/9;">
+          <img src="media/Charme/C1.png" alt="Charme Extensions">
+          <div class="portfolio-overlay"></div>
+          <div class="portfolio-content">
+            <p style="color:var(--secondary-400);font-weight:700;font-size:0.875rem;margin-bottom:0.5rem;">+180% Conversioni</p>
+            <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Charme Extensions</h3>
+            <span class="portfolio-cta">Scopri la storia <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        
+        <!-- Nemesis -->
+        <a href="storia-nemesis.html" class="portfolio-card reveal-right" style="aspect-ratio:16/9;">
+          <video autoplay muted loop playsinline>
+            <source src="media/Nemesis/N1.mp4" type="video/mp4">
+          </video>
+          <div class="portfolio-overlay"></div>
+          <div class="portfolio-content">
+            <p style="color:var(--secondary-400);font-weight:700;font-size:0.875rem;margin-bottom:0.5rem;">Brand awareness 3x</p>
+            <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Nemesis</h3>
+            <span class="portfolio-cta">Scopri la storia <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- COMPARISON SECTION -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;max-width:42rem;margin:0 auto 4rem;">
+        <h2>Perché <span class="gradient-text">Affidarti a Me</span></h2>
+        <p style="color:var(--white-60);margin-top:1rem;">La differenza tra <u>investire</u> nel marketing e buttare soldi.</p>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;max-width:56rem;margin:0 auto;">
+        
+        <!-- Con me -->
+        <div class="comparison-card highlight reveal">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;">
+            <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--primary-600),var(--primary-500));display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3 style="font-size:1.25rem;">Con un Professionista</h3>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:1rem;">
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="check-icon">✓</span><span style="color:var(--white-70);">Strategia personalizzata sui tuoi obiettivi</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="check-icon">✓</span><span style="color:var(--white-70);">Report mensili con metriche chiare</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="check-icon">✓</span><span style="color:var(--white-70);">Un referente dedicato (io)</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="check-icon">✓</span><span style="color:var(--white-70);">Risposte in 24h massimo</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="check-icon">✓</span><span style="color:var(--white-70);">Focus sul ROI, non sulle vanity metrics</span></li>
+          </ul>
+        </div>
+        
+        <!-- Senza -->
+        <div class="comparison-card reveal" style="transition-delay:0.1s;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;">
+            <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(239,68,68,0.2);display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" fill="none" stroke="#ef4444" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </div>
+            <h3 style="font-size:1.25rem;">Agenzie Generiche</h3>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:1rem;">
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="x-icon">✗</span><span style="color:var(--white-50);">Pacchetti standard per tutti</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="x-icon">✗</span><span style="color:var(--white-50);">Report incomprensibili o assenti</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="x-icon">✗</span><span style="color:var(--white-50);">Account manager che cambiano ogni mese</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="x-icon">✗</span><span style="color:var(--white-50);">Settimane per avere una risposta</span></li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;"><span class="x-icon">✗</span><span style="color:var(--white-50);">Focus sui like, non sul fatturato</span></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SONO SECTION -->
+  <section id="chi-sono" class="section" style="background:var(--dark-950);">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:center;" class="about-grid">
+        
+        <div class="reveal-left" style="position:relative;">
+          <div style="position:absolute;inset:0;background:rgba(99,102,241,0.2);filter:blur(80px);border-radius:50%;"></div>
+          <div style="position:relative;aspect-ratio:4/5;border-radius:1.5rem;overflow:hidden;border:1px solid var(--white-10);max-width:24rem;margin:0 auto;">
+            <img src="https://www.k-marketing.it/wp-content/uploads/2024/08/Chi_sono_sito-1024x1024.png" alt="Ivan Crescini" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+        </div>
+        
+        <div class="reveal-right">
+          <h2 style="margin-bottom:1.5rem;">Ivan Crescini<br><span class="gradient-text">Digital Marketing Specialist</span></h2>
+          <div style="color:var(--white-60);line-height:1.8;display:flex;flex-direction:column;gap:1rem;">
+            <p>Dal 2020 aiuto aziende e professionisti a crescere online. Ho iniziato quando "fare marketing su internet" era ancora una cosa strana. Oggi è una necessità.</p>
+            <p>Non siamo una semplice agenzia. Siamo persone. Quando lavori con noi, lavori con un team che vede la tua attività come un business da far crescere.</p>
+            <p>La mia base è Brescia, ma lavoro con clienti in tutta Italia. Quello che conta non è dove siamo, ma i risultati che portiamo a casa insieme.</p>
+          </div>
+          
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;">
+            <div style="display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1rem;background:var(--dark-800);border-radius:0.75rem;border:1px solid var(--white-10);">
+              <svg width="20" height="20" fill="none" stroke="var(--primary-400)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span style="font-size:0.875rem;">HTML Certified</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1rem;background:var(--dark-800);border-radius:0.75rem;border:1px solid var(--white-10);">
+              <svg width="20" height="20" fill="none" stroke="var(--primary-400)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span style="font-size:0.875rem;">CSS Certified</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1rem;background:var(--dark-800);border-radius:0.75rem;border:1px solid var(--white-10);">
+              <svg width="20" height="20" fill="none" stroke="var(--primary-400)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span style="font-size:0.875rem;">JavaScript Certified</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1rem;background:var(--dark-800);border-radius:0.75rem;border:1px solid var(--white-10);">
+              <svg width="20" height="20" fill="none" stroke="var(--primary-400)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span style="font-size:0.875rem;">And More</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;max-width:42rem;margin:0 auto 4rem;">
+        <h2>Come <span class="gradient-text">Lavoro</span></h2>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;max-width:56rem;margin:0 auto;">
+        
+        <div class="process-step reveal">
+          <div class="process-number">1</div>
+          <h3 style="margin-bottom:0.5rem;">Analisi</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;">Studiamo il tuo business, i competitor e il mercato. Capiamo dove sei e dove vuoi arrivare.</p>
+        </div>
+        
+        <div class="process-step reveal" style="transition-delay:0.1s;">
+          <div class="process-number">2</div>
+          <h3 style="margin-bottom:0.5rem;">Strategia</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;">Creiamo un piano d'azione su misura con obiettivi chiari e misurabili.</p>
+        </div>
+        
+        <div class="process-step reveal" style="transition-delay:0.2s;">
+          <div class="process-number">3</div>
+          <h3 style="margin-bottom:0.5rem;">Esecuzione</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;">Mettiamo in pratica la strategia. Ogni azione è tracciata e ottimizzata.</p>
+        </div>
+        
+        <div class="process-step reveal" style="transition-delay:0.3s;">
+          <div class="process-number">4</div>
+          <h3 style="margin-bottom:0.5rem;">Risultati</h3>
+          <p style="color:var(--white-60);font-size:0.9375rem;">Report mensili chiari. Sai sempre cosa funziona e quanto stai guadagnando.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" style="background:var(--dark-950);">
+    <div class="container">
+      <div style="text-align:center;max-width:42rem;margin:0 auto 3rem;">
+        <h2>Domande <span class="gradient-text">Frequenti</span></h2>
+      </div>
+      
+      <div style="max-width:48rem;margin:0 auto;">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quanto costa una consulenza?
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer"><p>La prima consulenza è gratuita e senza impegno. Serve a capire le tue esigenze e se possiamo lavorare bene insieme. Non preoccuparti del costo ma pensa al risultato che vuoi raggiungere.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            In quanto tempo vedo i risultati?
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer"><p>Dipende dal servizio. Per le campagne ads, i primi risultati arrivano in 2-4 settimane. Per la SEO, servono 3-6 mesi per vedere miglioramenti significativi. Sarò sempre trasparente sulle tempistiche.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Lavori solo con aziende di Brescia?
+            <svg class="faq-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer"><p>No, lavoro con clienti in tutta Italia. La maggior parte del lavoro si fa online, quindi la distanza non è un problema. Per i clienti locali sono disponibile anche per incontri di persona.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contatti" class="section section-dark">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:start;max-width:64rem;margin:0 auto;">
+        
+        <div style="text-align:center;">
+          <h2 style="margin-bottom:1rem;">Iniziamo a <span class="gradient-text">Lavorare Insieme</span></h2>
+          <p style="color:var(--white-60);max-width:32rem;margin:0 auto 2rem;">Compila il form o scrivimi direttamente. Rispondo sempre entro 24 ore.</p>
+        </div>
+        
+        <form action="php/send-email.php" method="POST" class="form-card" style="max-width:32rem;margin:0 auto;" id="contactForm">
+          <div class="form-grid">
+            <div>
+              <label class="form-label">Nome *</label>
+              <input required type="text" name="nome" class="form-input" placeholder="Il tuo nome">
+            </div>
+            <div>
+              <label class="form-label">Email *</label>
+              <input required type="email" name="email" class="form-input" placeholder="email@esempio.it">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Telefono</label>
+            <input type="tel" name="telefono" class="form-input" placeholder="+39 333 ...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Servizio</label>
+            <select name="servizio" class="form-select">
+              <option value="">Seleziona un servizio</option>
+              <option value="SEO">SEO & Posizionamento</option>
+              <option value="Web Design">Web Design & Sviluppo</option>
+              <option value="Advertising">Google & Meta Ads</option>
+              <option value="Social Media">Social Media Marketing</option>
+              <option value="Consulenza">Consulenza Strategica</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Messaggio *</label>
+            <textarea required name="messaggio" class="form-input" placeholder="Raccontami del tuo progetto..."></textarea>
+          </div>
+          <div class="form-checkbox">
+            <input required type="checkbox" id="privacy">
+            <label for="privacy">Accetto il trattamento dei dati personali secondo la Privacy Policy.</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-shine" style="width:100%;">Invia Messaggio</button>
+        </form>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="footer-logo">
+            <div class="logo-icon">K</div>
+            <span class="logo-text">Marketing</span>
+          </a>
+          <p style="color:var(--white-50);font-size:0.875rem;max-width:20rem;">Digital Marketing Specialist a Brescia. Strategie che convertono per PMI e professionisti.</p>
+        </div>
+        <div>
+          <h4>Servizi</h4>
+          <a href="#servizi">SEO & Posizionamento</a>
+          <a href="#servizi">Web Design</a>
+          <a href="#servizi">Google & Meta Ads</a>
+          <a href="#servizi">Social Media</a>
+        </div>
+        <div>
+          <h4>Risorse</h4>
+          <a href="blog.html">Blog</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#chi-sono">Chi Sono</a>
+        </div>
+        <div>
+          <h4>Contatti</h4>
+          <a href="mailto:kmarketing.ivan@gmail.com">kmarketing.ivan@gmail.com</a>
+          <a href="tel:+393757392959">+39 375 739 2959</a>
+          <a href="#">Brescia, Italia</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 K-Marketing di Ivan Crescini. P.IVA 12345678901</p>
+        <div style="display:flex;gap:1rem;">
+          <a href="#" style="color:var(--white-50);">Privacy Policy</a>
+          <a href="#" style="color:var(--white-50);">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile Menu
+    function toggleMobileMenu() {
+      document.querySelector('.mobile-menu').classList.toggle('active');
+      document.querySelector('.mobile-menu-overlay').classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
+    }
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // FAQ Toggle
+    function toggleFaq(btn) {
+      btn.parentElement.classList.toggle('active');
+    }
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const observerOptions = { threshold: 0.5 };
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.dataset.target);
+          let count = 0;
+          const increment = target / 60;
+          const updateCounter = () => {
+            count += increment;
+            if (count < target) {
+              counter.textContent = Math.ceil(count);
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = target;
+            }
+          };
+          updateCounter();
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+    counters.forEach(c => counterObserver.observe(c));
+
+    // Particles that follow mouse
+    const container = document.getElementById('particles-container');
+    const particles = [];
+    const mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    
+    for (let i = 0; i < 70; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = 3 + Math.random() * 6;
+      p.style.cssText = `width:${size}px;height:${size}px;background:${Math.random()>0.5?'#6366f1':'#0ea5e9'};`;
+      container.appendChild(p);
+      particles.push({
+        el: p,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        speed: 0.005 + Math.random() * 0.01,
+        offset: Math.random() * Math.PI * 2,
+        radius: 100 + Math.random() * 300
+      });
+    }
+    
+    document.addEventListener('mousemove', (e) => {
+      mousePos.x = e.clientX;
+      mousePos.y = e.clientY;
+    });
+    
+    function animateParticles() {
+      const time = Date.now() * 0.002;
+      particles.forEach((p, i) => {
+        const angle = time * 0.5 + p.offset;
+        const targetX = mousePos.x + Math.cos(angle) * p.radius;
+        const targetY = mousePos.y + Math.sin(angle) * p.radius;
+        const dx = targetX - p.x;
+        const dy = targetY - p.y;
+        p.x += dx * p.speed;
+        p.y += dy * p.speed;
+        const floatY = Math.sin(time + p.offset) * 20;
+        const floatX = Math.cos(time + p.offset) * 15;
+        p.el.style.transform = `translate(${p.x + floatX}px, ${p.y + floatY}px)`;
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  </script>
+
+</body>
+</html>

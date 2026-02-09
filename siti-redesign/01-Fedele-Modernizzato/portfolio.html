@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio di Ivan Crescini - K-Marketing. Progetti di digital marketing, web design e grafica.">
+  <title>Portfolio | K-Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { padding: 140px 0 60px; background: var(--bg-alt); text-align: center; }
+    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--secondary); }
+    .project { padding: 80px 0; border-bottom: 1px solid var(--border); }
+    .project:nth-child(even) { background: var(--bg-alt); }
+    .project-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .project:nth-child(even) .project-content { direction: rtl; }
+    .project:nth-child(even) .project-content > * { direction: ltr; }
+    .project h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: 8px; }
+    .project h3 { font-size: 1rem; color: var(--text-light); font-weight: 400; margin-bottom: 20px; }
+    .project p { margin-bottom: 12px; }
+    .project-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .project-images img { border-radius: 8px; aspect-ratio: 1; object-fit: cover; }
+    @media (max-width: 768px) { .project-content { grid-template-columns: 1fr; } .project:nth-child(even) .project-content { direction: ltr; } }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="https://www.k-marketing.it/wp-content/uploads/2025/11/logo-rgb-scaled-e1764060359685.png" alt="K-Marketing"></a>
+      <nav class="nav" id="nav"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="portfolio.html">Portfolio</a><a href="index.html#contatti">Contatti</a></nav>
+      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Portfolio</h1>
+      <p class="section-subtitle">Progetti realizzati con passione e dedizione</p>
+    </div>
+  </section>
+
+  <section class="about" style="padding: 80px 0;">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content" style="margin-top: 32px;">
+        <div class="about-text">
+          <p><strong>Quello che faccio va ben oltre l'essere un semplice lavoro.</strong></p>
+          <p>Affronto ogni progetto in modo personale, come se fossi io stesso il titolare dell'attività con cui collaboro perché il successo del mio cliente è, in parte, anche il mio.</p>
+          <p>Il mio obiettivo è soddisfare pienamente ogni richiesta, mettendo in campo tutte le mie <strong>competenze e conoscenze</strong>.</p>
+          <p><strong>Grafica, web design e digital advertising</strong> sono gli strumenti che mi permettono di trasformare una semplice idea in qualcosa di concreto e funzionale.</p>
+          <p>Alla base di tutto pongo <strong>l'ascolto</strong>: comprendere davvero le esigenze del cliente è il primo passo per costruire la <strong>strategia giusta</strong>.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/Immagine-WhatsApp-2025-11-05-ore-10.20.45_cee06424-1.webp" alt="Ivan Crescini" style="border-radius:12px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="collaborations" style="padding: 60px 0; background: var(--bg-alt);">
+    <div class="container">
+      <h2 class="section-title text-center">Collaborazioni</h2>
+      <div class="collab-logos">
+        <img src="https://www.k-marketing.it/wp-content/uploads/2025/10/ChatGPT-Image-11-ago-2025-17_26_36-320x320.png" alt="Partner">
+        <img src="https://www.k-marketing.it/wp-content/uploads/2025/10/logo_orizz5-qtbnstxqnpx8x6oja16wd2qbagt6744f7ombrdmy9s-320x93.webp" alt="Partner">
+        <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/logo-nemis-scaled-e1762767964590-320x49.webp" alt="Nemis">
+        <img src="https://www.k-marketing.it/wp-content/uploads/2025/10/logo-TooMuch-1024x883-1-320x276.webp" alt="TooMuch">
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="container">
+      <div class="project-content">
+        <div class="project-text">
+          <h2>I Peruvià</h2>
+          <h3>Tradizione e modernità</h3>
+          <p>La collaborazione con <strong>I Peruvià</strong> è nata per rilanciare la loro presenza online dopo la fine delle campagne sponsorizzate.</p>
+          <p>Ho lavorato con la fotografa professionista <strong>IAMGIULS</strong> per curare la produzione di contenuti fotografici e video.</p>
+          <p>Il lavoro ha spaziato dalla realizzazione di grafiche personalizzate per i menù, alla creazione di post e reel, fino alla presenza fisica durante eventi speciali.</p>
+        </div>
+        <div class="project-images">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/p1-scaled.webp" alt="I Peruvià">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/p2-scaled.webp" alt="I Peruvià">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/p3-scaled.webp" alt="I Peruvià">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="container">
+      <div class="project-content">
+        <div class="project-text">
+          <h2>Charme Extensions</h2>
+          <h3>Eleganza e lusso</h3>
+          <p>La cliente mi ha richiesto inizialmente una landing page, ma dopo un'analisi approfondita ho proposto un <strong>vero e proprio sito web</strong>.</p>
+          <p>L'obiettivo era creare un sito che <strong>trasmettesse eleganza e lusso</strong>, perfettamente in linea con l'identità del brand.</p>
+          <p>Il risultato finale ha soddisfatto pienamente le aspettative, offrendo un'esperienza raffinata e coerente.</p>
+        </div>
+        <div class="project-images">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/charme-1.webp" alt="Charme Extensions">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/charme1.webp" alt="Charme Extensions">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="container">
+      <div class="project-content">
+        <div class="project-text">
+          <h2>Nemesis</h2>
+          <h3>Accattivante ed elegante</h3>
+          <p>Un progetto per una <strong>parrucchiera di Brescia</strong> che voleva promuovere una linea di prodotti professionali.</p>
+          <p>Ho creato <strong>contenuti video e grafici eleganti ma accattivanti</strong>, in grado di rispecchiare la personalità e lo stile raffinato del salone.</p>
+          <p>Mi sono occupato della produzione e montaggio video, copywriting e gestione delle campagne organiche.</p>
+        </div>
+        <div class="project-images">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/1-1-scaled.webp" alt="Nemesis">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/2-1-scaled.webp" alt="Nemesis">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/3-scaled.webp" alt="Nemesis">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contatti">
+    <div class="container">
+      <h2 class="section-title text-center">Contattami</h2>
+      <p class="section-subtitle text-center">La prima consulenza è <strong>gratuita</strong></p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group"><label for="nome">Nome *</label><input type="text" id="nome" required></div>
+          <div class="form-group"><label for="cognome">Cognome</label><input type="text" id="cognome"></div>
+        </div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" required></div>
+        <div class="form-group"><label for="messaggio">Messaggio</label><textarea id="messaggio"></textarea></div>
+        <button type="submit" class="btn-submit">Invia</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col"><h4>K-Marketing</h4><p>Digital Marketing Specialist</p></div>
+        <div class="footer-col"><h4>Link</h4><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="portfolio.html">Portfolio</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 K-Marketing - Ivan Crescini</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servizi di Digital Marketing: Digital Advertising, Web Design, Grafica e Consulenza. Ivan Crescini, K-Marketing.">
+  <title>Servizi | K-Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .service-detail { padding: 80px 0; border-bottom: 1px solid var(--border); }
+    .service-detail:nth-child(even) { background: var(--bg-alt); }
+    .service-detail h2 { font-size: 2rem; color: var(--primary); margin-bottom: 24px; }
+    .service-detail p { font-size: 1.05rem; margin-bottom: 16px; max-width: 800px; }
+    .page-hero { padding: 140px 0 60px; background: var(--bg-alt); text-align: center; }
+    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--secondary); margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/logo-rgb-scaled-e1764060359685.png" alt="K-Marketing Logo">
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="index.html#contatti">Contatti</a>
+      </nav>
+      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>I Miei Servizi</h1>
+      <p class="section-subtitle">Soluzioni digitali complete per far crescere il tuo business</p>
+    </div>
+  </section>
+
+  <section class="service-detail" id="digital">
+    <div class="container">
+      <h2>Digital Advertising</h2>
+      <p>Vuoi <strong>più clienti, più visibilità e più vendite online</strong>? Con una strategia di <strong>digital advertising mirata</strong>, tutto questo è possibile.</p>
+      <p>Gestisco <strong>campagne pubblicitarie su Google, Facebook, Instagram, YouTube e LinkedIn</strong>, progettate per <strong>far crescere il tuo business</strong> e <strong>ottenere risultati misurabili</strong>.</p>
+      <p>Ogni annuncio è studiato per <strong>catturare l'attenzione</strong>, <strong>intercettare il pubblico ideale</strong> e <strong>trasformare i clic in azioni concrete</strong>.</p>
+      <p>Mi occupo dell'intero processo: dall'<strong>analisi del target</strong>, alla <strong>creazione dei contenuti pubblicitari</strong>, fino al <strong>monitoraggio delle performance</strong> e <strong>ottimizzazione continua</strong>.</p>
+      <p><strong>Con il digital advertising non sperimenti: investi in risultati.</strong></p>
+    </div>
+  </section>
+
+  <section class="service-detail" id="web">
+    <div class="container">
+      <h2>Web Design</h2>
+      <p>Vuoi un <strong>sito web che catturi l'attenzione</strong>, comunichi chi sei e <strong>converta i visitatori in clienti reali</strong>?</p>
+      <p>Con il mio servizio di <strong>web design su misura</strong>, costruisco esperienze digitali <strong>coinvolgenti, intuitive e performanti</strong>.</p>
+      <p>Progetto <strong>siti web moderni</strong>, <strong>responsive</strong> e <strong>ottimizzati SEO</strong>, curando ogni aspetto: dal <strong>design visivo</strong> alla <strong>struttura dei contenuti</strong>, fino alla <strong>velocità di caricamento</strong> e all'<strong>usabilità</strong>.</p>
+      <p><strong>Un buon web design non è un costo: è il motore della tua presenza digitale.</strong></p>
+    </div>
+  </section>
+
+  <section class="service-detail" id="grafica">
+    <div class="container">
+      <h2>Grafica</h2>
+      <p>Hai bisogno di <strong>grafiche accattivanti</strong> che attirino l'attenzione e facciano ricordare il tuo brand?</p>
+      <p>Creo <strong>design personalizzati</strong> che uniscono <strong>creatività, strategia e impatto visivo</strong> per far risaltare la tua attività.</p>
+      <p>Realizzo <strong>menu per locali</strong>, <strong>locandine promozionali</strong>, <strong>brochure</strong>, <strong>volantini</strong> e <strong>grafiche per social media</strong>, sempre con un obiettivo chiaro: <strong>comunicare in modo efficace e professionale</strong>.</p>
+      <p><strong>Una grafica curata, lavora per te: comunica, conquista e convince.</strong></p>
+    </div>
+  </section>
+
+  <section class="service-detail" id="consulenza">
+    <div class="container">
+      <h2>Consulenza</h2>
+      <p>Sai che la tua azienda può ottenere di più online, ma non sai da dove iniziare?</p>
+      <p>Con le mie <strong>consulenze di marketing personalizzate</strong> scoprirai <strong>cosa migliorare, come farlo e quali strategie funzionano davvero</strong>.</p>
+      <p>Analizzo la tua <strong>presenza digitale</strong>, identifico <strong>punti deboli e opportunità</strong> e sviluppo un piano d'azione concreto per <strong>far crescere il tuo brand e aumentare i risultati</strong>.</p>
+      <p><strong>La differenza tra chi spera nei risultati e chi li ottiene è una strategia chiara.</strong></p>
+    </div>
+  </section>
+
+  <section class="contact" id="contatti">
+    <div class="container">
+      <h2 class="section-title text-center">Contattami</h2>
+      <p class="section-subtitle text-center">La prima consulenza è <strong>gratuita</strong></p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group"><label for="nome">Nome *</label><input type="text" id="nome" required></div>
+          <div class="form-group"><label for="cognome">Cognome</label><input type="text" id="cognome"></div>
+        </div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" required></div>
+        <div class="form-group"><label for="messaggio">Messaggio</label><textarea id="messaggio"></textarea></div>
+        <button type="submit" class="btn-submit">Invia</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>K-Marketing</h4>
+          <p>Digital Marketing Specialist</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ivan-crescini-358a87248/" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Link</h4><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="portfolio.html">Portfolio</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 K-Marketing - Ivan Crescini</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

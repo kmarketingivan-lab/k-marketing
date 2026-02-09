@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi | K-Marketing Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { min-height: 60vh; background: var(--black); color: var(--white); display: flex; align-items: flex-end; padding: 120px 0 80px; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem); font-weight: 400; }
+    .page-hero h1 em { font-style: italic; color: var(--accent); }
+    .service-detail { padding: 120px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+    .service-detail:nth-child(even) { background: var(--white); }
+    .service-detail-grid { display: grid; grid-template-columns: 200px 1fr; gap: 80px; }
+    .service-detail h2 { font-family: var(--serif); font-size: 2.5rem; font-weight: 400; color: var(--accent); position: sticky; top: 120px; }
+    .service-detail p { font-size: 1.15rem; line-height: 1.9; color: var(--text-light); margin-bottom: 20px; }
+    .service-detail strong { color: var(--text); }
+    @media (max-width: 768px) { .service-detail-grid { grid-template-columns: 1fr; gap: 32px; } .service-detail h2 { position: static; } }
+  </style>
+</head>
+<body>
+  <header class="header" style="mix-blend-mode: normal;">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" style="color: #fff;">K.</a>
+      <nav class="nav"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="portfolio.html">Lavori</a><a href="index.html#contatti">Contatti</a></nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container"><h1>I miei <em>servizi</em></h1></div>
+  </section>
+
+  <section class="service-detail" id="digital">
+    <div class="container">
+      <div class="service-detail-grid">
+        <h2>Digital Advertising</h2>
+        <div>
+          <p>Vuoi <strong>più clienti, più visibilità e più vendite online</strong>? Con una strategia di digital advertising mirata, tutto questo diventa realtà.</p>
+          <p>Gestisco campagne pubblicitarie su <strong>Google, Facebook, Instagram, YouTube e LinkedIn</strong>, progettate per far crescere il tuo business e ottenere risultati misurabili.</p>
+          <p>Mi occupo dell'intero processo: dall'analisi del target alla creazione dei contenuti, fino al monitoraggio delle performance e ottimizzazione continua.</p>
+          <p><strong>Con il digital advertising non sperimenti: investi in risultati.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail" id="web">
+    <div class="container">
+      <div class="service-detail-grid">
+        <h2>Web Design</h2>
+        <div>
+          <p>Vuoi un <strong>sito web che catturi l'attenzione</strong>, comunichi chi sei e converta i visitatori in clienti?</p>
+          <p>Progetto <strong>siti web moderni, responsive e ottimizzati SEO</strong>, curando ogni aspetto: dal design visivo alla struttura dei contenuti, fino alla velocità e all'usabilità.</p>
+          <p><strong>Un buon web design non è un costo: è il motore della tua presenza digitale.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail" id="grafica">
+    <div class="container">
+      <div class="service-detail-grid">
+        <h2>Grafica</h2>
+        <div>
+          <p>Hai bisogno di <strong>grafiche accattivanti</strong> che attirino l'attenzione e facciano ricordare il tuo brand?</p>
+          <p>Realizzo <strong>menu, locandine, brochure, volantini e grafiche social</strong>, sempre con un obiettivo chiaro: comunicare in modo efficace.</p>
+          <p><strong>Una grafica curata lavora per te: comunica, conquista e convince.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail" id="consulenza">
+    <div class="container">
+      <div class="service-detail-grid">
+        <h2>Consulenza</h2>
+        <div>
+          <p>Sai che la tua azienda può ottenere di più online, ma non sai da dove iniziare?</p>
+          <p>Con le mie <strong>consulenze personalizzate</strong> scoprirai cosa migliorare, come farlo e quali strategie funzionano davvero.</p>
+          <p>Analizzo la tua presenza digitale, identifico punti deboli e opportunità e sviluppo un piano d'azione concreto.</p>
+          <p><strong>La differenza tra chi spera nei risultati e chi li ottiene è una strategia chiara.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contatti">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Richiedi una <em>consulenza</em></h2>
+          <p>La prima consulenza è gratuita. Parliamo del tuo progetto.</p>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><label>Nome</label><input type="text" required></div>
+          <div class="form-group"><label>Email</label><input type="email" required></div>
+          <div class="form-group"><label>Messaggio</label><textarea></textarea></div>
+          <button type="submit" class="btn-submit">Invia</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="logo">K.</a>
+        <div class="footer-links"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="portfolio.html">Lavori</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 K-Marketing Studio</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

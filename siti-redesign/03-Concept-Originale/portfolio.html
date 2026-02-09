@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | K-Marketing Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { min-height: 60vh; background: var(--black); color: var(--white); display: flex; align-items: flex-end; padding: 120px 0 80px; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem); font-weight: 400; }
+    .page-hero h1 em { font-style: italic; color: var(--accent); }
+    .project-full { padding: 120px 0; }
+    .project-full:nth-child(even) { background: var(--white); }
+    .project-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+    .project-header h2 { font-family: var(--serif); font-size: 3rem; font-weight: 400; }
+    .project-header span { font-size: 0.9rem; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
+    .project-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .project-content p { font-size: 1.1rem; line-height: 1.8; color: var(--text-light); margin-bottom: 16px; }
+    .project-images { display: grid; gap: 16px; }
+    .project-images img { width: 100%; border-radius: 0; filter: grayscale(30%); transition: 0.4s; }
+    .project-images img:hover { filter: grayscale(0); }
+    @media (max-width: 768px) { .project-content { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header" style="mix-blend-mode: normal;">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" style="color: #fff;">K.</a>
+      <nav class="nav"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="portfolio.html">Lavori</a><a href="index.html#contatti">Contatti</a></nav>
+    </div>
+  </header>
+  <section class="page-hero"><div class="container"><h1>I miei <em>lavori</em></h1></div></section>
+
+  <section class="project-full">
+    <div class="container">
+      <div class="project-header">
+        <h2>I Peruvià</h2>
+        <span>Social Media / Content</span>
+      </div>
+      <div class="project-content">
+        <div>
+          <p>La collaborazione con <strong>I Peruvià</strong> è nata per rilanciare la loro presenza online dopo la fine delle campagne sponsorizzate.</p>
+          <p>Ho lavorato con la fotografa <strong>IAMGIULS</strong> per la produzione di contenuti fotografici e video di alta qualità.</p>
+          <p>Il lavoro ha spaziato dalla realizzazione di grafiche personalizzate per i menù alla creazione di post e reel, fino alla presenza durante eventi speciali.</p>
+        </div>
+        <div class="project-images">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/p1-scaled.webp" alt="I Peruvià">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/p2-scaled.webp" alt="I Peruvià">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-full">
+    <div class="container">
+      <div class="project-header">
+        <h2>Charme Extensions</h2>
+        <span>Web Design / Branding</span>
+      </div>
+      <div class="project-content">
+        <div>
+          <p>Da una semplice richiesta di landing page a un <strong>sito web completo</strong> che trasmette l'essenza del brand.</p>
+          <p>L'obiettivo era chiaro: creare un design che comunicasse <strong>eleganza e lusso</strong>, perfettamente in linea con i prodotti offerti.</p>
+        </div>
+        <div class="project-images">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/charme-1.webp" alt="Charme">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/charme1.webp" alt="Charme">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-full">
+    <div class="container">
+      <div class="project-header">
+        <h2>Nemesis</h2>
+        <span>Video / Grafica</span>
+      </div>
+      <div class="project-content">
+        <div>
+          <p>Promozione di una linea di <strong>prodotti professionali per la cura dei capelli</strong> per un salone di Brescia.</p>
+          <p>Ho creato contenuti video e grafici eleganti ma accattivanti, che rispecchiano la personalità e lo stile raffinato del salone.</p>
+          <p>Produzione video, montaggio, copywriting e gestione delle campagne organiche.</p>
+        </div>
+        <div class="project-images">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/1-1-scaled.webp" alt="Nemesis">
+          <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/2-1-scaled.webp" alt="Nemesis">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contatti">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Vuoi realizzare il tuo <em>progetto</em>?</h2>
+          <p>La prima consulenza è gratuita. Parliamo della tua idea.</p>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><label>Nome</label><input type="text" required></div>
+          <div class="form-group"><label>Email</label><input type="email" required></div>
+          <div class="form-group"><label>Messaggio</label><textarea></textarea></div>
+          <button type="submit" class="btn-submit">Invia</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="logo">K.</a>
+        <div class="footer-links"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="portfolio.html">Lavori</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 K-Marketing Studio — Ivan Crescini</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
