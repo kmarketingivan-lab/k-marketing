@@ -36,8 +36,8 @@ jobs:
       - name: Deploy to Altervista via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: kmarketing.altervista.org
-          username: kmarketing
+          server: ftp.avid4056923.altervista.org
+          username: avid4056923
           password: ${{ secrets.ALTERVISTA_FTP_PASSWORD }}
           port: 21
           protocol: ftp
