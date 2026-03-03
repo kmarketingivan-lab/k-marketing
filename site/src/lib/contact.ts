@@ -27,7 +27,7 @@ async function sendEmail(data: ContactFormData): Promise<boolean> {
   }
 
   try {
-    const res = await fetch("https://api.emailjs.com/api/v1.6/email/send", {
+    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
