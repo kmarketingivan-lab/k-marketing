@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Link } from "@/../../navigation";
 import { Button } from "@/components/ui/button";
 import { ParticleField } from "@/components/ui/particle-field";
 import { SERVICE_KEYS, serviceIcons } from "@/components/ui/service-icons";
+import { SITE } from "@/lib/constants";
 
 export function ServicesPageClient() {
   const t = useTranslations("servicesPage");
@@ -107,7 +107,7 @@ export function ServicesPageClient() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button variant="primary" size="lg" asChild>
-                <Link href="/contatti">{t("cta")}</Link>
+                <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
               </Button>
             </div>
           </motion.div>

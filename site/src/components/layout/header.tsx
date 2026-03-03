@@ -6,6 +6,7 @@ import { Link, usePathname } from "@/../../navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
+import { SITE } from "@/lib/constants";
 
 function FlagIT({ className = "" }: { className?: string }) {
   return (
@@ -172,7 +173,7 @@ export function Header() {
 
           {/* CTA */}
           <Button variant="primary" size="sm" className="ml-3" asChild>
-            <Link href="/contatti">{t("cta")}</Link>
+            <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
           </Button>
         </nav>
 
@@ -250,7 +251,7 @@ export function Header() {
                 )}
               </button>
               <Button variant="primary" size="sm" className="flex-1" asChild>
-                <Link href="/contatti">{t("cta")}</Link>
+                <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
               </Button>
             </div>
           </nav>

@@ -6,6 +6,7 @@ import { Link } from "@/../../navigation";
 import { Button } from "@/components/ui/button";
 import { ParticleField } from "@/components/ui/particle-field";
 import { caseStudies } from "@/lib/case-studies";
+import { SITE } from "@/lib/constants";
 import { CaseMediaGallery } from "@/components/ui/case-media";
 
 export function CaseStudyDetailClient({ slug }: { slug: string }) {
@@ -135,7 +136,7 @@ export function CaseStudyDetailClient({ slug }: { slug: string }) {
               {t("cta")}
             </h2>
             <Button variant="primary" size="lg" asChild>
-              <Link href="/contatti">{t("cta")}</Link>
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
             </Button>
           </motion.div>
         </div>

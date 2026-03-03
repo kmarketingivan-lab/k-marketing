@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Link } from "@/../../navigation";
 import { ParticleField } from "@/components/ui/particle-field";
 import { useTheme } from "@/components/theme-provider";
+import { SITE } from "@/lib/constants";
 
 export function CtaSection() {
   const t = useTranslations("ctaSection");
@@ -65,14 +65,16 @@ export function CtaSection() {
           transition={{ duration: 0.75, delay: 0.2 }}
           className="flex items-center justify-center gap-4"
         >
-          <Link
-            href="/contatti"
+          <a
+            href={SITE.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-[3px] bg-navy-800 px-8 py-3.5 text-[0.78rem] font-semibold uppercase tracking-[0.1em] text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-navy-700 hover:shadow-xl dark:bg-orange-500 dark:text-navy-800 dark:hover:bg-orange-400"
           >
             {t("cta")}
-          </Link>
+          </a>
           <a
-            href="mailto:kmarketing.ivan@gmail.com"
+            href={`mailto:${SITE.email}`}
             className="flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white dark:text-gray-100/50 dark:hover:text-gray-100"
           >
             {t("ctaSecondary")} →

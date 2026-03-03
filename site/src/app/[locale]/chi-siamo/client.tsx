@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Link } from "@/../../navigation";
 import { Button } from "@/components/ui/button";
 import { ParticleField } from "@/components/ui/particle-field";
+import { SITE } from "@/lib/constants";
 
 const valueKeys = ["automation", "noSmoke", "modern", "personal"] as const;
 
@@ -194,7 +194,7 @@ export function AboutPageClient() {
               {t("ctaSubtitle")}
             </p>
             <Button variant="primary" size="lg" asChild>
-              <Link href="/contatti">{t("ctaCta")}</Link>
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer">{t("ctaCta")}</a>
             </Button>
           </motion.div>
         </div>

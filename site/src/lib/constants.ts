@@ -9,4 +9,5 @@ export const SITE = {
   founder: "Ivan Crescini",
   foundedYear: 2020,
   projectCount: "20+",
+  bookingUrl: "https://calendar.app.google/BauatAzFmdj6THD4A",
 } as const;

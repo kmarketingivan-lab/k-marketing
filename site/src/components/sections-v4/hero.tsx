@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Link } from "@/../../navigation";
 import { ParticleField } from "@/components/ui/particle-field";
+import { SITE } from "@/lib/constants";
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -78,12 +78,14 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-4 flex flex-shrink-0 items-center gap-4 md:ml-[50%] md:w-[50%] md:justify-center"
         >
-          <Link
-            href="/contatti"
+          <a
+            href={SITE.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-[3px] bg-orange-500 px-8 py-3.5 text-[0.78rem] font-semibold uppercase tracking-[0.1em] text-navy-800 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-85"
           >
             {t("cta")}
-          </Link>
+          </a>
           <a
             href="#servizi"
             className="flex items-center gap-2 text-sm text-gray-100/40 transition-colors hover:text-gray-100"
