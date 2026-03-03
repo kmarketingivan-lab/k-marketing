@@ -35,8 +35,8 @@ async function sendEmail(data: ContactFormData): Promise<boolean> {
         template_id: templateId,
         user_id: publicKey,
         template_params: {
-          from_name: data.name,
-          from_email: data.email,
+          name: data.name,
+          email: data.email,
           company: data.company,
           industry: data.industry,
           budget: data.budget,
@@ -76,16 +76,19 @@ function hasConfiguredChannels(): boolean {
 export async function submitContactForm(
   data: ContactFormData
 ): Promise<{ success: boolean }> {
-  // Try server API route first (Vercel — sends Telegram + future integrations)
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    if (res.ok) return { success: true };
-  } catch {
-    // API route not available (static export) — fall through to EmailJS
+  // Skip API route on static export (Altervista) — it doesn't exist and the
+  // host may return a 200 HTML page for unknown paths, causing a false positive.
+  if (!process.env.NEXT_PUBLIC_STATIC_EXPORT) {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) return { success: true };
+    } catch {
+      // API route not available — fall through to EmailJS
+    }
   }
 
   // Fallback: EmailJS (client-side, works on static export too)
