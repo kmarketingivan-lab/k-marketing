@@ -1,0 +1,388 @@
+{
+  "metadata": {
+    "title": "K-Marketing | AI Marketing Systems for SMBs | Brescia, Italy",
+    "description": "We build automated AI marketing systems for ambitious SMBs. SEO, advertising, automation. 20+ projects completed. Brescia, Italy.",
+    "servizi": {
+      "title": "Services | K-Marketing — SEO, Ads, AI & Automation",
+      "description": "SEO, advertising, social media, AI and automation. Integrated digital marketing systems for SMBs that want real growth."
+    },
+    "casiStudio": {
+      "title": "Case Studies | K-Marketing — Real Results for SMBs",
+      "description": "Real results for real businesses. See how we grew restaurants, e-commerce, hotels and dealerships with digital marketing."
+    },
+    "chiSiamo": {
+      "title": "About Us | K-Marketing — AI Marketing Studio, Brescia",
+      "description": "A digital marketing studio in Brescia, Italy. Automation, AI and custom strategies for ambitious SMBs. 20+ projects, measurable results."
+    },
+    "contatti": {
+      "title": "Contact | K-Marketing — Let's Talk About Your Project",
+      "description": "Book a free consultation or fill out the form. We respond within 24 hours. K-Marketing, Brescia, Italy."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "about": "About",
+    "blog": "Blog",
+    "cta": "Book a Call"
+  },
+  "hero": {
+    "overline": "AI Marketing Agency · Brescia, Italy",
+    "line1": "We make",
+    "line2": "your business",
+    "line3": "grow.",
+    "subtitle": "Automation, strategy and digital marketing for ambitious SMBs. No fluff — just systems that generate leads and customers.",
+    "cta": "Book a free call",
+    "ctaSecondary": "See the results",
+    "studioLabel": "Studio — since 2020",
+    "scroll": "Scroll"
+  },
+  "stats": {
+    "projects": "Projects completed",
+    "growth": "Average traffic growth",
+    "automated": "Automated systems",
+    "since": "Active since"
+  },
+  "ticker": {
+    "items": ["SEO & Ranking", "Social Media", "Advertising", "AI Automation", "Content Marketing", "Web Development", "Brand Identity", "Analytics & KPI"]
+  },
+  "services": {
+    "overline": "What we do",
+    "title": "Every",
+    "titleBreak": "project",
+    "titleItalic": "is unique.",
+    "count": "06",
+    "subtitle": "Each service is part of an integrated system. We don't sell packages — we build custom solutions.",
+    "cta": "See all services →",
+    "items": {
+      "seo": { "title": "SEO & Ranking", "desc": "We get you found on Google with strategy, not tricks.", "tags": ["Google", "Keywords"] },
+      "social": { "title": "Social Media", "desc": "Strategic content that brings customers, not just followers.", "tags": ["Instagram", "LinkedIn"] },
+      "ads": { "title": "Advertising", "desc": "Google and Meta campaigns with measurable ROI.", "tags": ["Meta Ads", "Google Ads"] },
+      "ai": { "title": "AI & Automation", "desc": "Systems that work 24/7: chatbots, email, lead generation.", "tags": ["Chatbot", "Automation"] },
+      "content": { "title": "Content Marketing", "desc": "Blog posts, newsletters, content that educates and converts.", "tags": ["Blog", "Video"] },
+      "web": { "title": "Web & App Development", "desc": "Fast, modern websites and web apps optimized to convert.", "tags": ["Next.js", "E-commerce"] }
+    }
+  },
+  "servicesPage": {
+    "overline": "Our services",
+    "title": "Systems that deliver",
+    "titleItalic": "results.",
+    "subtitle": "We don't sell packages. We build integrated systems where every piece works together to bring you real customers.",
+    "cta": "Book a free call",
+    "items": {
+      "seo": {
+        "title": "SEO & Search Ranking",
+        "desc": "We make you visible on Google when your customers search for your services. Technical strategy and optimized content — no tricks, only lasting results.",
+        "features": [
+          { "title": "Full technical audit", "desc": "We analyze structure, speed, indexing and every factor holding back your ranking." },
+          { "title": "Targeted keyword strategy", "desc": "Research focused on keywords that bring real customers, not generic traffic. Commercial intent first." },
+          { "title": "Optimized content", "desc": "We create pages and articles that answer your customers' questions and rank organically." },
+          { "title": "Monitoring and reporting", "desc": "Clear dashboard with rankings, traffic and conversions. You always know how things are going." }
+        ]
+      },
+      "social": {
+        "title": "Social Media Management",
+        "desc": "Social media isn't for collecting likes — it's for bringing customers. We create strategic content that builds trust and generates inquiries.",
+        "features": [
+          { "title": "Strategic editorial plan", "desc": "Content designed for your target audience, not generic posts. Every piece has a clear objective." },
+          { "title": "Content creation", "desc": "Graphics, copy and video optimized for each platform. Content that stops the scroll." },
+          { "title": "Community management", "desc": "We handle comments, DMs and interactions. Your brand always responds professionally." },
+          { "title": "Analytics and optimization", "desc": "We analyze what works and what doesn't. Every month we improve strategy based on data." }
+        ]
+      },
+      "ads": {
+        "title": "Advertising & Paid Media",
+        "desc": "Google Ads and Meta Ads campaigns with one goal: positive ROI. Every euro invested must come back multiplied.",
+        "features": [
+          { "title": "Advanced campaign setup", "desc": "Account structure, conversion tracking, pixels and APIs configured correctly from day one." },
+          { "title": "Surgical targeting", "desc": "We reach the right people at the right time. Lookalike, retargeting and custom audiences." },
+          { "title": "Creative that converts", "desc": "Continuous A/B testing on copy and visuals. We find the combination that performs best." },
+          { "title": "Budget optimization", "desc": "We shift budget where it performs best. Weekly reports on spend, leads and cost per acquisition." }
+        ]
+      },
+      "ai": {
+        "title": "AI & Automation",
+        "desc": "Intelligent systems that work 24/7 for you. Chatbots, automated emails, lead scoring and workflows that turn contacts into customers while you sleep.",
+        "features": [
+          { "title": "Custom AI chatbots", "desc": "Virtual assistants that answer customers, qualify leads and book appointments automatically." },
+          { "title": "Automated email marketing", "desc": "Email sequences that nurture contacts and guide them to purchase without manual intervention." },
+          { "title": "Lead scoring and qualification", "desc": "AI evaluates every contact and flags only those ready to buy. Stop wasting time on browsers." },
+          { "title": "Custom workflows", "desc": "We automate repetitive processes: follow-ups, reminders, reports, notifications. You focus on business." }
+        ]
+      },
+      "content": {
+        "title": "Content Marketing",
+        "desc": "Content that educates, entertains and converts. Blogs, newsletters, video — every piece builds authority and drives qualified traffic.",
+        "features": [
+          { "title": "Editorial strategy", "desc": "We plan content based on data: what your audience searches, what competitors miss, where opportunity lies." },
+          { "title": "SEO blog articles", "desc": "Optimized content that ranks on Google and answers your customers' real questions." },
+          { "title": "Newsletters and email", "desc": "Regular communications that keep contacts warm and build a relationship with your audience." },
+          { "title": "Video and visual content", "desc": "Multimedia content that increases engagement and makes your brand memorable." }
+        ]
+      },
+      "web": {
+        "title": "Web & App Development",
+        "desc": "Fast, modern websites and applications designed to convert visitors into customers. Cutting-edge technology focused on performance and UX.",
+        "features": [
+          { "title": "High-performance websites", "desc": "Built with Next.js, instant loading, responsive design. Your site is your best salesperson." },
+          { "title": "Custom e-commerce", "desc": "Online stores optimized to sell: simplified checkout, automatic upsells, secure payments." },
+          { "title": "Custom web apps", "desc": "Applications tailored to your business needs: dashboards, client portals, internal tools." },
+          { "title": "Maintenance and support", "desc": "Updates, security, backups and ongoing support. Your site is always at its best." }
+        ]
+      }
+    }
+  },
+  "caseStudies": {
+    "overline": "Real results",
+    "title": "Projects that speak through numbers",
+    "subtitle": "Don't take our word for it. See what we've done for businesses like yours.",
+    "cta": "See all case studies →"
+  },
+  "caseStudiesPage": {
+    "overline": "Case studies",
+    "title": "Real results,",
+    "titleItalic": "real clients.",
+    "subtitle": "We don't talk theory. Here's what we've built for businesses like yours — with numbers, strategy and measurable results.",
+    "cta": "Want similar results?",
+    "viewProject": "View project →",
+    "backToList": "← All case studies",
+    "detailOverline": "Case study",
+    "challenge": "The challenge",
+    "solution": "The solution",
+    "results": "The results",
+    "servicesUsed": "Services used",
+    "stats": {
+      "traffic": "Organic traffic",
+      "reservations": "Reservations",
+      "ranking": "Local ranking",
+      "revenue": "E-commerce revenue",
+      "roas": "ROAS",
+      "views": "Views",
+      "engagement": "Engagement rate",
+      "leads": "Leads generated",
+      "leadsMonth": "Leads per month",
+      "localRanking": "Local ranking",
+      "directBookings": "Direct bookings",
+      "adCost": "Cost per lead"
+    },
+    "items": {
+      "i-peruvia": {
+        "title": "I Peruvià",
+        "subtitle": "Peruvian restaurant — Brescia",
+        "desc": "From unknown venue to the most searched restaurant in the area. Local SEO, social media and targeted campaigns tripled reservations in 4 months.",
+        "challenge": "I Peruvià was an authentic Peruvian restaurant with excellent cuisine but zero online visibility. No Google Maps ranking, inactive social media and no strategy to attract new customers beyond word of mouth.",
+        "solution": "We built an integrated system: Google Business Profile optimization with professional photos and incentivized reviews, Instagram editorial plan with content showcasing Peruvian culture, geo-targeted Meta Ads campaigns on Brescia with first-visit offers.",
+        "results": "In 4 months the restaurant went from page 3 on Google to #1 for 'Peruvian restaurant Brescia'. Online reservations increased by 280% and monthly revenue grew by 340%."
+      },
+      "charme-extensions": {
+        "title": "Charme Extensions",
+        "subtitle": "Beauty e-commerce — Brescia",
+        "desc": "From physical store to thriving e-commerce. +520% online revenue in 6 months with SEO, advertising and a conversion-optimized website.",
+        "challenge": "Charme Extensions had a successful physical store but the e-commerce wasn't taking off. The site was slow, not mobile-optimized and ad campaigns were burning budget with no return.",
+        "solution": "Complete site redesign focused on speed and mobile UX. SEO strategy for high-volume commercial keywords. Meta Ads campaigns with full funnel: awareness, consideration, retargeting. Email automation for abandoned carts and post-purchase upsells.",
+        "results": "E-commerce revenue grew 520% in 6 months. Average campaign ROAS reached 4.2×. Organic traffic increased 180% thanks to ranking on key commercial keywords."
+      },
+      "nemesis": {
+        "title": "Nemesis",
+        "subtitle": "Video branding — Brescia",
+        "desc": "Video brand identity that generated 50K+ views and tripled qualified leads in 3 months.",
+        "challenge": "Nemesis needed to stand out in a saturated market. The brand wasn't communicating the real value of its services and social content was generic and uninspiring.",
+        "solution": "We created a complete video branding strategy: main brand film, short-form content series for social, video ad campaigns on Meta and YouTube. Every piece designed to communicate positioning and generate leads.",
+        "results": "The brand film surpassed 50,000 organic views. Social engagement rate grew 200%. Qualified leads tripled in 3 months thanks to the video funnel integrated with ad campaigns."
+      },
+      "bottega-matta": {
+        "title": "Bottega Matta",
+        "subtitle": "Artisan e-commerce — Brescia",
+        "desc": "From historic workshop to thriving e-commerce. Custom site with Next.js + Stripe, SEO, social media and ad campaigns to bring 35 years of Brescia craftsmanship online.",
+        "challenge": "Bottega Matta is an artisan workshop specializing in artistic ceramics and lampwork glass jewelry, founded in 1990 by Raffaella Cirelli. After 35 years of exclusively in-store sales, a digital leap was needed: no e-commerce, no structured online presence, and a loyal but locally-limited audience relying on word of mouth.",
+        "solution": "We built a custom e-commerce with Next.js, Supabase and Stripe — fast, secure and mobile-optimized. Technical SEO and content to rank artisan ceramics on Google. Instagram and Facebook editorial plan to showcase the creative process. Meta Ads campaigns to reach craft and design enthusiasts across Italy.",
+        "results": "The e-commerce opened an entirely new sales channel. Online revenue grew 620% in the first 6 months after launch. Organic traffic increased 350% thanks to ranking on keywords like 'artisan ceramics Brescia' and 'lampwork glass jewelry'. Ad campaigns achieved a 3.8× ROAS."
+      },
+      "villa-riviera": {
+        "title": "Villa Riviera",
+        "subtitle": "Boutique hotel — Lake Garda",
+        "desc": "+390% direct bookings and -60% acquisition costs. Less dependence on Booking, more margin.",
+        "challenge": "Villa Riviera depended almost entirely on Booking.com and Expedia for reservations, paying 15-20% commissions. The website generated less than 10% of total bookings.",
+        "solution": "Website redesign with integrated booking engine and mobile-optimized UX. Google Ads campaigns on destination keywords. Email automation system for re-engaging past guests. AI chatbot to handle inquiries and direct bookings.",
+        "results": "Direct bookings increased 390%, reducing OTA dependency from 90% to 45%. Cost per booking acquisition dropped 60%. Overall ROAS reached 4.8×."
+      },
+      "auto-brescia": {
+        "title": "Auto Brescia",
+        "subtitle": "Car dealership — Brescia",
+        "desc": "120+ qualified leads per month with SEO, content marketing and integrated ad campaigns.",
+        "challenge": "The dealership had an outdated website and no structured digital strategy. Leads came only through word of mouth and walk-ins, limiting growth.",
+        "solution": "New website with SEO-optimized vehicle pages, CRM integration and model-specific contact forms. Content marketing with buying guides and comparisons. Google and Meta Ads campaigns with interest and geo targeting.",
+        "results": "In 6 months the dealership generates over 120 qualified digital leads per month. Organic traffic grew 450%. Average campaign ROAS is 3.5×, with cost per lead under €8."
+      }
+    }
+  },
+  "aboutPage": {
+    "overline": "About us",
+    "heroTitle": "Not an agency.",
+    "heroTitleItalic": "A studio.",
+    "heroSubtitle": "Behind K-Marketing there is a clear vision: building marketing systems that deliver measurable results for SMBs.",
+    "storyOverline": "The story",
+    "storyTitle": "A choice born from experience.",
+    "storyP1": "In 2020 the digital marketing landscape for small and medium businesses had a clear problem: too many agencies offered standardised services, opaque reporting and strategies that failed to produce measurable outcomes. Companies were investing significant budgets without real visibility into their return on investment.",
+    "storyP2": "From this awareness K-Marketing was founded in Brescia, with a clear mission: to design digital marketing systems built on data, automation and artificial intelligence. An approach where every action is trackable, every investment is justified and every result is measurable.",
+    "storyP3": "Over five years of operation we have completed more than 20 projects across diverse industries — from restaurants to automotive, from artisan e-commerce to hospitality. Every project is unique, but the guiding principle remains the same: if it does not generate a measurable business impact, it is not part of our strategy.",
+    "approachOverline": "The approach",
+    "approachTitle": "Where others follow,",
+    "approachTitleItalic": "we anticipate.",
+    "values": {
+      "automation": {
+        "title": "Automation as standard",
+        "desc": "We design systems that operate autonomously and continuously. AI chatbots for customer support, advertising campaigns with automatic optimisation, editorial content generated and reviewed by intelligent agents. The goal is a marketing ecosystem that works with consistent efficiency, regardless of the hour."
+      },
+      "noSmoke": {
+        "title": "Complete transparency on results",
+        "desc": "Every activity we undertake is accompanied by clear metrics: leads generated, cost per acquisition, return on ad spend. We work with a minimum ROAS target of 3× and provide detailed reports that show exactly how every euro of the budget is deployed."
+      },
+      "modern": {
+        "title": "Digital-native strategy",
+        "desc": "Purchasing behaviour has changed fundamentally. Today's customer searches for solutions on Google, evaluates options on social media and completes decisions through digital channels. Our strategy positions your brand precisely at the touchpoints where your target audience is already present — with the most effective message, at the optimal moment."
+      },
+      "personal": {
+        "title": "A studio, not a chain",
+        "desc": "Every project receives direct and continuous attention. There are no account manager rotations or internal handoffs. This working model ensures deep knowledge of each client's business and a level of care that larger structures can rarely provide."
+      }
+    },
+    "ctaTitle": "Ready to start?",
+    "ctaSubtitle": "Book a free 30-minute consultation. We will analyse your situation together and assess growth opportunities.",
+    "ctaCta": "Book a consultation"
+  },
+  "process": {
+    "overline": "How we work",
+    "title": "Our",
+    "titleItalic": "process",
+    "steps": {
+      "1": { "title": "Analysis", "desc": "We analyse your current situation: website, SEO, social media, advertising. We identify real problems and opportunities." },
+      "2": { "title": "Strategy", "desc": "We define a custom plan with clear goals, timeline and budget. No surprises." },
+      "3": { "title": "Implementation", "desc": "We build and activate the systems: SEO, content, advertising, AI automations. All connected." },
+      "4": { "title": "Growth", "desc": "We monitor, optimise and scale. Transparent reports, regular calls, measurable results." }
+    },
+    "studioLabel": "The studio",
+    "manifesto1start": "We're not the agency that churns out volume. We're a studio that",
+    "manifesto1bold": "chooses its clients",
+    "manifesto1end": "just as clients choose us — by alignment, not by budget.",
+    "manifesto2start": "We believe a great digital product starts with an",
+    "manifesto2bold": "honest question",
+    "manifesto2end": ": what does your customer really want?",
+    "stats": {
+      "projects": { "value": "20", "suffix": "+", "label": "Projects" },
+      "experience": { "value": "5", "suffix": "yr", "label": "Experience" },
+      "growth": { "value": "3", "suffix": "×", "label": "Avg. growth" },
+      "automations": { "value": "24", "suffix": "/7", "label": "Automations" }
+    }
+  },
+  "ctaSection": {
+    "overline": "Start a project",
+    "line1": "Let's build",
+    "line2": "something",
+    "line3": "extraordinary.",
+    "subtitle": "Book a free 30-minute call. We'll analyse your situation and honestly tell you if we can help.",
+    "cta": "Book a free call",
+    "ctaSecondary": "Or write to us"
+  },
+  "footer": {
+    "tagline": "AI marketing systems for ambitious SMBs.",
+    "location": "Brescia, Italy",
+    "nav": "Navigation",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "rights": "© 2026 K-Marketing. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "terms": "Terms of Service",
+    "manageCookies": "Manage Cookies"
+  },
+  "contact": {
+    "overline": "Contact",
+    "title": "Let's talk about your project",
+    "subtitle": "Fill out the form or book a call directly. We respond within 24 hours.",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "industry": "Industry",
+    "budget": "Monthly budget",
+    "message": "Message",
+    "submit": "Send request",
+    "sending": "Sending...",
+    "success": "Message sent! We'll respond within 24 hours.",
+    "successSub": "We'll get back to you as soon as possible.",
+    "sendAnother": "Send another message",
+    "error": "An error occurred, please try again.",
+    "form": {
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "messageRequired": "Message is required",
+        "messageMin": "Message must be at least 20 characters"
+      }
+    },
+    "industries": {
+      "dental": "Dental practice",
+      "aesthetics": "Aesthetic clinic",
+      "realestate": "Real estate agency",
+      "automotive": "Car dealership",
+      "legal": "Law firm",
+      "hotel": "Hotel / Hospitality",
+      "restaurant": "Restaurant",
+      "beauty": "Beauty / Hair salon",
+      "veterinary": "Veterinary clinic",
+      "other": "Other"
+    },
+    "budgets": {
+      "500-1000": "€500 – €1,000",
+      "1000-3000": "€1,000 – €3,000",
+      "3000+": "€3,000+"
+    }
+  },
+  "cookieBanner": {
+    "title": "This site uses cookies",
+    "description": "We use necessary technical cookies and, with your consent, analytics cookies to improve your experience and analyse site traffic.",
+    "learnMore": "Read our Cookie Policy",
+    "acceptAll": "Accept All",
+    "rejectAll": "Reject All",
+    "customize": "Customize",
+    "savePreferences": "Save Preferences",
+    "back": "Back",
+    "categories": {
+      "necessary": {
+        "title": "Necessary cookies",
+        "description": "Essential for the website to function. These include theme preference (light/dark) and language. They cannot be disabled.",
+        "alwaysOn": "Always on"
+      },
+      "analytics": {
+        "title": "Analytics cookies",
+        "description": "Allow us to understand how visitors interact with the site through Google Analytics. Data is anonymous and aggregated. No data is shared for advertising purposes."
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "content": "Privacy notice pursuant to the GDPR (EU Regulation 2016/679).\n\nData controller: K-Marketing di Ivan Crescini, Brescia, Italy.\n\nData collected through the contact form (name, email, company, message) is used solely to respond to the user's request.\n\nData is not shared with third parties. The legal basis is the consent of the data subject.\n\nTo exercise the rights provided for in Articles 15-22 of the GDPR, write to: kmarketing.ivan@gmail.com"
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "content": "Cookie notice pursuant to the GDPR (EU Regulation 2016/679) and the ePrivacy Directive.\n\nData controller: K-Marketing di Ivan Crescini, Brescia, Italy.\n\n1. TECHNICAL COOKIES (NECESSARY)\n\nThis website uses strictly necessary technical cookies:\n- Theme preference (light/dark): stored in localStorage under the key \"km-theme\"\n- Cookie consent preference: stored in localStorage under the key \"km-consent\"\n\nThese cookies do not require user consent as they are essential for the website to function.\n\n2. ANALYTICS COOKIES (WITH CONSENT)\n\nWith the user's explicit consent, this website uses Google Analytics 4 (Google LLC) to analyse traffic anonymously and in aggregate. Google Analytics uses the following cookies:\n- _ga: identification cookie (duration: 2 years)\n- _ga_[ID]: session cookie (duration: 2 years)\n- _gid: identification cookie (duration: 24 hours)\n\nThe data collected (pages visited, visit duration, approximate geographic origin) is used solely to improve the website and is not shared with third parties for advertising purposes. IP addresses are anonymised.\n\n3. CONSENT MANAGEMENT\n\nOn first visit, a consent banner is displayed. The user can:\n- Accept all cookies\n- Reject non-essential cookies\n- Customise preferences by category\n\nConsent can be changed at any time via the \"Manage Cookies\" link in the site footer. When consent is withdrawn, analytics cookies are immediately deleted.\n\n4. USER RIGHTS\n\nUsers can exercise the rights provided for in Articles 15-22 of the GDPR by writing to: kmarketing.ivan@gmail.com\n\n5. LEGAL BASIS\n\nTechnical cookies: legitimate interest (Art. 6.1.f GDPR).\nAnalytics cookies: consent of the data subject (Art. 6.1.a GDPR).\n\nLast updated: March 2026."
+    },
+    "termini": {
+      "title": "Terms and Conditions",
+      "content": "The use of this website is subject to the following conditions.\n\nAll published content is the property of K-Marketing di Ivan Crescini. Reproduction without authorisation is prohibited.\n\nThe information provided is for informational purposes only and does not constitute a contractual offer.\n\nFor any dispute, the competent court is that of Brescia, Italy."
+    }
+  },
+  "common": {
+    "readMore": "Read more →",
+    "backHome": "Back to home",
+    "notFoundTitle": "Page not found",
+    "notFoundDesc": "The page you're looking for doesn't exist or has been moved.",
+    "errorTitle": "Something went wrong",
+    "errorDesc": "An error occurred. Please try again.",
+    "retry": "Try again",
+    "loading": "Loading..."
+  }
+}
