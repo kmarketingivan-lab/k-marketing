@@ -13,20 +13,18 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "i-peruvia",
-    category: "ristorazione",
-    image: "/images/cases/i-peruvia.jpg",
+    slug: "bottega-matta",
+    category: "artigianato",
+    image: "/images/cases/bottega-matta.jpg",
     media: [
-      { type: "image", src: "/images/cases/i-peruvia/10.png" },
-      { type: "image", src: "/images/cases/i-peruvia/11.png" },
-      { type: "image", src: "/images/cases/i-peruvia/12.png" },
+      { type: "image", src: "/images/cases/bottega-matta/BM1.png" },
     ],
     stats: [
-      { value: "+340%", label: "traffic" },
-      { value: "2.8×", label: "reservations" },
-      { value: "#1", label: "ranking" },
+      { value: "+620%", label: "revenue" },
+      { value: "3.8×", label: "roas" },
+      { value: "+350%", label: "traffic" },
     ],
-    services: ["seo", "social", "ads"],
+    services: ["web", "seo", "ads", "social", "content"],
   },
   {
     slug: "charme-extensions",
@@ -44,6 +42,22 @@ export const caseStudies: CaseStudy[] = [
     services: ["ads", "seo", "web"],
   },
   {
+    slug: "i-peruvia",
+    category: "ristorazione",
+    image: "/images/cases/i-peruvia.jpg",
+    media: [
+      { type: "image", src: "/images/cases/i-peruvia/10.png" },
+      { type: "image", src: "/images/cases/i-peruvia/11.png" },
+      { type: "image", src: "/images/cases/i-peruvia/12.png" },
+    ],
+    stats: [
+      { value: "+340%", label: "traffic" },
+      { value: "2.8×", label: "reservations" },
+      { value: "#1", label: "ranking" },
+    ],
+    services: ["seo", "social", "ads"],
+  },
+  {
     slug: "nemesis",
     category: "branding",
     image: "/images/cases/nemesis.jpg",
@@ -57,20 +71,6 @@ export const caseStudies: CaseStudy[] = [
       { value: "3×", label: "leads" },
     ],
     services: ["content", "social", "ads"],
-  },
-  {
-    slug: "bottega-matta",
-    category: "artigianato",
-    image: "/images/cases/bottega-matta.jpg",
-    media: [
-      { type: "image", src: "/images/cases/bottega-matta/BM1.png" },
-    ],
-    stats: [
-      { value: "+620%", label: "revenue" },
-      { value: "3.8×", label: "roas" },
-      { value: "+350%", label: "traffic" },
-    ],
-    services: ["web", "seo", "ads", "social", "content"],
   },
   {
     slug: "villa-riviera",
