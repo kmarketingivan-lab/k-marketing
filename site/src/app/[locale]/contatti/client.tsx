@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { SITE } from "@/lib/constants";
 import { ContactForm } from "@/components/forms/contact-form";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ParticleField } from "@/components/ui/particle-field";
 
 export function ContactPageClient() {
@@ -22,6 +23,7 @@ export function ContactPageClient() {
         </div>
 
         <div className="relative z-[1] flex h-full flex-col justify-center">
+          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: t("overline") }]} />
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}

@@ -5,22 +5,11 @@ import { SITE } from "@/lib/constants";
 // backup v1 in: @/components/sections/
 // backup v2 in: @/components/sections-v2/
 // backup v3 in: @/components/sections-v3/
-import dynamic from "next/dynamic";
 import { HeroSection } from "@/components/sections-v4/hero";
 import { TickerBand } from "@/components/sections-v4/ticker";
-
-const ServicesPreview = dynamic(
-  () => import("@/components/sections-v4/services-preview").then((m) => m.ServicesPreview),
-  { ssr: false },
-);
-const SplitPanel = dynamic(
-  () => import("@/components/sections-v4/split-panel").then((m) => m.SplitPanel),
-  { ssr: false },
-);
-const CtaSection = dynamic(
-  () => import("@/components/sections-v4/cta-section").then((m) => m.CtaSection),
-  { ssr: false },
-);
+import { ServicesPreview } from "@/components/sections-v4/services-preview";
+import { SplitPanel } from "@/components/sections-v4/split-panel";
+import { CtaSection } from "@/components/sections-v4/cta-section";
 
 export async function generateMetadata({
   params: { locale },
@@ -82,21 +71,55 @@ const jsonLd = {
       "@type": "LocalBusiness",
       "@id": `${SITE.url}/#localbusiness`,
       name: SITE.name,
+      description:
+        "Agenzia di marketing digitale a Brescia. SEO, pubblicità, siti internet, social media e automazione AI per PMI.",
       url: SITE.url,
       telephone: SITE.phone,
       email: SITE.email,
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Brescia",
         addressLocality: "Brescia",
+        postalCode: "25121",
         addressRegion: "Lombardia",
         addressCountry: "IT",
       },
-      areaServed: {
-        "@type": "Country",
-        name: "Italy",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 45.5416,
+        longitude: 10.2118,
       },
+      areaServed: [
+        { "@type": "City", name: "Brescia" },
+        { "@type": "AdministrativeArea", name: "Provincia di Brescia" },
+        { "@type": "Country", name: "Italy" },
+      ],
       priceRange: "$$",
       image: `${SITE.url}/icon/large`,
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
+        opens: "09:00",
+        closes: "18:00",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Servizi di Marketing Digitale",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO e Posizionamento Google" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Social Media Marketing" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pubblicità Online (Google Ads, Meta Ads)" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI e Automazione Marketing" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Content Marketing" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Siti Internet e Web Development" } },
+        ],
+      },
     },
     {
       "@type": "WebSite",

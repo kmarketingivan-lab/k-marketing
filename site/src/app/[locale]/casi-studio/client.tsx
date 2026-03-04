@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/../../navigation";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ParticleField } from "@/components/ui/particle-field";
 import { caseStudies, sectionThemes } from "@/lib/case-studies";
 import { SITE } from "@/lib/constants";
@@ -22,6 +23,7 @@ export function CaseStudiesListClient() {
           <div className="absolute -left-20 top-1/4 h-[400px] w-[500px] rounded-full bg-orange-500/[0.06] blur-[120px]" />
         </div>
         <div className="relative z-[1] mx-auto max-w-3xl text-center">
+          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: t("overline") }]} />
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}

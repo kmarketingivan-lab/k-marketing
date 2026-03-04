@@ -1,22 +1,22 @@
 {
   "metadata": {
-    "title": "K-Marketing | AI Marketing Systems for SMBs | Brescia, Italy",
-    "description": "We build automated AI marketing systems for ambitious SMBs. SEO, advertising, automation. 20+ projects completed. Brescia, Italy.",
+    "title": "K-Marketing | Digital Marketing Agency in Brescia, Italy — SEO, Web Design, AI",
+    "description": "Digital marketing agency in Brescia, Italy. We build websites, advertising campaigns, SEO and AI automation for SMBs. 20+ projects, measurable results.",
     "servizi": {
-      "title": "Services | K-Marketing — SEO, Ads, AI & Automation",
-      "description": "SEO, advertising, social media, AI and automation. Integrated digital marketing systems for SMBs that want real growth."
+      "title": "Marketing Services Brescia | SEO, Advertising, Web Design — K-Marketing",
+      "description": "Digital marketing services in Brescia: SEO, Google ranking, online advertising, websites, social media, AI and automation for SMBs."
     },
     "casiStudio": {
-      "title": "Case Studies | K-Marketing — Real Results for SMBs",
-      "description": "Real results for real businesses. See how we grew restaurants, e-commerce, hotels and dealerships with digital marketing."
+      "title": "Case Studies | Real Digital Marketing Results in Brescia — K-Marketing",
+      "description": "Real results for SMBs in Brescia and beyond. See how we increased traffic, leads and revenue for restaurants, e-commerce, hotels and dealerships."
     },
     "chiSiamo": {
-      "title": "About Us | K-Marketing — AI Marketing Studio, Brescia",
-      "description": "A digital marketing studio in Brescia, Italy. Automation, AI and custom strategies for ambitious SMBs. 20+ projects, measurable results."
+      "title": "About Us | Digital Marketing Agency Brescia — K-Marketing",
+      "description": "Digital marketing studio in Brescia, Italy. SEO, advertising, web design and AI automation. 20+ projects for SMBs, measurable results."
     },
     "contatti": {
-      "title": "Contact | K-Marketing — Let's Talk About Your Project",
-      "description": "Book a free consultation or fill out the form. We respond within 24 hours. K-Marketing, Brescia, Italy."
+      "title": "Contact | Free Marketing Consultation Brescia — K-Marketing",
+      "description": "Contact our marketing agency in Brescia. Book a free consultation or fill out the form. We respond within 24 hours."
     }
   },
   "nav": {
@@ -28,11 +28,11 @@
     "cta": "Book a Call"
   },
   "hero": {
-    "overline": "AI Marketing Agency · Brescia, Italy",
+    "overline": "Digital Marketing & Advertising Agency · Brescia, Italy",
     "line1": "We make",
     "line2": "your business",
     "line3": "grow.",
-    "subtitle": "Automation, strategy and digital marketing for ambitious SMBs. No fluff — just systems that generate leads and customers.",
+    "subtitle": "Digital marketing agency in Brescia. Websites, advertising, SEO and AI automation for SMBs that want real results — leads, customers and revenue.",
     "cta": "Book a free call",
     "ctaSecondary": "See the results",
     "studioLabel": "Studio — since 2020",
@@ -68,7 +68,7 @@
     "overline": "Our services",
     "title": "Systems that deliver",
     "titleItalic": "results.",
-    "subtitle": "We don't sell packages. We build integrated systems where every piece works together to bring you real customers.",
+    "subtitle": "Digital marketing services in Brescia: SEO, advertising, websites and AI automation. We build integrated systems that bring real customers to your SMB.",
     "cta": "Book a free call",
     "items": {
       "seo": {
@@ -221,11 +221,11 @@
     "overline": "About us",
     "heroTitle": "Not an agency.",
     "heroTitleItalic": "A studio.",
-    "heroSubtitle": "Behind K-Marketing there is a clear vision: building marketing systems that deliver measurable results for SMBs.",
+    "heroSubtitle": "Digital marketing and advertising agency in Brescia, Italy. We build websites, SEO strategies, ad campaigns and AI automation that deliver measurable results for SMBs.",
     "storyOverline": "The story",
     "storyTitle": "A choice born from experience.",
     "storyP1": "In 2020 the digital marketing landscape for small and medium businesses had a clear problem: too many agencies offered standardised services, opaque reporting and strategies that failed to produce measurable outcomes. Companies were investing significant budgets without real visibility into their return on investment.",
-    "storyP2": "From this awareness K-Marketing was founded in Brescia, with a clear mission: to design digital marketing systems built on data, automation and artificial intelligence. An approach where every action is trackable, every investment is justified and every result is measurable.",
+    "storyP2": "From this awareness our marketing agency in Brescia was founded, with a clear mission: to design websites, advertising campaigns and digital marketing systems built on data, automation and artificial intelligence. An approach where every action is trackable, every investment is justified and every result is measurable.",
     "storyP3": "Over five years of operation we have completed more than 20 projects across diverse industries — from restaurants to automotive, from artisan e-commerce to hospitality. Every project is unique, but the guiding principle remains the same: if it does not generate a measurable business impact, it is not part of our strategy.",
     "approachOverline": "The approach",
     "approachTitle": "Where others follow,",
@@ -281,12 +281,12 @@
     "line1": "Let's build",
     "line2": "something",
     "line3": "extraordinary.",
-    "subtitle": "Book a free 30-minute call. We'll analyse your situation and honestly tell you if we can help.",
+    "subtitle": "Looking for a marketing agency in Brescia? Book a free 30-minute call. We'll analyse your situation and honestly tell you if we can help.",
     "cta": "Book a free call",
     "ctaSecondary": "Or write to us"
   },
   "footer": {
-    "tagline": "AI marketing systems for ambitious SMBs.",
+    "tagline": "Digital marketing and advertising agency in Brescia for ambitious SMBs.",
     "location": "Brescia, Italy",
     "nav": "Navigation",
     "servicesTitle": "Services",

@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/case-studies";
+import { SITE } from "@/lib/constants";
 
-const SITE_URL = "https://k-marketing.it";
+const SITE_URL = SITE.url;
 
 const staticRoutes = [
   "",

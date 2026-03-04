@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ParticleField } from "@/components/ui/particle-field";
 import { SITE } from "@/lib/constants";
 
@@ -45,6 +46,7 @@ export function AboutPageClient() {
           <div className="absolute -left-20 bottom-1/4 h-[300px] w-[400px] rounded-full bg-navy-400/[0.06] blur-[100px]" />
         </div>
         <div className="relative z-[1] mx-auto max-w-3xl text-center">
+          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: t("overline") }]} />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

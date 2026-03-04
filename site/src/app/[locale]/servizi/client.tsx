@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ParticleField } from "@/components/ui/particle-field";
 import { SERVICE_KEYS, serviceIcons } from "@/components/ui/service-icons";
 import { SITE } from "@/lib/constants";
@@ -19,6 +20,7 @@ export function ServicesPageClient() {
           <div className="absolute -right-20 top-1/3 h-[400px] w-[500px] rounded-full bg-orange-500/[0.06] blur-[120px]" />
         </div>
         <div className="relative z-[1] mx-auto max-w-3xl text-center">
+          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: t("overline") }]} />
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}

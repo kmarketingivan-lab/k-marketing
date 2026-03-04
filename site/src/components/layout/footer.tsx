@@ -44,7 +44,7 @@ export function Footer() {
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-100/40">{t("servicesTitle")}</h4>
             <ul className="space-y-2.5">
               {serviceKeys.map((key) => (
-                <li key={key}><span className="text-sm text-gray-100/60">{ts(`items.${key}.title`)}</span></li>
+                <li key={key}><Link href="/servizi" className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{ts(`items.${key}.title`)}</Link></li>
               ))}
             </ul>
           </div>

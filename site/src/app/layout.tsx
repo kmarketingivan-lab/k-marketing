@@ -31,6 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html
+      lang="it"
       className={`${plusJakarta.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >

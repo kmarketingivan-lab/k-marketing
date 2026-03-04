@@ -35,11 +35,31 @@ export async function generateMetadata({
   };
 }
 
+function getBreadcrumbJsonLd(locale: string) {
+  const prefix = locale === "it" ? "" : "/en";
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: locale === "it" ? "Chi Siamo" : "About", item: `${SITE.url}${prefix}/chi-siamo` },
+    ],
+  };
+}
+
 export default function ChiSiamoPage({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
   setRequestLocale(locale);
-  return <AboutPageClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbJsonLd(locale)) }}
+      />
+      <AboutPageClient />
+    </>
+  );
 }
