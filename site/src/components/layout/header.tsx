@@ -65,7 +65,9 @@ export function Header() {
     { href: "/", label: t("home") },
     { href: "/servizi", label: t("services") },
     { href: "/casi-studio", label: t("caseStudies") },
+    { href: "/blog", label: t("blog") },
     { href: "/chi-siamo", label: t("about") },
+    { href: "/contatti", label: t("contact") },
   ];
 
   const currentLang = languages.find((l) => l.code === locale) ?? languages[0]!;

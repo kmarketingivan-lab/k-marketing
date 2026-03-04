@@ -17,7 +17,7 @@ export async function generateMetadata({
     description: t("metaDesc"),
     alternates: {
       canonical: url,
-      languages: { it: `${SITE.url}/blog`, en: `${SITE.url}/en/blog` },
+      languages: { it: `${SITE.url}/blog`, en: `${SITE.url}/en/blog`, "x-default": `${SITE.url}/blog` },
     },
     openGraph: {
       title: t("metaTitle"),

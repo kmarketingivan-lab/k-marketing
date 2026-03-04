@@ -42,6 +42,7 @@ export function Footer() {
               <li><Link href="/servizi" className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{t("servicesTitle")}</Link></li>
               <li><Link href="/casi-studio" className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{tn("caseStudies")}</Link></li>
               <li><Link href="/chi-siamo" className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{tn("about")}</Link></li>
+              <li><Link href="/blog" className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{tn("blog")}</Link></li>
               <li><Link href="/contatti" className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{t("contactTitle")}</Link></li>
             </ul>
           </div>

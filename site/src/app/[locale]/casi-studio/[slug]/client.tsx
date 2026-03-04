@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ParticleField } from "@/components/ui/particle-field";
 import { caseStudies } from "@/lib/case-studies";
+import { serviceKeyToSlug } from "@/lib/services";
 import { SITE } from "@/lib/constants";
 import { CaseMediaGallery } from "@/components/ui/case-media";
 
@@ -117,12 +118,13 @@ export function CaseStudyDetailClient({ slug }: { slug: string }) {
           </h3>
           <div className="flex flex-wrap gap-3">
             {cs.services.map((svc) => (
-              <span
+              <Link
                 key={svc}
-                className="rounded-[3px] border border-navy-800/[0.1] px-4 py-2 text-sm font-medium text-navy-800/60 dark:border-gray-100/[0.1] dark:text-gray-100/50"
+                href={`/servizi/${serviceKeyToSlug[svc] ?? svc}`}
+                className="rounded-[3px] border border-navy-800/[0.1] px-4 py-2 text-sm font-medium text-navy-800/60 transition-colors hover:border-orange-500/30 hover:text-orange-500 dark:border-gray-100/[0.1] dark:text-gray-100/50"
               >
                 {tServices(`items.${svc}.title`)}
-              </span>
+              </Link>
             ))}
           </div>
         </motion.div>

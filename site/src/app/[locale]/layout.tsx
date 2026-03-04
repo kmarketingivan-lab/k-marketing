@@ -30,6 +30,12 @@ export default function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      {/* Blocking script: set correct lang attribute before paint (SEO: crawlers see correct lang) */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang="${locale}"`,
+        }}
+      />
       <SetLang locale={locale} />
       <ThemeProvider>
         <CookieConsentProvider>

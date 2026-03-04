@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Link } from "@/../../navigation";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ParticleField } from "@/components/ui/particle-field";
 import { SERVICE_KEYS, serviceIcons } from "@/components/ui/service-icons";
+import { serviceKeyToSlug } from "@/lib/services";
 import { SITE } from "@/lib/constants";
 
 export function ServicesPageClient() {
@@ -47,6 +49,7 @@ export function ServicesPageClient() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_KEYS.map((key, i) => {
             const features = t.raw(`items.${key}.features`) as Array<{ title: string; desc: string }>;
+            const slug = serviceKeyToSlug[key];
             return (
               <motion.article
                 key={key}
@@ -58,8 +61,10 @@ export function ServicesPageClient() {
               >
                 {/* Icon + Title */}
                 <div className="mb-2 text-orange-500">{serviceIcons[key]}</div>
-                <h2 className="mb-3 text-[clamp(1.3rem,2.5vw,1.7rem)] font-semibold leading-tight tracking-tight text-navy-800 dark:text-gray-100">
-                  {t(`items.${key}.title`)}
+                <h2 className="mb-3 text-[clamp(1.3rem,2.5vw,1.7rem)] font-semibold leading-tight tracking-tight text-navy-800 transition-colors group-hover:text-orange-500 dark:text-gray-100">
+                  <Link href={`/servizi/${slug}`}>
+                    {t(`items.${key}.title`)}
+                  </Link>
                 </h2>
                 <p className="mb-8 text-sm font-light leading-[1.75] text-navy-700/60 dark:text-gray-100/50">
                   {t(`items.${key}.desc`)}
@@ -81,6 +86,13 @@ export function ServicesPageClient() {
                     </div>
                   ))}
                 </div>
+
+                <Link
+                  href={`/servizi/${slug}`}
+                  className="mt-6 inline-flex items-center text-sm font-medium text-orange-500 transition-colors hover:text-orange-400"
+                >
+                  {t("readMore")} →
+                </Link>
               </motion.article>
             );
           })}

@@ -30,6 +30,7 @@ export async function generateMetadata({
       languages: {
         it: `${SITE.url}/casi-studio/${slug}`,
         en: `${SITE.url}/en/casi-studio/${slug}`,
+        "x-default": `${SITE.url}/casi-studio/${slug}`,
       },
     },
     openGraph: {

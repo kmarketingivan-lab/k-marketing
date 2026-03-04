@@ -18,3 +18,13 @@ export const slugToServiceKey: Record<ServiceSlug, string> = {
   "automazione-ai-brescia": "ai",
   "content-marketing-brescia": "content",
 };
+
+/** Map service key → slug (reverse lookup) */
+export const serviceKeyToSlug: Record<string, ServiceSlug> = {
+  seo: "seo-brescia",
+  ads: "pubblicita-online-brescia",
+  web: "siti-internet-brescia",
+  social: "social-media-brescia",
+  ai: "automazione-ai-brescia",
+  content: "content-marketing-brescia",
+};

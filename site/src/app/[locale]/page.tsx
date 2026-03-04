@@ -25,7 +25,7 @@ export async function generateMetadata({
     description: t("description"),
     alternates: {
       canonical: url,
-      languages: { it: SITE.url, en: `${SITE.url}/en` },
+      languages: { it: SITE.url, en: `${SITE.url}/en`, "x-default": SITE.url },
     },
     openGraph: {
       title: t("title"),
@@ -67,6 +67,10 @@ const jsonLd = {
         name: SITE.founder,
       },
       foundingDate: String(SITE.foundedYear),
+      sameAs: [
+        "https://www.instagram.com/k.marketing_brescia/",
+        "https://www.linkedin.com/company/k-marketing-brescia",
+      ],
     },
     {
       "@type": "LocalBusiness",
@@ -121,6 +125,10 @@ const jsonLd = {
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Siti Internet e Web Development" } },
         ],
       },
+      sameAs: [
+        "https://www.instagram.com/k.marketing_brescia/",
+        "https://www.linkedin.com/company/k-marketing-brescia",
+      ],
     },
     {
       "@type": "WebSite",
@@ -129,14 +137,6 @@ const jsonLd = {
       url: SITE.url,
       inLanguage: ["it", "en"],
       publisher: { "@id": `${SITE.url}/#organization` },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${SITE.url}/casi-studio?q={search_term_string}`,
-        },
-        "query-input": "required name=search_term_string",
-      },
     },
   ],
 };

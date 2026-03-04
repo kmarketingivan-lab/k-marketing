@@ -17,7 +17,7 @@ export async function generateMetadata({
     description: t("casiStudio.description"),
     alternates: {
       canonical: url,
-      languages: { it: `${SITE.url}/casi-studio`, en: `${SITE.url}/en/casi-studio` },
+      languages: { it: `${SITE.url}/casi-studio`, en: `${SITE.url}/en/casi-studio`, "x-default": `${SITE.url}/casi-studio` },
     },
     openGraph: {
       title: t("casiStudio.title"),
