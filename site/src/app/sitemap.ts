@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/case-studies";
 import { SITE } from "@/lib/constants";
+import { SERVICE_SLUGS } from "@/lib/services";
+import { BLOG_SLUGS } from "@/lib/blog";
 
 const SITE_URL = SITE.url;
 
@@ -10,6 +12,7 @@ const staticRoutes = [
   "/casi-studio",
   "/chi-siamo",
   "/contatti",
+  "/blog",
   "/privacy",
   "/cookies",
   "/termini",
@@ -78,5 +81,57 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  return [...itPages, ...enPages, ...itCaseStudies, ...enCaseStudies];
+  const itServices: MetadataRoute.Sitemap = SERVICE_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/servizi/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+    alternates: {
+      languages: {
+        it: `${SITE_URL}/servizi/${slug}`,
+        en: `${SITE_URL}/en/servizi/${slug}`,
+      },
+    },
+  }));
+
+  const enServices: MetadataRoute.Sitemap = SERVICE_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/en/servizi/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+    alternates: {
+      languages: {
+        it: `${SITE_URL}/servizi/${slug}`,
+        en: `${SITE_URL}/en/servizi/${slug}`,
+      },
+    },
+  }));
+
+  const itBlog: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/blog/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+    alternates: {
+      languages: {
+        it: `${SITE_URL}/blog/${slug}`,
+        en: `${SITE_URL}/en/blog/${slug}`,
+      },
+    },
+  }));
+
+  const enBlog: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/en/blog/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+    alternates: {
+      languages: {
+        it: `${SITE_URL}/blog/${slug}`,
+        en: `${SITE_URL}/en/blog/${slug}`,
+      },
+    },
+  }));
+
+  return [...itPages, ...enPages, ...itServices, ...enServices, ...itBlog, ...enBlog, ...itCaseStudies, ...enCaseStudies];
 }

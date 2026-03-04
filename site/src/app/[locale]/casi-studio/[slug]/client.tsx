@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/../../navigation";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ParticleField } from "@/components/ui/particle-field";
 import { caseStudies } from "@/lib/case-studies";
 import { SITE } from "@/lib/constants";
@@ -26,6 +27,11 @@ export function CaseStudyDetailClient({ slug }: { slug: string }) {
       <section className="grain relative overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 px-6 py-24 md:px-12 md:py-32">
         <ParticleField color="237,236,237" particleCount={300} maxConnectionDist={0} mouseRadius={300} />
         <div className="relative z-[1]">
+          <Breadcrumb items={[
+            { label: "Home", href: "/" },
+            { label: t("overline"), href: "/casi-studio" },
+            { label: t(`items.${slug}.title`) },
+          ]} />
           <Link
             href="/casi-studio"
             className="mb-8 inline-flex items-center text-sm font-medium text-gray-100/40 transition-colors hover:text-orange-400"

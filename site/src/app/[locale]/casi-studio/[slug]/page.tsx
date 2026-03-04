@@ -48,7 +48,20 @@ export async function generateMetadata({
   };
 }
 
-export default function CaseStudyPage({
+function getBreadcrumbJsonLd(locale: string, slug: string, title: string) {
+  const prefix = locale === "it" ? "" : "/en";
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${prefix}` },
+      { "@type": "ListItem", position: 2, name: locale === "it" ? "Casi Studio" : "Case Studies", item: `${SITE.url}${prefix}/casi-studio` },
+      { "@type": "ListItem", position: 3, name: title, item: `${SITE.url}${prefix}/casi-studio/${slug}` },
+    ],
+  };
+}
+
+export default async function CaseStudyPage({
   params: { locale, slug },
 }: {
   params: { locale: string; slug: string };
@@ -56,5 +69,15 @@ export default function CaseStudyPage({
   setRequestLocale(locale);
   const cs = caseStudies.find((c) => c.slug === slug);
   if (!cs) notFound();
-  return <CaseStudyDetailClient slug={slug} />;
+  const t = await getTranslations({ locale, namespace: "caseStudiesPage" });
+  const title = t(`items.${slug}.title`);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbJsonLd(locale, slug, title)) }}
+      />
+      <CaseStudyDetailClient slug={slug} />
+    </>
+  );
 }

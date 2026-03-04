@@ -375,6 +375,146 @@
       "content": "The use of this website is subject to the following conditions.\n\nAll published content is the property of K-Marketing di Ivan Crescini. Reproduction without authorisation is prohibited.\n\nThe information provided is for informational purposes only and does not constitute a contractual offer.\n\nFor any dispute, the competent court is that of Brescia, Italy."
     }
   },
+  "blog": {
+    "overline": "Blog",
+    "title": "Digital marketing strategies",
+    "titleItalic": "and insights",
+    "subtitle": "Practical guides, market analysis and proven strategies for SMBs looking to grow online. Articles based on our real experience with clients in Brescia.",
+    "readMore": "Read article →",
+    "metaTitle": "Digital Marketing Blog Brescia | SEO, Ads, Web Guides — K-Marketing",
+    "metaDesc": "Digital marketing blog from Brescia. Practical guides on SEO, online advertising, websites and strategies for SMBs. Articles based on real results.",
+    "posts": {
+      "come-scegliere-agenzia-marketing-brescia": {
+        "title": "How to choose a marketing agency in Brescia: complete 2026 guide",
+        "excerpt": "The 7 key criteria for choosing the right agency, mistakes to avoid and questions to ask before signing a contract.",
+        "body": "Choosing a marketing agency in Brescia can seem complicated. The market is full of offers and promises, but how do you distinguish those who deliver real results from those who sell smoke?\n\nIn this guide we share the criteria that Brescia SMBs should evaluate before engaging a digital marketing agency.\n\n## 1. Demonstrable results with real case studies\n\nThe first thing to check is whether the agency can show concrete results with real clients. Not generic slides, but numbers: how much traffic did they generate? How many leads? What is the campaign ROAS?\n\n## 2. Digital specialisation\n\nDigital marketing requires specific skills: technical SEO, Google Ads management, analytics, automation. Be wary of agencies that do \"everything.\" Look for digital specialists with demonstrable expertise.\n\n## 3. Transparency on costs and results\n\nA serious agency tells you clearly how much the service costs, what it includes and what results you can expect. Detailed monthly reports with clear metrics are the minimum.\n\n## 4. Local market knowledge\n\nFor Brescia SMBs, local market knowledge is crucial. An agency that knows the territory, local competitors and consumer behaviour has a significant advantage.\n\n## 5. Modern technologies\n\nDigital marketing evolves rapidly. Verify that the agency uses up-to-date tools and technologies.\n\n## 6. Right size\n\nLarge agencies often relegate small clients to inexperienced juniors. Smaller, specialised structures can offer direct attention and continuity.\n\n## 7. Clear, measurable objectives\n\nBefore starting any collaboration, the agency should define SMART objectives. If they don't talk about KPIs and metrics, they probably don't measure them."
+      },
+      "quanto-costa-sito-internet-brescia": {
+        "title": "How much does a website cost in Brescia in 2026? Prices and guide",
+        "excerpt": "Real prices for websites in Brescia: brochure sites, e-commerce, web apps. What influences cost and how to choose the right budget.",
+        "body": "\"How much does a website cost?\" is the question we receive most often from Brescia SMBs. The honest answer is: it depends. But in this guide we give you real numbers based on our experience.\n\n## Average prices in Brescia in 2026\n\n### Brochure site (5-10 pages)\n**€2,000 — €5,000**\n\n### Website with blog\n**€3,000 — €7,000**\n\n### E-commerce\n**€5,000 — €15,000+**\n\n### Custom web app\n**€10,000 — €30,000+**\n\n## What influences the price\n\nCustom design, number of pages, SEO optimisation, and technology choice all affect pricing. A professional website is an investment that pays for itself through leads and customers generated."
+      },
+      "seo-locale-brescia-guida-completa": {
+        "title": "Local SEO in Brescia: complete guide to ranking on Google in 2026",
+        "excerpt": "How local SEO works, why it's essential for Brescia SMBs and practical strategies for ranking in Google's Local Pack.",
+        "body": "Local SEO is the most important strategy for SMBs in Brescia that want to be found on Google by local customers. When someone searches for \"restaurant Brescia\" or \"dentist Brescia\", Google shows local results — and you want to be among the first.\n\n## What is local SEO\n\nLocal SEO is the set of techniques for ranking in geolocalised searches. It includes website optimisation for local keywords, Google Business Profile management and building citations and reviews.\n\n## Google's Local Pack\n\nThe Local Pack captures 44% of clicks in local searches — being here is fundamental.\n\n## Local ranking factors in 2026\n\nAccording to the Whitespark 2026 study:\n- Google Business Profile: 32%\n- Reviews: 20%\n- On-page signals: 18%\n- Links: 13%\n\nConsistent work on all these factors is key to achieving and maintaining local search visibility."
+      }
+    }
+  },
+  "serviceDetail": {
+    "ctaTitle": "Want this service for your business?",
+    "ctaSub": "Book a free 30-minute consultation. We'll analyse your situation and tell you how we can help.",
+    "cta": "Book a free consultation",
+    "faqTitle": "Frequently asked questions",
+    "seo": {
+      "metaTitle": "SEO Brescia | Google Ranking for SMBs — K-Marketing",
+      "metaDesc": "SEO services in Brescia for SMBs. Google ranking, technical audits, keyword strategy and optimised content. Measurable results, free consultation.",
+      "heroTitle": "SEO and Google Ranking",
+      "heroTitleItalic": "in Brescia",
+      "heroSub": "We help you get found on Google when your customers search for your services. Technical SEO strategy and optimised content to position your business on page one.",
+      "body": "Organic ranking on Google is the most effective and sustainable customer acquisition channel for SMBs in Brescia. Unlike paid advertising, SEO results compound over time: every month your site gains more authority, more traffic and more leads.\n\nOur approach to SEO in Brescia starts with a full technical audit of your website. We analyse structure, load speed, indexing and every factor that could be holding back your ranking. We identify strategic keywords your potential customers use — not generic terms, but queries with commercial intent that bring qualified contacts.\n\nAfter the initial analysis, we build an SEO editorial plan with optimised content to answer your customers' questions. Every page, every article is designed to rank on Google and convert visitors into leads. We constantly monitor positions, traffic and conversions with clear monthly reports.\n\nFor Brescia businesses operating in local markets, local SEO is essential. We optimise your Google Business Profile, build consistent citations and work on reviews to position you in the Local Pack — the top three Google Maps positions that capture 44% of clicks in local searches.",
+      "faq": [
+        { "question": "How much does SEO cost in Brescia?", "answer": "Our SEO packages start from €500/month for basic activities (audit + on-page optimisation) up to €2,000+/month for complete strategies with content marketing and link building. The cost depends on sector competitiveness and goals." },
+        { "question": "How long before I see SEO results?", "answer": "Initial improvements typically appear within 3-4 months. For competitive keywords, stable results require 6-12 months. For local and less competitive keywords, results can arrive in 2-3 months." },
+        { "question": "Can I do SEO and Google Ads together?", "answer": "Absolutely, and we recommend it. Google Ads delivers immediate results while SEO builds long-term organic traffic. The two strategies reinforce each other." }
+      ]
+    },
+    "ads": {
+      "metaTitle": "Online Advertising Brescia | Google Ads & Meta Ads — K-Marketing",
+      "metaDesc": "Online advertising campaigns in Brescia: Google Ads, Meta Ads for SMBs. Measurable ROI, precise targeting. Free consultation.",
+      "heroTitle": "Online Advertising",
+      "heroTitleItalic": "in Brescia",
+      "heroSub": "Google Ads and Meta Ads campaigns with one goal: positive ROI. Every euro invested must come back multiplied.",
+      "body": "Online advertising is the fastest way to generate leads and customers for your business in Brescia. With Google Ads you reach people actively searching for your services. With Meta Ads (Facebook and Instagram) you target potential customers based on interests, behaviours and demographics.\n\nOur approach to digital advertising in Brescia always starts with analysing your market and competitors. We configure conversion tracking from day one, because without accurate data, optimisation is impossible. We structure campaigns with full funnels: awareness to get discovered, consideration to build interest, retargeting to convert site visitors.\n\nTargeting is surgical. We don't waste budget on generic audiences. We use lookalike audiences, personalised retargeting and intent-based audiences to reach the right people at the right time. Every week we analyse performance and optimise: shift budget where it performs best, test new creatives and adjust targeting.\n\nWe provide weekly reports with clear metrics: spend, impressions, clicks, leads generated and cost per acquisition. Our minimum target is 3× ROAS — for every euro invested, at least three come back.",
+      "faq": [
+        { "question": "How much budget do I need for advertising campaigns?", "answer": "The minimum recommended budget is €500-1,000/month for Google Ads and €300-800/month for Meta Ads, plus our management fee. The optimal budget depends on your sector and keyword competitiveness." },
+        { "question": "How much does a lead cost with online campaigns?", "answer": "Cost per lead varies significantly by sector: from €5-15 for low-competition local services to €30-80 for highly competitive sectors. Our goal is always to lower the cost per lead month over month." },
+        { "question": "Google Ads or Meta Ads: which should I choose?", "answer": "It depends on your business. Google Ads is ideal for services with high search intent. Meta Ads is better for visual products, brand awareness and retargeting. Often the best strategy combines both." }
+      ]
+    },
+    "web": {
+      "metaTitle": "Websites Brescia | Professional Web Design for SMBs — K-Marketing",
+      "metaDesc": "Professional website development in Brescia. Websites, e-commerce, web apps. Fast, modern, SEO-optimised. Free quote.",
+      "heroTitle": "Websites",
+      "heroTitleItalic": "in Brescia",
+      "heroSub": "Fast, modern websites and applications designed to convert visitors into customers. Cutting-edge technology focused on performance and UX.",
+      "body": "A professional website is the foundation of any digital marketing strategy in Brescia. It's your best salesperson: working 24/7, often the first point of contact with potential customers.\n\nThe websites we build in Brescia aren't simple brochures. They're business tools designed to convert: modern design that communicates professionalism, SEO-optimised structure, excellent loading speed and UX designed to guide visitors toward action.\n\nWe use Next.js as our primary framework, the same technology used by Netflix, Nike and TikTok. This means sites that load instantly, perform perfectly on mobile and score excellently on Google's Core Web Vitals — an important ranking factor.\n\nFor e-commerce, we design simplified checkouts, automatic upsell systems and integrations with major payment gateways. Every project includes maintenance, security updates and ongoing support.",
+      "faq": [
+        { "question": "How much does a website cost in Brescia?", "answer": "A professional brochure website starts from €2,000-3,000. For e-commerce, costs range from €5,000 to €15,000+ depending on complexity. We offer free personalised quotes." },
+        { "question": "How long does it take to build a website?", "answer": "A brochure site takes 3-6 weeks. A full e-commerce takes 6-12 weeks. Timelines depend on project complexity and how quickly you provide content and feedback." },
+        { "question": "Will the site be mobile and SEO optimised?", "answer": "Absolutely. All our sites are responsive and SEO-optimised from day one: semantic structure, meta tags, loading speed, sitemap and schema markup." }
+      ]
+    },
+    "social": {
+      "metaTitle": "Social Media Marketing Brescia | Social Management for SMBs — K-Marketing",
+      "metaDesc": "Social media management in Brescia for SMBs. Instagram, Facebook, LinkedIn. Editorial planning, content, community management. Measurable results.",
+      "heroTitle": "Social Media Marketing",
+      "heroTitleItalic": "in Brescia",
+      "heroSub": "Strategic content that brings customers, not just followers. We manage your social media with a clear goal: generate business.",
+      "body": "Social media is the daily touchpoint between your brand and potential customers in Brescia. But posting isn't enough — you need a strategy that turns followers into customers.\n\nOur social media marketing service in Brescia starts with analysing your target audience and competitors. We define a strategic editorial plan where every piece of content has a clear objective.\n\nWe create content for Instagram, Facebook, LinkedIn and other relevant platforms. Professional graphics, persuasive copy, short videos and Reels. Every piece communicates your brand positioning and builds trust over time.\n\nWe manage the community with professional responses to comments and direct messages. We constantly monitor performance and optimise strategy monthly based on real data.",
+      "faq": [
+        { "question": "How many posts do you publish per month?", "answer": "The standard plan includes 12-16 posts per month (3-4 per week) across the most effective formats. The exact volume depends on the platform and sector." },
+        { "question": "Do social media really matter for B2B?", "answer": "Yes, especially LinkedIn. For B2B, social media builds authority, enables networking and generates qualified leads. 75% of B2B decision makers use social media in the purchasing process." },
+        { "question": "How do you measure social media results?", "answer": "With concrete metrics: reach, engagement rate, website clicks, leads generated and conversions. We provide detailed monthly reports showing the real business impact." }
+      ]
+    },
+    "ai": {
+      "metaTitle": "AI Marketing Automation Brescia | Chatbots & Workflows — K-Marketing",
+      "metaDesc": "AI marketing automation in Brescia. Intelligent chatbots, email automation, lead scoring, automated workflows for SMBs. Free consultation.",
+      "heroTitle": "AI and Automation",
+      "heroTitleItalic": "in Brescia",
+      "heroSub": "Intelligent systems working 24/7 for you. Chatbots, automated emails, lead scoring and workflows that turn contacts into customers.",
+      "body": "Artificial intelligence is revolutionising digital marketing and SMBs in Brescia can benefit enormously. Our AI automation systems work around the clock to qualify leads, respond to customers, send personalised communications and optimise campaigns.\n\nThe AI chatbots we develop aren't simple auto-responders. They're intelligent virtual assistants that understand customer questions, provide accurate answers and can qualify leads, book appointments and collect information — all without human intervention.\n\nAutomated email marketing is another pillar. We create email sequences that nurture contacts over time: from first interaction to purchase. Welcome emails, educational sequences, abandoned cart reminders, post-purchase follow-ups.\n\nAI lead scoring automatically evaluates every contact based on behaviour: pages visited, emails opened, content interactions. It flags only purchase-ready leads so your sales team doesn't waste time.",
+      "faq": [
+        { "question": "What is an AI chatbot and how does it work?", "answer": "An AI chatbot is a virtual assistant on your website that intelligently answers visitor questions. It uses artificial intelligence to understand queries and provide accurate responses. It can qualify leads, book appointments and collect information 24/7." },
+        { "question": "Will automation replace my team?", "answer": "No, it empowers them. Automation handles repetitive, low-value tasks (FAQ responses, follow-ups, initial qualification) freeing your team for high-value activities." },
+        { "question": "How much does AI automation cost?", "answer": "A basic system (chatbot + email automation) starts from €1,500-2,500 setup plus €500-800/month management. Complex systems with advanced AI and custom integrations may require greater investment." }
+      ]
+    },
+    "content": {
+      "metaTitle": "Content Marketing Brescia | Blog, Video, Newsletter — K-Marketing",
+      "metaDesc": "Content marketing in Brescia for SMBs. SEO blog, newsletters, video, strategic content that generates traffic and qualified leads. Free consultation.",
+      "heroTitle": "Content Marketing",
+      "heroTitleItalic": "in Brescia",
+      "heroSub": "Content that educates, entertains and converts. Blogs, newsletters, video — every piece builds authority and drives qualified traffic.",
+      "body": "Content marketing transforms your business from unknown to authoritative in your sector in Brescia. By creating valuable content — articles, guides, videos, newsletters — you attract qualified traffic, build trust and generate leads without paying for every click.\n\nOur content marketing approach in Brescia is data-driven. We analyse what your audience searches on Google, identify gaps in competitor content and create a strategic editorial plan.\n\nThe SEO articles we create rank on Google and bring consistent organic traffic over time. Every article is optimised with keyword research, semantic structure, internal links and meta tags.\n\nNewsletters and email marketing keep contacts warm. Regular communications build relationships and naturally guide them toward purchase. Multimedia content — video, infographics, case studies — increases engagement and makes your brand memorable.",
+      "faq": [
+        { "question": "How many articles per month do I need for SEO?", "answer": "For an effective strategy we recommend 2-4 quality articles per month, 1,500-2,500 words each. Quality matters more than quantity: one well-crafted article that ranks on Google is worth more than ten generic ones." },
+        { "question": "How long before content generates traffic?", "answer": "A well-optimised SEO article starts ranking on Google after 2-4 months from publication. The effect is cumulative: the more quality content you publish, the more authority your site gains." },
+        { "question": "Do you create video content?", "answer": "Yes, we offer video content marketing services: brand videos, social Reels, tutorials and testimonials. Video increases engagement by 200% versus text content." }
+      ]
+    }
+  },
+  "faq": {
+    "overline": "Frequently asked questions",
+    "title": "Answers to the most common questions",
+    "items": [
+      {
+        "question": "How much does it cost to hire a marketing agency in Brescia?",
+        "answer": "Costs vary based on goals and services required. Our packages start from €500/month for single activities (e.g., SEO only) up to €3,000+/month for complete integrated systems. We offer a free 30-minute consultation to analyse your situation and provide a no-obligation custom quote."
+      },
+      {
+        "question": "How long does it take to see results with SEO in Brescia?",
+        "answer": "Initial ranking improvements on Google typically appear within 3-4 months. For competitive keywords like 'marketing Brescia', stable page-one results require 6-12 months of consistent work. For less competitive or local keywords, results can arrive in as little as 2-3 months."
+      },
+      {
+        "question": "What is the difference between SEO and paid advertising?",
+        "answer": "SEO (organic ranking) delivers lasting results over time without per-click costs, but requires months of work. Paid advertising (Google Ads, Meta Ads) delivers immediate results but stops when you stop paying. The ideal strategy combines both: advertising for immediate results while SEO builds long-term organic traffic."
+      },
+      {
+        "question": "How do I know if the marketing is working?",
+        "answer": "We provide detailed monthly reports with clear metrics: Google ranking, website traffic, leads generated, cost per acquisition and ROAS (return on ad spend). Our minimum target is 3× ROAS, meaning for every euro invested, at least three come back."
+      },
+      {
+        "question": "Do you only work with businesses in Brescia?",
+        "answer": "Our office is in Brescia and most clients are in the Brescia province and northern Italy. However, we also work with businesses across Italy through regular calls and digital collaboration tools. Proximity is not a requirement."
+      },
+      {
+        "question": "How much does it cost to build a website in Brescia?",
+        "answer": "A professional website with modern design, mobile-optimised and SEO-ready starts from €2,000-3,000 for brochure sites. For e-commerce or custom web apps, costs range from €5,000 to €15,000+ depending on complexity. All our sites are built with modern technology (Next.js) to ensure excellent speed and performance."
+      }
+    ]
+  },
   "common": {
     "readMore": "Read more →",
     "backHome": "Back to home",

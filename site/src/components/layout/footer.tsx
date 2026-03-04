@@ -9,7 +9,14 @@ export function Footer() {
   const ts = useTranslations("services");
   const tn = useTranslations("nav");
 
-  const serviceKeys = ["seo", "social", "ads", "ai", "content", "web"] as const;
+  const serviceLinks: Array<{ key: string; slug: string }> = [
+    { key: "seo", slug: "seo-brescia" },
+    { key: "social", slug: "social-media-brescia" },
+    { key: "ads", slug: "pubblicita-online-brescia" },
+    { key: "ai", slug: "automazione-ai-brescia" },
+    { key: "content", slug: "content-marketing-brescia" },
+    { key: "web", slug: "siti-internet-brescia" },
+  ];
 
   return (
     <footer className="border-t border-gray-100/[0.06] bg-navy-900">
@@ -43,8 +50,8 @@ export function Footer() {
           <div>
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-100/40">{t("servicesTitle")}</h4>
             <ul className="space-y-2.5">
-              {serviceKeys.map((key) => (
-                <li key={key}><Link href="/servizi" className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{ts(`items.${key}.title`)}</Link></li>
+              {serviceLinks.map(({ key, slug }) => (
+                <li key={key}><Link href={`/servizi/${slug}`} className="text-sm text-gray-100/60 transition-colors hover:text-orange-400">{ts(`items.${key}.title`)}</Link></li>
               ))}
             </ul>
           </div>

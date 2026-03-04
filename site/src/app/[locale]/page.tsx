@@ -10,6 +10,7 @@ import { TickerBand } from "@/components/sections-v4/ticker";
 import { ServicesPreview } from "@/components/sections-v4/services-preview";
 import { SplitPanel } from "@/components/sections-v4/split-panel";
 import { CtaSection } from "@/components/sections-v4/cta-section";
+import { HomeFaq } from "@/components/sections-v4/home-faq";
 
 export async function generateMetadata({
   params: { locale },
@@ -156,6 +157,7 @@ export default function HomePage({
       <TickerBand />
       <ServicesPreview />
       <SplitPanel />
+      <HomeFaq />
       <CtaSection />
     </>
   );

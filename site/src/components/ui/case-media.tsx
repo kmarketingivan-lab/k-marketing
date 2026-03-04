@@ -114,10 +114,28 @@ export function CaseMediaGallery({
   );
 }
 
-/* ── Video player with loop + pause ── */
+/* ── Video player with loop + pause + lazy load ── */
 function VideoPlayer({ src, compact = false }: { src: string; compact?: boolean }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [paused, setPaused] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  // Lazy load: only set src when video enters viewport
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const setupObserver = (node: HTMLDivElement | null) => {
+    if (observerRef.current) observerRef.current.disconnect();
+    if (!node) return;
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setLoaded(true);
+          observerRef.current?.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observerRef.current.observe(node);
+  };
 
   const toggle = () => {
     if (!ref.current) return;
@@ -131,32 +149,49 @@ function VideoPlayer({ src, compact = false }: { src: string; compact?: boolean 
   };
 
   return (
-    <div className="group relative cursor-pointer overflow-hidden rounded-[3px]" onClick={toggle}>
-      <video
-        ref={ref}
-        src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={compact ? "h-auto max-h-[300px] w-auto max-w-full" : "h-auto w-full"}
-      />
-      {/* Pause/play overlay */}
-      <div
-        className={`absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity ${paused ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
-      >
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg">
-          {paused ? (
-            <svg className="ml-0.5 h-6 w-6 text-navy-800" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          ) : (
-            <svg className="h-6 w-6 text-navy-800" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-            </svg>
-          )}
+    <div
+      ref={setupObserver}
+      className="group relative cursor-pointer overflow-hidden rounded-[3px]"
+      onClick={toggle}
+    >
+      {loaded ? (
+        <video
+          ref={ref}
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className={compact ? "h-auto max-h-[300px] w-auto max-w-full" : "h-auto w-full"}
+        />
+      ) : (
+        <div
+          className={`flex items-center justify-center bg-navy-900 ${compact ? "h-[300px] max-w-full" : "aspect-video w-full"}`}
+        >
+          <svg className="h-12 w-12 animate-pulse text-white/20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
         </div>
-      </div>
+      )}
+      {/* Pause/play overlay */}
+      {loaded && (
+        <div
+          className={`absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity ${paused ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
+        >
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg">
+            {paused ? (
+              <svg className="ml-0.5 h-6 w-6 text-navy-800" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6 text-navy-800" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+              </svg>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
