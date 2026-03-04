@@ -165,7 +165,7 @@ export function CaseStudyDetailClient({ slug }: { slug: string }) {
               {t("cta")}
             </h2>
             <Button variant="primary" size="lg" asChild>
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="h-auto whitespace-normal py-3 text-sm md:text-[17px]">{t("cta")}</a>
             </Button>
           </motion.div>
         </div>
