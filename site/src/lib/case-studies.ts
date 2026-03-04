@@ -62,7 +62,9 @@ export const caseStudies: CaseStudy[] = [
     slug: "bottega-matta",
     category: "artigianato",
     image: "/images/cases/bottega-matta.jpg",
-    media: [],
+    media: [
+      { type: "image", src: "/images/cases/bottega-matta/BM1.png" },
+    ],
     stats: [
       { value: "+620%", label: "revenue" },
       { value: "3.8×", label: "roas" },
