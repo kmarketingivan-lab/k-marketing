@@ -52,7 +52,7 @@ export function CaseStudiesListClient() {
         return (
           <section
             key={cs.slug}
-            className={`${theme.grain} relative overflow-hidden ${theme.bg} px-6 py-20 md:px-12 md:py-28`}
+            className={`${theme.grain} relative overflow-hidden ${theme.bg} px-6 py-20 md:px-12 md:py-28 min-h-[75vh] flex flex-col justify-center`}
           >
             <ParticleField
               color={theme.particles}

@@ -25,7 +25,7 @@ export function CaseMediaPreview({
   }
 
   if (first.type === "video") {
-    return <VideoPlayer src={first.src} compact />;
+    return <VideoPlayer src={first.src} />;
   }
 
   return (
@@ -34,7 +34,7 @@ export function CaseMediaPreview({
       alt={fallbackTitle}
       width={1200}
       height={900}
-      className="h-auto max-h-[300px] w-auto max-w-full transition-transform duration-500 ease-out group-hover:scale-105"
+      className="h-auto w-full rounded-[3px] transition-transform duration-500 ease-out group-hover:scale-105"
     />
   );
 }
@@ -115,7 +115,7 @@ export function CaseMediaGallery({
 }
 
 /* ── Video player with loop + pause + lazy load ── */
-function VideoPlayer({ src, compact = false }: { src: string; compact?: boolean }) {
+function VideoPlayer({ src }: { src: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [paused, setPaused] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -163,11 +163,11 @@ function VideoPlayer({ src, compact = false }: { src: string; compact?: boolean 
           muted
           playsInline
           preload="metadata"
-          className={compact ? "h-auto max-h-[300px] w-auto max-w-full" : "h-auto w-full"}
+          className="h-auto w-full rounded-[3px]"
         />
       ) : (
         <div
-          className={`flex items-center justify-center bg-navy-900 ${compact ? "h-[300px] max-w-full" : "aspect-video w-full"}`}
+          className="flex aspect-video w-full items-center justify-center rounded-[3px] bg-navy-900"
         >
           <svg className="h-12 w-12 animate-pulse text-white/20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z" />
@@ -206,7 +206,7 @@ function GradientPlaceholder({
 }) {
   return (
     <div
-      className={`aspect-[4/3] w-full bg-gradient-to-br ${caseStudyColors[slug] || "from-gray-600 to-gray-800"} flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-105`}
+      className={`aspect-video w-full rounded-[3px] bg-gradient-to-br ${caseStudyColors[slug] || "from-gray-600 to-gray-800"} flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-105`}
     >
       <span className="text-[4rem] font-bold text-white/20 select-none">
         {fallbackTitle.charAt(0)}
