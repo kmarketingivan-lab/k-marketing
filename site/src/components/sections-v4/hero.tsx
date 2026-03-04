@@ -49,15 +49,15 @@ export function HeroSection() {
             className="font-sans leading-[0.92]"
           >
             <span
-              className="block text-[clamp(2.8rem,14vw,12rem)] font-extrabold tracking-tight text-transparent"
+              className="block text-[clamp(3.05rem,14vw,12rem)] font-extrabold tracking-tight text-transparent"
               style={{ WebkitTextStroke: "1.5px #edeced" }}
             >
               {t("line1")}
             </span>
-            <span className="block text-[clamp(2.8rem,14vw,12rem)] font-extrabold tracking-tight text-orange-500">
+            <span className="block text-[clamp(3.05rem,14vw,12rem)] font-extrabold tracking-tight text-orange-500">
               {t("line2")}
             </span>
-            <span className="block text-[clamp(2.8rem,14vw,12rem)] font-light italic tracking-tight text-gray-100/40">
+            <span className="block text-[clamp(3.05rem,14vw,12rem)] font-light italic tracking-tight text-gray-100/40">
               {t("line3")}
             </span>
           </motion.h1>
