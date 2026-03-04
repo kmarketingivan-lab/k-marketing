@@ -19,6 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
+  verification: {
+    google: "QDCG4gzIB3AjN502fm74Slw9Kf_PxwEJNPVij4NIO4k",
+  },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
