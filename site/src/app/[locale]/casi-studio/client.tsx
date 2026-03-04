@@ -52,7 +52,7 @@ export function CaseStudiesListClient() {
         return (
           <section
             key={cs.slug}
-            className={`${theme.grain} relative overflow-hidden ${theme.bg} px-6 py-20 md:px-12 md:py-28 min-h-[75vh] flex flex-col justify-center`}
+            className={`${theme.grain} relative overflow-hidden ${theme.bg} px-6 py-16 md:px-12 md:py-0 md:h-[75vh] flex flex-col justify-center`}
           >
             <ParticleField
               color={theme.particles}
@@ -69,12 +69,12 @@ export function CaseStudiesListClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-80px" }}
               transition={{ duration: 0.6 }}
-              className="group relative z-[1]"
+              className="group relative z-[1] flex-1 flex flex-col justify-center"
             >
               <div className={`grid items-center gap-8 md:grid-cols-2 md:gap-16 ${isEven ? "" : "md:[direction:rtl]"}`}>
                 {/* Media */}
                 <div className={`${isEven ? "" : "md:[direction:ltr]"}`}>
-                  <div className="flex items-center justify-center overflow-hidden rounded-[3px]">
+                  <div className="flex items-center justify-center overflow-hidden rounded-[3px] md:max-h-[35vh]">
                     <CaseMediaPreview
                       slug={cs.slug}
                       media={cs.media}

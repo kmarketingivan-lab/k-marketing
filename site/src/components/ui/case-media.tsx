@@ -34,7 +34,7 @@ export function CaseMediaPreview({
       alt={fallbackTitle}
       width={1200}
       height={900}
-      className="h-auto w-full rounded-[3px] transition-transform duration-500 ease-out group-hover:scale-105"
+      className="h-full w-full rounded-[3px] object-cover transition-transform duration-500 ease-out group-hover:scale-105"
     />
   );
 }
@@ -163,7 +163,7 @@ function VideoPlayer({ src }: { src: string }) {
           muted
           playsInline
           preload="metadata"
-          className="h-auto w-full rounded-[3px]"
+          className="h-full w-full rounded-[3px] object-cover"
         />
       ) : (
         <div
@@ -206,7 +206,7 @@ function GradientPlaceholder({
 }) {
   return (
     <div
-      className={`aspect-video w-full rounded-[3px] bg-gradient-to-br ${caseStudyColors[slug] || "from-gray-600 to-gray-800"} flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-105`}
+      className={`aspect-video h-full w-full rounded-[3px] bg-gradient-to-br ${caseStudyColors[slug] || "from-gray-600 to-gray-800"} flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-105`}
     >
       <span className="text-[4rem] font-bold text-white/20 select-none">
         {fallbackTitle.charAt(0)}
