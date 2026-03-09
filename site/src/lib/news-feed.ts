@@ -3,7 +3,7 @@
  * Used by blog pages to display automated news alongside editorial posts.
  */
 
-const CLOUDFRONT_BASE = "https://d4gy5ea465kim.cloudfront.net/data";
+const CLOUDFRONT_BASE = "https://d2jzkys8vp7hqz.cloudfront.net/data";
 
 export interface NewsArticle {
   id: string;
