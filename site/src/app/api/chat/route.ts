@@ -1,7 +1,5 @@
 import { NextRequest } from "next/server";
 
-export const dynamic = "force-dynamic";
-
 /* ───────────────────────── System prompt ───────────────────────── */
 
 const SYSTEM_PROMPT = `Sei l'assistente AI di K-Marketing, agenzia di marketing digitale a Brescia fondata da Ivan Crescini nel 2020. Rispondi SEMPRE in italiano (a meno che l'utente scriva in un'altra lingua). Sii cordiale, professionale e conciso.

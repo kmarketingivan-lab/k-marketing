@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { fetchNewsArticles, NEWS_CATEGORIES, type NewsArticle } from "@/lib/news-feed";
 
-export const dynamic = "force-dynamic";
-
 /**
- * GET /api/newsletter/digest?locale=it&limit=5
+ * POST /api/newsletter/digest
+ * Body: { locale?: "it" | "en", limit?: number }
  *
  * Returns a ready-to-send newsletter digest with the latest marketing news.
  * Output: { subject, html, text, articles }
@@ -12,14 +11,10 @@ export const dynamic = "force-dynamic";
  * Use this endpoint to generate newsletter content that can be sent via
  * any email provider (Mailchimp, Brevo, Resend, etc.).
  */
-export async function GET(req: NextRequest) {
-  const locale = (req.nextUrl.searchParams.get("locale") ?? "it") as
-    | "it"
-    | "en";
-  const limit = Math.min(
-    Number(req.nextUrl.searchParams.get("limit") ?? "5"),
-    10
-  );
+export async function POST(req: NextRequest) {
+  const body = await req.json().catch(() => ({}));
+  const locale = (body.locale ?? "it") as "it" | "en";
+  const limit = Math.min(Number(body.limit ?? 5), 10);
 
   const articles = await fetchNewsArticles(locale);
   const top = articles.slice(0, limit);
