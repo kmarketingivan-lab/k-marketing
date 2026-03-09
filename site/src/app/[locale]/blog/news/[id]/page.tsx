@@ -2,8 +2,20 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
-import { fetchNewsArticleById } from "@/lib/news-feed";
+import { fetchNewsArticleById, fetchNewsArticleIds } from "@/lib/news-feed";
 import { NewsArticleClient } from "./client";
+
+export async function generateStaticParams() {
+  const locales = ["it", "en"] as const;
+  const params: { locale: string; id: string }[] = [];
+  for (const locale of locales) {
+    const ids = await fetchNewsArticleIds(locale);
+    for (const id of ids) {
+      params.push({ locale, id });
+    }
+  }
+  return params;
+}
 
 export async function generateMetadata({
   params: { locale, id },
