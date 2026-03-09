@@ -7,6 +7,7 @@ const schema = z.object({
   company: z.string().max(200).optional().default(""),
   industry: z.string().max(100).optional().default(""),
   budget: z.string().max(50).optional().default(""),
+  howFound: z.string().max(100).optional().default(""),
   message: z.string().min(20).max(5000),
 });
 
@@ -53,6 +54,7 @@ export async function POST(req: NextRequest) {
         `🏢 *Azienda:* ${escapeMarkdown(data.company || "—")}`,
         `📂 *Settore:* ${escapeMarkdown(data.industry || "—")}`,
         `💰 *Budget:* ${escapeMarkdown(data.budget || "—")}`,
+        `🔍 *Come trovato:* ${escapeMarkdown(data.howFound || "—")}`,
         "",
         `💬 *Messaggio:*`,
         escapeMarkdown(data.message),

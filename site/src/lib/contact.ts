@@ -13,6 +13,7 @@ export interface ContactFormData {
   company: string;
   industry: string;
   budget: string;
+  howFound: string;
   message: string;
 }
 
@@ -40,6 +41,7 @@ async function sendEmail(data: ContactFormData): Promise<boolean> {
           company: data.company,
           industry: data.industry,
           budget: data.budget,
+          howFound: data.howFound,
           message: data.message,
         },
       }),

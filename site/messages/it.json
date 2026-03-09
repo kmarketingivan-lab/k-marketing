@@ -340,6 +340,13 @@
       "500-1000": "€500 – €1.000",
       "1000-3000": "€1.000 – €3.000",
       "3000+": "€3.000+"
+    },
+    "howFound": "Come ci hai trovato?",
+    "howFoundOptions": {
+      "google": "Google",
+      "social": "Social Media",
+      "referral": "Passaparola",
+      "other": "Altro"
     }
   },
   "cookieBanner": {
@@ -383,6 +390,9 @@
     "titleItalic": "marketing digitale",
     "subtitle": "Guide pratiche, analisi di mercato e strategie testate per PMI che vogliono crescere online. Articoli basati sulla nostra esperienza reale con clienti a Brescia.",
     "readMore": "Leggi l'articolo →",
+    "readOriginal": "Leggi l'articolo originale",
+    "newsOverline": "News",
+    "newsTitle": "Dal mondo del marketing digitale",
     "metaTitle": "Blog Marketing Digitale Brescia | Guide SEO, Ads, Web — K-Marketing",
     "metaDesc": "Blog di marketing digitale a Brescia. Guide pratiche su SEO, pubblicità online, siti internet e strategie per PMI. Articoli basati su risultati reali.",
     "posts": {
@@ -493,7 +503,7 @@
     "items": [
       {
         "question": "Quanto costa affidarsi a un'agenzia di marketing a Brescia?",
-        "answer": "I costi variano in base agli obiettivi e ai servizi richiesti. I nostri pacchetti partono da €500/mese per attività singole (es. solo SEO) fino a €3.000+/mese per sistemi integrati completi. Offriamo una consulenza gratuita di 30 minuti per analizzare la tua situazione e proporti un preventivo personalizzato senza impegno."
+        "answer": "I costi variano in base agli obiettivi e ai servizi richiesti. I nostri pacchetti partono da €300/mese per attività singole (es. solo SEO) fino a €3.000+/mese per sistemi integrati completi. Offriamo una consulenza gratuita di 30 minuti per analizzare la tua situazione e proporti un preventivo personalizzato senza impegno."
       },
       {
         "question": "Quanto tempo serve per vedere risultati con la SEO a Brescia?",
@@ -505,17 +515,105 @@
       },
       {
         "question": "Come faccio a sapere se il marketing sta funzionando?",
-        "answer": "Forniamo report mensili dettagliati con metriche chiare: posizionamento su Google, traffico al sito, lead generati, costo per acquisizione e ROAS (ritorno sulla spesa pubblicitaria). Il nostro obiettivo minimo è un ROAS di 3×, ovvero per ogni euro investito ne tornano almeno tre."
+        "answer": "Forniamo report mensili dettagliati con metriche chiare: posizionamento su Google, traffico al sito, lead generati, costo per acquisizione e ROAS (ritorno sulla spesa pubblicitaria). Il nostro obiettivo minimo è un ROAS di 2×, ovvero per ogni euro investito ne tornano almeno due."
       },
       {
         "question": "Lavorate solo con aziende di Brescia?",
         "answer": "La nostra sede è a Brescia e la maggior parte dei clienti è nella provincia bresciana e nel nord Italia. Tuttavia lavoriamo anche con aziende in tutta Italia grazie a call regolari e strumenti di collaborazione digitale. La vicinanza non è un requisito."
       },
       {
-        "question": "Quanto costa realizzare un sito internet a Brescia?",
-        "answer": "Un sito web professionale con design moderno, ottimizzato per mobile e SEO parte da €2.000-3.000 per siti vetrina. Per e-commerce o web app personalizzate i costi variano da €5.000 a €15.000+ in base alla complessità. Tutti i nostri siti sono costruiti con tecnologie moderne (Next.js) per garantire velocità e performance eccellenti."
+        "question": "Quanto costa realizzare un sito internet?",
+        "answer": "Un sito web professionale con design moderno, ottimizzato per mobile e SEO parte da €2.000-3.000 per siti vetrina. Per e-commerce o web app personalizzate i costi variano da €5.000 a €15.000+ in base alla complessità, ma grazie all'integrazione attiva e a strumenti appositamente sviluppati siamo in grado di offrire un sito vetrina o un e-commerce alla metà del prezzo di un'agenzia tradizionale. Tutti i nostri siti sono costruiti con tecnologie moderne (Next.js) per garantire velocità e performance eccellenti."
+      },
+      {
+        "question": "Quanto costa una strategia di marketing completa?",
+        "answer": "Dipende dagli obiettivi. Un singolo servizio (es. solo SEO) parte da €300/mese. Una strategia integrata con più canali va da €700 a €3.000+/mese. La prima consulenza è gratuita: analizziamo la tua situazione e ti proponiamo un piano con costi chiari, senza sorprese."
+      },
+      {
+        "question": "Posso vedere i risultati del vostro lavoro?",
+        "answer": "Assolutamente sì. Nella sezione Casi Studio trovi progetti reali con numeri verificabili: +340% engagement per I Peruvià, +180% conversioni per Charme Extensions, brand awareness triplicata per Nemesis. Ogni progetto include metriche concrete e risultati misurabili."
+      },
+      {
+        "question": "Che differenza c'è tra SEO e Google Ads?",
+        "answer": "La SEO ti posiziona su Google in modo organico — richiede 3-6 mesi ma i risultati durano nel tempo senza costo per click. Google Ads porta traffico immediato a pagamento. La strategia ideale combina entrambi: Ads per risultati rapidi, SEO per crescita sostenibile nel lungo termine."
       }
     ]
+  },
+  "testimonials": {
+    "overline": "Cosa dicono i clienti",
+    "title": "Risultati reali,",
+    "titleItalic": "parole reali.",
+    "items": [
+      {
+        "text": "Grazie a K-Marketing il nostro ristorante è sempre pieno. I social hanno fatto la differenza — ora i clienti ci trovano online prima ancora di venire in zona.",
+        "name": "Marco R.",
+        "role": "Titolare, I Peruvià",
+        "initials": "MR"
+      },
+      {
+        "text": "Il sito e-commerce ci ha aperto un canale di vendita che non avevamo. In pochi mesi le vendite online hanno superato ogni aspettativa.",
+        "name": "Sara M.",
+        "role": "Titolare, Charme Extensions",
+        "initials": "SM"
+      },
+      {
+        "text": "I video hanno cambiato la percezione del nostro brand. Finalmente i clienti capiscono chi siamo e cosa facciamo, prima ancora di contattarci.",
+        "name": "Luca B.",
+        "role": "CEO, Nemesis",
+        "initials": "LB"
+      }
+    ]
+  },
+  "clientLogos": {
+    "title": "Aziende che ci hanno scelto"
+  },
+  "chatbot": {
+    "greeting": "Ciao! Sono l'assistente di K-Marketing. Come posso aiutarti?",
+    "headerTitle": "K-Marketing",
+    "headerSub": "Di solito rispondiamo in pochi minuti",
+    "placeholder": "Scrivi un messaggio...",
+    "options": {
+      "clients": "Voglio più clienti",
+      "website": "Ho bisogno di un sito web",
+      "pricing": "Quanto costa?",
+      "booking": "Prenota una consulenza"
+    },
+    "responses": {
+      "clients": "Ottima scelta! Aiutiamo PMI a trovare nuovi clienti con SEO, advertising e social media. Qual è il tuo settore? Lasciami la tua email e ti ricontatto entro 24h con alcune idee personalizzate.",
+      "website": "Realizziamo siti web moderni e veloci con Next.js, ottimizzati per convertire. I prezzi partono da €2.000 per un sito vetrina. Vuoi raccontarmi del tuo progetto? Lascia la tua email!",
+      "pricing": "I nostri servizi partono da €300/mese per attività singole. Una strategia integrata va da €700 a €3.000+/mese. La prima consulenza è gratuita! Vuoi prenotarne una?",
+      "booking": "Perfetto! Puoi prenotare una call gratuita di 30 minuti direttamente dal nostro calendario. Ti analizzo la situazione e ti dico onestamente se possiamo aiutarti."
+    },
+    "emailPrompt": "Lascia la tua email e ti ricontattiamo entro 24h:",
+    "emailThanks": "Grazie! Ti ricontatteremo presto. Nel frattempo puoi prenotare una call gratuita.",
+    "bookCta": "Prenota una call gratuita",
+    "errorMsg": "Scusa, non riesco a rispondere in questo momento. Scrivici a info@k-marketing.it o prenota una call gratuita!",
+    "rateLimited": "Stai inviando messaggi troppo velocemente. Riprova tra qualche secondo.",
+    "limitReached": "Hai raggiunto il limite di messaggi per questa sessione. Per continuare la conversazione, prenota una consulenza gratuita o scrivici a info@k-marketing.it!",
+    "limitPlaceholder": "Limite messaggi raggiunto",
+    "aiDisclaimer": "Assistente AI — Le risposte sono generate automaticamente"
+  },
+  "leadMagnet": {
+    "badge": "Gratuito",
+    "title": "10 Errori di Marketing che Costano Clienti alla Tua PMI",
+    "subtitle": "Scarica la checklist gratuita e scopri cosa stai sbagliando.",
+    "benefits": ["Checklist immediata via email", "Consigli pratici e applicabili subito", "Bonus: template piano marketing 2026"],
+    "namePlaceholder": "Il tuo nome",
+    "emailPlaceholder": "La tua email",
+    "cta": "Scarica Gratis",
+    "thanks": "Perfetto! Controlla la tua email."
+  },
+  "newsletter": {
+    "title": "Resta aggiornato",
+    "subtitle": "Strategie e consigli di marketing nella tua inbox. Zero spam.",
+    "placeholder": "La tua email",
+    "cta": "Iscriviti",
+    "thanks": "Iscritto! Controlla la tua email.",
+    "error": "Errore. Riprova tra qualche secondo."
+  },
+  "urgencyBanner": {
+    "text": "Solo 3 posti disponibili questo mese per nuovi clienti",
+    "cta": "Prenota ora"
   },
   "common": {
     "readMore": "Leggi di più →",

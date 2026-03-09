@@ -3,6 +3,7 @@ import { Link } from "@/../../navigation";
 import { SITE } from "@/lib/constants";
 import { ObfuscatedContact } from "./obfuscated-contact";
 import { CookieSettingsButton } from "./cookie-settings-button";
+import { NewsletterBar } from "./newsletter-bar";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -20,6 +21,9 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gray-100/[0.06] bg-navy-900">
+      {/* Newsletter Bar */}
+      <NewsletterBar />
+
       <div className="container-custom py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}

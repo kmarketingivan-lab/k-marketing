@@ -340,6 +340,13 @@
       "500-1000": "€500 – €1,000",
       "1000-3000": "€1,000 – €3,000",
       "3000+": "€3,000+"
+    },
+    "howFound": "How did you find us?",
+    "howFoundOptions": {
+      "google": "Google",
+      "social": "Social Media",
+      "referral": "Word of mouth",
+      "other": "Other"
     }
   },
   "cookieBanner": {
@@ -383,6 +390,9 @@
     "titleItalic": "and insights",
     "subtitle": "Practical guides, market analysis and proven strategies for SMBs looking to grow online. Articles based on our real experience with clients in Brescia.",
     "readMore": "Read article →",
+    "readOriginal": "Read the original article",
+    "newsOverline": "News",
+    "newsTitle": "From the digital marketing world",
     "metaTitle": "Digital Marketing Blog Brescia | SEO, Ads, Web Guides — K-Marketing",
     "metaDesc": "Digital marketing blog from Brescia. Practical guides on SEO, online advertising, websites and strategies for SMBs. Articles based on real results.",
     "posts": {
@@ -516,6 +526,82 @@
         "answer": "A professional website with modern design, mobile-optimised and SEO-ready starts from €2,000-3,000 for brochure sites. For e-commerce or custom web apps, costs range from €5,000 to €15,000+ depending on complexity. All our sites are built with modern technology (Next.js) to ensure excellent speed and performance."
       }
     ]
+  },
+  "chatbot": {
+    "greeting": "Hi! I'm K-Marketing's AI assistant. How can I help you?",
+    "headerTitle": "K-Marketing",
+    "headerSub": "We usually reply in a few minutes",
+    "placeholder": "Type a message...",
+    "options": {
+      "clients": "I want more customers",
+      "website": "I need a website",
+      "pricing": "How much does it cost?",
+      "booking": "Book a consultation"
+    },
+    "responses": {
+      "clients": "Great choice! We help SMEs find new customers with SEO, advertising and social media.",
+      "website": "We build modern, fast websites with Next.js, optimized to convert.",
+      "pricing": "Our services start from €300/month for single activities. An integrated strategy ranges from €700 to €3,000+/month.",
+      "booking": "You can book a free 30-minute call directly from our calendar."
+    },
+    "emailPrompt": "Leave your email and we'll get back to you within 24h:",
+    "emailThanks": "Thanks! We'll contact you soon.",
+    "bookCta": "Book a free call",
+    "errorMsg": "Sorry, I can't respond right now. Email us at info@k-marketing.it or book a free call!",
+    "rateLimited": "You're sending messages too quickly. Please try again in a few seconds.",
+    "limitReached": "You've reached the message limit for this session. To continue, book a free consultation or email us at info@k-marketing.it!",
+    "limitPlaceholder": "Message limit reached",
+    "aiDisclaimer": "AI Assistant — Responses are automatically generated"
+  },
+  "testimonials": {
+    "overline": "What our clients say",
+    "title": "Real results,",
+    "titleItalic": "real words.",
+    "items": [
+      {
+        "text": "Thanks to K-Marketing, our restaurant is always full. Social media made the difference — customers now find us online before even coming to the area.",
+        "name": "Marco R.",
+        "role": "Owner, I Peruvià",
+        "initials": "MR"
+      },
+      {
+        "text": "The e-commerce site opened a sales channel we didn't have. Within a few months, online sales exceeded all expectations.",
+        "name": "Sara M.",
+        "role": "Owner, Charme Extensions",
+        "initials": "SM"
+      },
+      {
+        "text": "The videos changed the perception of our brand. Customers finally understand who we are and what we do, before even contacting us.",
+        "name": "Luca B.",
+        "role": "CEO, Nemesis",
+        "initials": "LB"
+      }
+    ]
+  },
+  "clientLogos": {
+    "title": "Companies that chose us"
+  },
+  "leadMagnet": {
+    "badge": "Free",
+    "title": "10 Marketing Mistakes Costing Your SMB Customers",
+    "subtitle": "Download the free checklist and find out what you're doing wrong.",
+    "benefits": ["Instant checklist via email", "Practical, immediately actionable tips", "Bonus: 2026 marketing plan template"],
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "cta": "Download Free",
+    "thanks": "Done! Check your email."
+  },
+  "newsletter": {
+    "title": "Stay updated",
+    "subtitle": "Marketing strategies and tips in your inbox. Zero spam.",
+    "placeholder": "Your email",
+    "cta": "Subscribe",
+    "thanks": "Subscribed! Check your email.",
+    "error": "Error. Please try again in a few seconds."
+  },
+  "urgencyBanner": {
+    "text": "Only 3 spots available this month for new clients",
+    "cta": "Book now"
   },
   "common": {
     "readMore": "Read more →",

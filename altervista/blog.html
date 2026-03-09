@@ -26,31 +26,6 @@
     body.modal-open { overflow: hidden; }
     #particles-container { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
     .particle { position: absolute; border-radius: 50%; pointer-events: none; opacity: 0.3; }
-    
-    /* Tabs */
-    .tabs { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
-    .tab-btn { padding: 0.75rem 1.5rem; border: 1px solid var(--white-10); border-radius: 0.5rem; background: transparent; color: var(--white-60); cursor: pointer; transition: all 0.3s; font-size: 0.875rem; font-weight: 500; }
-    .tab-btn:hover { border-color: var(--primary-400); color: var(--white); }
-    .tab-btn.active { background: var(--primary-400); border-color: var(--primary-400); color: white; }
-    
-    /* Filter */
-    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .filter-btn { padding: 0.5rem 1rem; border: 1px solid var(--white-10); border-radius: 2rem; background: transparent; color: var(--white-50); cursor: pointer; transition: all 0.3s; font-size: 0.75rem; }
-    .filter-btn:hover, .filter-btn.active { border-color: var(--primary-400); color: var(--primary-400); }
-    
-    /* Difficulty badge */
-    .difficulty-badge { font-size: 0.65rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; }
-    .difficulty-badge.principiante { background: #10b98120; color: #10b981; }
-    .difficulty-badge.intermedio { background: #f9731620; color: #f97316; }
-    .difficulty-badge.avanzato { background: #ef444420; color: #ef4444; }
-    
-    /* Loading */
-    .loading { text-align: center; padding: 3rem; color: var(--white-50); }
-    .loading-spinner { width: 40px; height: 40px; border: 3px solid var(--white-10); border-top-color: var(--primary-400); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    
-    /* Empty state */
-    .empty-state { text-align: center; padding: 3rem; color: var(--white-50); }
   </style>
 </head>
 <body>
@@ -103,33 +78,12 @@
     </div>
   </section>
 
-  <!-- CONTENT -->
+  <!-- ARTICLES -->
   <section class="section section-dark">
     <div class="container">
-      
-      <!-- Tabs -->
-      <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('articles')">
-          📰 Articoli <span id="articles-count" style="opacity:0.6;margin-left:0.25rem;"></span>
-        </button>
-        <button class="tab-btn" onclick="switchTab('tutorials')">
-          📚 Tutorial <span id="tutorials-count" style="opacity:0.6;margin-left:0.25rem;"></span>
-        </button>
+      <div class="grid grid-3" id="articles-grid">
+        <!-- Articles loaded via JS -->
       </div>
-      
-      <!-- Filter bar -->
-      <div class="filter-bar" id="filter-bar">
-        <button class="filter-btn active" onclick="filterCategory('all')">Tutti</button>
-      </div>
-      
-      <!-- Content grid -->
-      <div class="grid grid-3" id="content-grid">
-        <div class="loading">
-          <div class="loading-spinner"></div>
-          <p>Caricamento contenuti...</p>
-        </div>
-      </div>
-      
     </div>
   </section>
 
@@ -196,152 +150,113 @@
   </div>
 
   <script>
-    // Colori per categoria
-    const categoryColors = {
-      'SEO': '#06b6d4',
-      'Social Media': '#a855f7',
-      'Advertising': '#f97316',
-      'Content': '#10b981',
-      'Analytics': '#3b82f6',
-      'AI & Automation': '#6366f1'
-    };
-
-    let articles = [];
-    let tutorials = [];
-    let currentTab = 'articles';
-    let currentFilter = 'all';
-
-    // Carica dati
-    async function loadData() {
-      try {
-        const [articlesRes, tutorialsRes] = await Promise.all([
-          fetch('data/articles.json'),
-          fetch('data/tutorials.json')
-        ]);
-        
-        if (articlesRes.ok) {
-          articles = await articlesRes.json();
-          document.getElementById('articles-count').textContent = `(${articles.length})`;
-        }
-        
-        if (tutorialsRes.ok) {
-          tutorials = await tutorialsRes.json();
-          document.getElementById('tutorials-count').textContent = `(${tutorials.length})`;
-        }
-        
-        renderContent();
-        updateFilterBar();
-      } catch (e) {
-        console.error('Errore caricamento:', e);
-        document.getElementById('content-grid').innerHTML = '<div class="empty-state"><p>Errore nel caricamento dei contenuti.</p></div>';
+    const articles = [
+      {
+        id: 1,
+        title: "L'AI Rivoluziona il Marketing nel 2026",
+        category: "AI & Marketing",
+        categoryColor: "#6366f1",
+        date: "10 Gen 2026",
+        excerpt: "L'AI non è più un esperimento: è il motore della personalizzazione e dell'automazione. Scopri come sfruttarla.",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+        readTime: "8 min",
+        content: `<h2>L'AI È il Motore del Marketing Moderno</h2><p>Nel 2026, le aziende che usano l'AI nella segmentazione e nel nurturing hanno ridotto il costo per lead di oltre il 30%.</p><h3>Iper-Personalizzazione</h3><p>I marketer possono adattare contenuti e offerte in tempo reale, basandosi su comportamenti e preferenze rilevate dall'AI.</p><ul><li><strong>Segmentazione automatica:</strong> L'AI identifica cluster di utenti con comportamenti simili</li><li><strong>Contenuti dinamici:</strong> Email e landing page che cambiano in base all'utente</li><li><strong>Predictive scoring:</strong> Previsione della probabilità di conversione</li></ul><h3>Cosa Significa per le PMI</h3><p>Per le piccole imprese, l'AI non è più un lusso. Strumenti accessibili permettono di automatizzare risposte, creare contenuti ottimizzati e analizzare dati di vendita.</p>`
+      },
+      {
+        id: 2,
+        title: "Search Everywhere Optimization: Oltre Google",
+        category: "SEO",
+        categoryColor: "#06b6d4",
+        date: "9 Gen 2026",
+        excerpt: "Nel 2026, la SEO evolve. Gli utenti cercano su TikTok, YouTube, ChatGPT e Reddit. Scopri come ottimizzare ovunque.",
+        image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop",
+        readTime: "10 min",
+        content: `<h2>La SEO Tradizionale Evolve</h2><p>Nel 2026, ottimizzare solo per Google non basta. Gli utenti cercano informazioni su TikTok, YouTube, ChatGPT, Perplexity e Reddit.</p><h3>Ottimizzare per le Risposte AI</h3><p>I brand vincenti competono per essere citati come fonte autorevole nelle risposte AI.</p><ul><li><strong>Contenuti strutturati:</strong> FAQ chiare, elenchi, tabelle che l'AI può interpretare</li><li><strong>Autorevolezza:</strong> Citazioni e backlink da fonti autorevoli</li><li><strong>Risposte dirette:</strong> Contenuti che rispondono esattamente alle domande</li></ul><h3>Strategia Pratica</h3><p>Non abbandonare la SEO tradizionale, ma espandila. Crea contenuti su più piattaforme: video YouTube, post LinkedIn, articoli blog.</p>`
+      },
+      {
+        id: 3,
+        title: "Video Brevi: Dominare i Social nel 2026",
+        category: "Video",
+        categoryColor: "#a855f7",
+        date: "8 Gen 2026",
+        excerpt: "TikTok, Reels, Shorts generano engagement superiore. Ecco come sfruttare i video brevi per il tuo business.",
+        image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&h=400&fit=crop",
+        readTime: "7 min",
+        content: `<h2>Il Formato Breve Ha Vinto</h2><p>I video brevi generano tassi di completamento superiori all'80%. Le piattaforme li spingono per massimizzare il tempo sulla app.</p><h3>Perché Funzionano</h3><ul><li>L'utente medio dedica 8 secondi prima di decidere se continuare</li><li>Gli algoritmi favoriscono i contenuti brevi</li><li>Facilità di condivisione e viralità</li></ul><h3>Come Iniziare</h3><p>Non serve attrezzatura professionale. Smartphone, hook nei primi 3 secondi, sottotitoli sempre. L'85% guarda video senza audio.</p>`
+      },
+      {
+        id: 4,
+        title: "Addio Cookie: Strategia First-Party Data",
+        category: "Privacy",
+        categoryColor: "#10b981",
+        date: "7 Gen 2026",
+        excerpt: "Entro metà 2026, Chrome eliminerà i cookie. Le aziende smart costruiscono strategie basate su dati di prima parte.",
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
+        readTime: "9 min",
+        content: `<h2>La Fine dei Cookie di Terze Parti</h2><p>Chi usa strategie first-party data ottiene 2.9x migliore retention clienti e 1.5x ROI.</p><h3>Come Costruire una Strategia</h3><ul><li><strong>Lead magnet:</strong> Offri valore in cambio dell'email</li><li><strong>Account utente:</strong> Incentiva la registrazione</li><li><strong>Survey e quiz:</strong> Raccogli preferenze in modo interattivo</li></ul><h3>Privacy Come Vantaggio</h3><p>I consumatori preferiscono brand trasparenti su come usano i dati. Trasforma il consenso in un'esperienza positiva.</p>`
+      },
+      {
+        id: 5,
+        title: "Google Business Profile: Fondamentale per PMI",
+        category: "Local SEO",
+        categoryColor: "#f97316",
+        date: "6 Gen 2026",
+        excerpt: "Per le attività locali, Google Business Profile è il fattore SEO numero uno. Gli assistenti AI selezionano provider da qui.",
+        image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=600&h=400&fit=crop",
+        readTime: "8 min",
+        content: `<h2>Il Fattore SEO #1 per Attività Locali</h2><p>Quando un utente chiede a ChatGPT "trova un idraulico vicino a me", l'AI sceglie basandosi sulle informazioni del Google Business Profile.</p><h3>Ottimizzazione Completa</h3><ul><li>Nome, indirizzo, telefono identici ovunque online</li><li>Minimo 10 foto di qualità</li><li>Orari sempre aggiornati</li><li>Rispondi a TUTTE le recensioni</li></ul><h3>Le Recensioni Fanno la Differenza</h3><p>Attività con più di 50 recensioni e rating sopra 4.5 dominano i risultati locali.</p>`
+      },
+      {
+        id: 6,
+        title: "E-E-A-T: Costruire Autorevolezza",
+        category: "Branding",
+        categoryColor: "#3b82f6",
+        date: "5 Gen 2026",
+        excerpt: "Google premia i contenuti scritti da persone con esperienza reale. I modelli AI danno priorità a segnali di autorità.",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+        readTime: "9 min",
+        content: `<h2>Google e AI Premiano la Competenza Reale</h2><p>E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness. Non basta dire di essere esperti: conta cosa dicono gli altri di te.</p><h3>Come Dimostrare Experience</h3><ul><li>Racconta casi studio reali con risultati</li><li>Mostra foto e video del tuo lavoro</li><li>Usa la prima persona</li></ul><h3>Costruire Autorevolezza</h3><p>L'autorevolezza viene da menzioni esterne: altri siti che linkano a te, articoli che ti citano, interviste.</p>`
       }
-    }
+    ];
 
-    // Switch tab
-    function switchTab(tab) {
-      currentTab = tab;
-      currentFilter = 'all';
-      
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.tab-btn[onclick="switchTab('${tab}')"]`).classList.add('active');
-      
-      updateFilterBar();
-      renderContent();
-    }
-
-    // Update filter bar
-    function updateFilterBar() {
-      const data = currentTab === 'articles' ? articles : tutorials;
-      const categories = [...new Set(data.map(item => item.category))];
-      
-      const filterBar = document.getElementById('filter-bar');
-      filterBar.innerHTML = '<button class="filter-btn active" onclick="filterCategory(\'all\')">Tutti</button>';
-      
-      categories.forEach(cat => {
-        const color = categoryColors[cat] || '#6366f1';
-        filterBar.innerHTML += `<button class="filter-btn" onclick="filterCategory('${cat}')" style="--filter-color:${color};">${cat}</button>`;
-      });
-    }
-
-    // Filter category
-    function filterCategory(category) {
-      currentFilter = category;
-      
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      
-      renderContent();
-    }
-
-    // Render content
-    function renderContent() {
-      const grid = document.getElementById('content-grid');
-      let data = currentTab === 'articles' ? articles : tutorials;
-      
-      if (currentFilter !== 'all') {
-        data = data.filter(item => item.category === currentFilter);
-      }
-      
-      if (data.length === 0) {
-        grid.innerHTML = '<div class="empty-state"><p>Nessun contenuto trovato.</p></div>';
-        return;
-      }
-      
-      grid.innerHTML = data.map((item, index) => {
-        const categoryColor = categoryColors[item.category] || '#6366f1';
-        const image = item.image ? (item.image.startsWith('http') ? item.image : item.image) : 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop';
-        const date = item.date || 'Recente';
-        const isTutorial = currentTab === 'tutorials';
-        
-        return `
-          <article class="card article-card">
-            <div style="height:12rem;overflow:hidden;position:relative;">
-              <img src="${image}" alt="${item.title}" class="card-image" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop'">
-              ${isTutorial && item.difficulty ? `<span class="difficulty-badge ${item.difficulty.toLowerCase()}" style="position:absolute;top:0.75rem;right:0.75rem;">${item.difficulty}</span>` : ''}
-            </div>
-            <div class="card-body">
-              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
-                <span class="badge" style="background:${categoryColor}20;color:${categoryColor};">${item.category}</span>
-                <span style="font-size:0.75rem;color:var(--white-40);">${date}</span>
-                ${item.readTime ? `<span style="font-size:0.75rem;color:var(--white-40);">• ${item.readTime}</span>` : ''}
-              </div>
-              <h3 style="font-size:1.125rem;margin-bottom:0.75rem;">${item.title}</h3>
-              <p style="font-size:0.875rem;color:var(--white-60);line-height:1.6;margin-bottom:1rem;">${item.excerpt}</p>
-              <button onclick="openArticle('${currentTab}', ${index})" class="article-cta">
-                ${isTutorial ? 'Leggi Tutorial' : 'Leggi di più'}
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </button>
-            </div>
-          </article>
-        `;
-      }).join('');
-    }
-
-    // Open article/tutorial modal
-    function openArticle(type, index) {
-      const data = type === 'articles' ? articles : tutorials;
-      const item = data[index];
-      if (!item) return;
-      
-      const categoryColor = categoryColors[item.category] || '#6366f1';
-      const image = item.image ? (item.image.startsWith('http') ? item.image : item.image) : 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop';
-      const date = item.date || 'Recente';
-      const isTutorial = type === 'tutorials';
-      
-      document.getElementById('modalBody').innerHTML = `
-        <img src="${image}" alt="${item.title}" class="modal-image" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop'">
-        <div class="modal-body">
-          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
-            <span class="badge" style="background:${categoryColor}20;color:${categoryColor};">${item.category}</span>
-            ${isTutorial && item.difficulty ? `<span class="difficulty-badge ${item.difficulty.toLowerCase()}">${item.difficulty}</span>` : ''}
-            <span style="font-size:0.875rem;color:var(--white-40);">${date} • ${item.readTime || '5 min'}</span>
+    // Render articles
+    const grid = document.getElementById('articles-grid');
+    articles.forEach(a => {
+      grid.innerHTML += `
+        <article class="card article-card">
+          <div style="height:12rem;overflow:hidden;">
+            <img src="${a.image}" alt="${a.title}" class="card-image">
           </div>
-          <h1 style="font-size:clamp(1.5rem,4vw,2rem);margin-bottom:1.5rem;">${item.title}</h1>
-          ${item.tags ? `<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">${item.tags.map(tag => `<span style="font-size:0.75rem;color:var(--white-40);background:var(--white-5);padding:0.25rem 0.75rem;border-radius:1rem;">#${tag}</span>`).join('')}</div>` : ''}
-          <div class="article-body">${item.content}</div>
-          ${item.source ? `<p style="margin-top:2rem;font-size:0.875rem;color:var(--white-40);">Fonte: <a href="${item.source_url}" target="_blank" rel="noopener" style="color:var(--primary-400);">${item.source}</a></p>` : ''}
+          <div class="card-body">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+              <span class="badge" style="background:${a.categoryColor}20;color:${a.categoryColor};">${a.category}</span>
+              <span style="font-size:0.75rem;color:var(--white-40);">${a.date}</span>
+            </div>
+            <h3 style="font-size:1.125rem;margin-bottom:0.75rem;">${a.title}</h3>
+            <p style="font-size:0.875rem;color:var(--white-60);line-height:1.6;margin-bottom:1rem;">${a.excerpt}</p>
+            <button onclick="openArticle(${a.id})" class="article-cta">
+              Leggi di più
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </button>
+          </div>
+        </article>
+      `;
+    });
+
+    function openArticle(id) {
+      const a = articles.find(x => x.id === id);
+      if (!a) return;
+      document.getElementById('modalBody').innerHTML = `
+        <img src="${a.image}" alt="${a.title}" class="modal-image">
+        <div class="modal-body">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+            <span class="badge" style="background:${a.categoryColor}20;color:${a.categoryColor};">${a.category}</span>
+            <span style="font-size:0.875rem;color:var(--white-40);">${a.date} • ${a.readTime}</span>
+          </div>
+          <h1 style="font-size:clamp(1.5rem,4vw,2rem);margin-bottom:1.5rem;">${a.title}</h1>
+          <div class="article-body">${a.content}</div>
           <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--white-10);">
-            <p style="color:var(--white-60);margin-bottom:1rem;">Ti è piaciuto questo ${isTutorial ? 'tutorial' : 'articolo'}?</p>
+            <p style="color:var(--white-60);margin-bottom:1rem;">Ti è piaciuto questo articolo?</p>
             <a href="index.html#contatti" class="btn btn-primary btn-shine">Parliamo del Tuo Progetto</a>
           </div>
         </div>
@@ -358,9 +273,6 @@
 
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
 
-    // Init
-    loadData();
-
     // Mobile Menu
     function toggleMobileMenu() {
       document.querySelector('.mobile-menu').classList.toggle('active');
@@ -373,18 +285,16 @@
       document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Particles
+    // Particles that follow mouse
     const container = document.getElementById('particles-container');
     const particles = [];
     const mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 70; i++) {
       const p = document.createElement('div');
       p.className = 'particle';
       const size = 3 + Math.random() * 6;
-      const colors = ['#6366f1', '#0ea5e9', '#f97316'];
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      p.style.cssText = `width:${size}px;height:${size}px;background:${color};`;
+      p.style.cssText = `width:${size}px;height:${size}px;background:${Math.random()>0.5?'#6366f1':'#0ea5e9'};`;
       container.appendChild(p);
       particles.push({
         el: p,
@@ -403,12 +313,14 @@
     
     function animateParticles() {
       const time = Date.now() * 0.002;
-      particles.forEach((p) => {
+      particles.forEach((p, i) => {
         const angle = time * 0.5 + p.offset;
         const targetX = mousePos.x + Math.cos(angle) * p.radius;
         const targetY = mousePos.y + Math.sin(angle) * p.radius;
-        p.x += (targetX - p.x) * p.speed;
-        p.y += (targetY - p.y) * p.speed;
+        const dx = targetX - p.x;
+        const dy = targetY - p.y;
+        p.x += dx * p.speed;
+        p.y += dy * p.speed;
         const floatY = Math.sin(time + p.offset) * 20;
         const floatX = Math.cos(time + p.offset) * 15;
         p.el.style.transform = `translate(${p.x + floatX}px, ${p.y + floatY}px)`;

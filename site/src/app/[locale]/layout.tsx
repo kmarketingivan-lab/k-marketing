@@ -9,6 +9,8 @@ import { SetLang } from "@/components/set-lang";
 import { CookieConsentProvider } from "@/components/cookie-consent-provider";
 import { CookieBanner } from "@/components/cookie-banner";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { Chatbot } from "@/components/chatbot";
+import { LeadMagnetPopup } from "@/components/lead-magnet-popup";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -42,6 +44,8 @@ export default function LocaleLayout({
           <Header />
           <main id="main-content" className="animate-fade-in pt-16 md:pt-20">{children}</main>
           <Footer />
+          <Chatbot />
+          <LeadMagnetPopup />
           <CookieBanner />
           <GoogleAnalytics />
         </CookieConsentProvider>

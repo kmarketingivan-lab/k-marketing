@@ -13,6 +13,8 @@ const industryKeys = [
 
 const budgetKeys = ["500-1000", "1000-3000", "3000+"] as const;
 
+const howFoundKeys = ["google", "social", "referral", "other"] as const;
+
 /** Build zod schema with translated error messages */
 function createSchema(t: (key: string) => string) {
   return z.object({
@@ -24,6 +26,7 @@ function createSchema(t: (key: string) => string) {
     company: z.string(),
     industry: z.string(),
     budget: z.string(),
+    howFound: z.string(),
     message: z
       .string()
       .min(1, t("form.errors.messageRequired"))
@@ -37,7 +40,7 @@ export function ContactForm() {
   const t = useTranslations("contact");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [form, setForm] = useState<ContactFormData>({
-    name: "", email: "", company: "", industry: "", budget: "", message: "",
+    name: "", email: "", company: "", industry: "", budget: "", howFound: "", message: "",
   });
   const [errors, setErrors] = useState<FieldErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof ContactFormData, boolean>>>({});
@@ -118,7 +121,7 @@ export function ContactForm() {
   };
 
   const resetForm = () => {
-    setForm({ name: "", email: "", company: "", industry: "", budget: "", message: "" });
+    setForm({ name: "", email: "", company: "", industry: "", budget: "", howFound: "", message: "" });
     setErrors({});
     setTouched({});
     setStatus("idle");
@@ -265,6 +268,25 @@ export function ContactForm() {
             <polyline points="6 9 12 15 18 9" />
           </svg>
         </div>
+      </div>
+
+      {/* How Found */}
+      <div className="relative">
+        <select
+          value={form.howFound}
+          onChange={(e) => update("howFound", e.target.value)}
+          disabled={isDisabled}
+          aria-label={t("howFound")}
+          className={`${selectClass("howFound")} ${!form.howFound ? "text-navy-800/30 dark:text-gray-100/30" : ""}`}
+        >
+          <option value="" disabled>{t("howFound")}</option>
+          {howFoundKeys.map((key) => (
+            <option key={key} value={key}>{t(`howFoundOptions.${key}`)}</option>
+          ))}
+        </select>
+        <svg className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-navy-800/30 dark:text-gray-100/30" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </div>
 
       {/* Message */}

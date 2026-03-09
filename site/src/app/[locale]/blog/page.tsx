@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
+import { fetchNewsArticles } from "@/lib/news-feed";
 import { BlogListClient } from "./client";
 
 export async function generateMetadata({
@@ -42,19 +43,20 @@ function getBreadcrumbJsonLd(locale: string) {
   };
 }
 
-export default function BlogPage({
+export default async function BlogPage({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
   setRequestLocale(locale);
+  const newsArticles = await fetchNewsArticles(locale as "it" | "en");
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbJsonLd(locale)) }}
       />
-      <BlogListClient />
+      <BlogListClient newsArticles={newsArticles} locale={locale} />
     </>
   );
 }
