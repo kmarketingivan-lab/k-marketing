@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { fetchNewsArticles, NEWS_CATEGORIES, type NewsArticle } from "@/lib/news-feed";
 
+export const dynamic = "force-dynamic";
+
 /**
  * GET /api/newsletter/digest?locale=it&limit=5
  *
