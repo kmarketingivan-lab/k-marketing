@@ -1,0 +1,75 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "STS",
+      "Effect": "Allow",
+      "Action": ["sts:GetCallerIdentity"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3Setup",
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:PutBucketPublicAccessBlock",
+        "s3:PutBucketPolicy",
+        "s3:GetBucketPolicy",
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": [
+        "arn:aws:s3:::kmarketing-news-data",
+        "arn:aws:s3:::kmarketing-news-data/*"
+      ]
+    },
+    {
+      "Sid": "DynamoDBSetup",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:CreateTable",
+        "dynamodb:DescribeTable",
+        "dynamodb:UpdateTimeToLive"
+      ],
+      "Resource": "arn:aws:dynamodb:eu-south-1:*:table/kmarketing-news-articles"
+    },
+    {
+      "Sid": "IAMRoleSetup",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:GetRole",
+        "iam:AttachRolePolicy",
+        "iam:PutRolePolicy",
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::*:role/kmarketing-news-lambda-role"
+    },
+    {
+      "Sid": "LambdaSetup",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:CreateFunction",
+        "lambda:GetFunction",
+        "lambda:GetFunctionConfiguration",
+        "lambda:UpdateFunctionCode",
+        "lambda:UpdateFunctionConfiguration"
+      ],
+      "Resource": [
+        "arn:aws:lambda:eu-south-1:*:function:kmarketing-news",
+        "arn:aws:lambda:eu-south-1:*:function:kmarketing-news-query"
+      ]
+    },
+    {
+      "Sid": "CloudFrontSetup",
+      "Effect": "Allow",
+      "Action": [
+        "cloudfront:CreateOriginAccessControl",
+        "cloudfront:GetOriginAccessControl",
+        "cloudfront:CreateDistribution",
+        "cloudfront:GetDistribution"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
