@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - K-marketing</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Hero Section con effetto */
+        .hero {
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: white;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: stretch;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            height: 100%;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-text * {
+            pointer-events: auto;
+        }
+
+        .hero-text {
+            text-align: left;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            height: 75%;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .hero-3d-container {
+            perspective: 1000px;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            align-self: stretch;
+        }
+
+        .hero-3d-card {
+            width: 440px;
+            height: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: visible;
+            margin-bottom: 10%;
+        }
+
+        .hero-3d-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            transform: translateZ(50px);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .card-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .card-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            transition: transform 0.1s ease-out;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .floating-element:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 10%;
+            background: rgba(255,255,255,0.25);
+        }
+
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            right: 15%;
+            background: rgba(255,255,255,0.35);
+        }
+
+        .floating-element:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            top: 60%;
+            left: 20%;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+        }
+
+        .hero-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        .hero h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.8s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,102,204,0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .future-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 4rem;
+            border-radius: 10px;
+        }
+
+        .future-text {
+            /* Testo visibile di default - opacity rimossa */
+        }
+
+        .future-text h2,
+        .future-text p {
+            /* Testo visibile di default - opacity rimossa */
+        }
+
+        .future-image {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        .future-image img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .future-image img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .future-section h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 1.5rem;
+        }
+
+        .future-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .future-section strong {
+            color: #0066cc;
+        }
+
+        .future-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* About Section */
+        .about-section {
+            background: #fffacd;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            gap: 3rem;
+            align-items: center;
+            padding: 4rem 2rem;
+            min-height: 80vh;
+        }
+
+        .about-image-container {
+            height: 100%;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            padding: 5% 0;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .about-image-container img {
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .about-image-container img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-content {
+            text-align: left;
+            width: 85%;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        .about-content h2,
+        .about-content h3,
+        .about-content p {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .about-section h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 100%;
+            margin: 0 0 2rem 0;
+            text-align: left;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: #f9f9f9;
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Collaborations Section */
+        .collaborations-section {
+            text-align: center;
+            background: white;
+        }
+
+        .collaborations-section h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 3rem;
+        }
+
+        .collaborations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .collaboration-logo {
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .collaboration-logo img {
+            max-width: 150px;
+            max-height: 80px;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .collaboration-logo:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            padding: 1rem 3rem;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #0066cc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero h1, .hero h2, .hero h3 {
+                text-align: center;
+            }
+
+            .hero-3d-container {
+                height: 300px;
+            }
+
+            .hero-3d-card {
+                width: 300px;
+                height: 300px;
+            }
+
+            .future-section {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .hero-background {
+                height: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="https://www.k-marketing.it/wp-content/uploads/2025/11/logo-rgb-scaled-e1764060359685.png" alt="K-Marketing Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section con effetto parallax e zoom -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-text">
+            <div class="hero-logo">
+                <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/logo-rgb-freccia-blu-01-scaled.png" alt="K-Marketing">
+            </div>
+            <h1>K-Digital marketing</h1>
+            <h2>Il successo del tuo business è fatto di piccoli passi.</h2>
+            <h3><strong>Crescini Ivan</strong> Digital marketing specialist</h3>
+            <a href="#portfolio" class="cta-button">Scopri di più</a>
+        </div>
+        <div class="hero-3d-container">
+            <div class="hero-3d-card">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="card-content">
+                    <h3>Innovazione Digitale</h3>
+                    <p>Trasformiamo le tue idee in realtà digitali di successo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section>
+        <div class="future-section">
+            <div class="future-text">
+                <h2>IL FUTURO DEL MARKETING</h2>
+                <p>Il <strong>successo</strong> di un business si realizza in piccoli passi curando ogni <strong>dettaglio</strong>.</p>
+                <p>Il mio contributo è mettere a disposizione le mie conoscenze e le mie capacità nel marketing e nella grafica in modo efficace.</p>
+                <p>Abbraccia il futuro del marketing lasciandoti guidare passo dopo passo verso il raggiungimento di <strong>un'identità digitale di successo</strong>.</p>
+            </div>
+            <div class="future-image">
+                <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/IMG_0017-scaled-e1763725673756.jpg" alt="Ivan Crescini">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-image-container">
+            <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/IMG_0017-scaled-e1763725673756.jpg" alt="About K-Marketing">
+        </div>
+        <div class="about-content">
+            <h2>ABOUT ME</h2>
+            <h3>Quello che faccio va ben oltre un semplice lavoro.</h3>
+            <p>Il mio obiettivo è soddisfare pienamente ogni richiesta, mettendo in campo tutte le mie <strong>competenze e conoscenze</strong>.</p>
+            <p><strong>Grafica, web design e digital advertising</strong> sono gli strumenti che mi permettono di trasformare una semplice idea in qualcosa di concreto e funzionale.</p>
+            <p>Alla base di tutto pongo <strong>l'ascolto</strong>: comprendere davvero le esigenze del cliente è il primo passo per costruire la <strong>strategia giusta</strong> e raggiungere l'obiettivo con precisione.</p>
+            <a href="#contatti" class="cta-button">Contattami</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="servizi">
+        <h2>I MIEI SERVIZI</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Digital advertising</h3>
+                <p>Campagne di marketing digitali su piattaforme social. Quando il marketing tradizionale non è più sufficiente.</p>
+            </div>
+            <div class="service-card">
+                <h3>Web design</h3>
+                <p>Sito web su misura per il tuo business, efficace e d'impatto. Dalla progettazione alla messa online.</p>
+            </div>
+            <div class="service-card">
+                <h3>Consulenze</h3>
+                <p>Consulenze mirate all'ottimizzazione dell'identità digitale del tuo business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section class="collaborations-section">
+        <h2>COLLABORAZIONI</h2>
+        <div class="collaborations-grid">
+            <div class="collaboration-logo">
+                <img src="https://www.k-marketing.it/wp-content/uploads/2025/10/ChatGPT-Image-11-ago-2025-17_26_36-320x320.png" alt="Collaborazione 1">
+            </div>
+            <div class="collaboration-logo">
+                <img src="https://www.k-marketing.it/wp-content/uploads/2025/10/logo_orizz5-qtbnstxqnpx8x6oja16wd2qbagt6744f7ombrdmy9s-320x93.webp" alt="Collaborazione 2">
+            </div>
+            <div class="collaboration-logo">
+                <img src="https://www.k-marketing.it/wp-content/uploads/2025/11/logo-nemis-scaled-e1762767964590-320x49.webp" alt="Collaborazione 3">
+            </div>
+            <div class="collaboration-logo">
+                <img src="https://www.k-marketing.it/wp-content/uploads/2025/10/logo-TooMuch-1024x883-1-320x276.webp" alt="Collaborazione 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contatti">
+        <h2>CONTATTAMI</h2>
+        <h3>la prima consulenza è <strong>gratuita</strong></h3>
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" placeholder="Nome *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Cognome">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Numero di telefono">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Scrivi la tua idea, le tue richieste, quello di cui hai bisogno."></textarea>
+            </div>
+            <button type="submit" class="submit-button">Invia</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About me</h3>
+                <p>Se ti interessa sapere di più su di me e sulle mie esperienze.</p>
+                <a href="https://www.linkedin.com/in/ivan-crescini-358a87248/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <a href="#home">Home</a>
+                <a href="#servizi">Servizi</a>
+                <a href="#portfolio">Portfolio</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Effetto 3D Tilt/Mouse Follow sulla card
+        const hero = document.querySelector('.hero');
+        const hero3dContainer = document.querySelector('.hero-3d-container');
+        const hero3dCard = document.querySelector('.hero-3d-card');
+        const floatingElements = document.querySelectorAll('.floating-element');
+
+        hero3dContainer.addEventListener('mousemove', (e) => {
+            if (!hero3dCard) return;
+            
+            const rect = hero3dCard.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calcola la rotazione in base alla posizione del mouse
+            const rotateX = ((y - centerY) / centerY) * -15; // -15 a 15 gradi
+            const rotateY = ((x - centerX) / centerX) * 15;  // -15 a 15 gradi
+            
+            // Applica la trasformazione 3D
+            hero3dCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            
+            // Muovi gli elementi fluttuanti
+            floatingElements.forEach((el, index) => {
+                const speed = (index + 1) * 1.5;
+                const moveX = ((x - centerX) / centerX) * (25 * speed);
+                const moveY = ((y - centerY) / centerY) * (25 * speed);
+                el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+
+        hero3dContainer.addEventListener('mouseleave', () => {
+            // Reset delle trasformazioni
+            if (hero3dCard) {
+                hero3dCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            }
+            floatingElements.forEach(el => {
+                el.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // Smooth scroll per i link di navigazione
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Registra ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animazione progressiva per future section con GSAP
+        gsap.fromTo('.future-text', 
+            {
+                x: -100,
+                opacity: 0
+            },
+            {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.future-section',
+                    start: 'top 80%',
+                    end: 'center center',
+                    scrub: 5,
+                    markers: false
+                }
+            }
+        );
+
+        gsap.fromTo('.future-image',
+            {
+                x: 100,
+                opacity: 0
+            },
+            {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.future-section',
+                    start: 'top 80%',
+                    end: 'center center',
+                    scrub: 5,
+                    markers: false
+                }
+            }
+        );
+
+        // Reveal progressivo dei paragrafi nella future section
+        const futureElements = gsap.utils.toArray('.future-text h2, .future-text p');
+        
+        futureElements.forEach((elem, index) => {
+            gsap.fromTo(elem,
+                {
+                    y: 20,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power2.out',
+                    duration: 0.5,
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    delay: index * 0.08
+                }
+            );
+        });
+
+        // Animazioni per about section
+        gsap.fromTo('.about-image-container',
+            {
+                x: -50,
+                opacity: 0
+            },
+            {
+                x: 0,
+                opacity: 1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: '.about-section',
+                    start: 'top 70%',
+                    end: 'top 30%',
+                    scrub: 2,
+                }
+            }
+        );
+
+        gsap.fromTo('.about-content',
+            {
+                x: 50,
+                opacity: 0
+            },
+            {
+                x: 0,
+                opacity: 1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: '.about-section',
+                    start: 'top 70%',
+                    end: 'top 30%',
+                    scrub: 2,
+                }
+            }
+        );
+
+        // Animazione progressiva dei paragrafi
+        const aboutElements = gsap.utils.toArray('.about-content h2, .about-content h3, .about-content p, .about-content .cta-button');
+        
+        aboutElements.forEach((elem, index) => {
+            gsap.fromTo(elem,
+                {
+                    y: 20,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power2.out',
+                    duration: 0.5,
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    delay: index * 0.08
+                }
+            );
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Grazie per il tuo messaggio! Ti contatterò al più presto.');
+        });
+    </script>
+</body>
+</html>

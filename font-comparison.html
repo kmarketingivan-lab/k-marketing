@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K-Marketing — Font Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #060724;
+    --orange: #ff6700;
+    --light: #edeced;
+    --white: #ffffff;
+    --gray-500: #6b7280;
+    --gray-300: #d1d5db;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--light);
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .page-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+
+  .page-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .page-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--gray-500);
+    margin-bottom: 48px;
+    max-width: 600px;
+  }
+
+  .color-strip {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  .color-swatch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(6,7,36,0.08);
+  }
+
+  .swatch-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(6,7,36,0.1);
+  }
+
+  .swatch-info { font-size: 13px; }
+  .swatch-name { font-weight: 600; color: var(--navy); }
+  .swatch-hex { color: var(--gray-500); font-family: monospace; }
+
+  .font-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .font-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(6,7,36,0.06);
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .font-card:hover {
+    border-color: var(--orange);
+  }
+
+  .font-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--gray-300);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .font-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .font-tag {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tag-tech { background: #ede9fe; color: #7c3aed; }
+  .tag-neutral { background: #e0f2fe; color: #0369a1; }
+  .tag-friendly { background: #fef3c7; color: #b45309; }
+  .tag-modern { background: #d1fae5; color: #047857; }
+
+  .font-body {
+    padding: 32px;
+  }
+
+  /* Light mode preview */
+  .preview-light {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+
+  /* Dark mode preview */
+  .preview-dark {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+
+  .preview-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .preview-light .preview-label { color: var(--gray-500); }
+  .preview-dark .preview-label { color: rgba(237,236,237,0.5); }
+
+  .preview-hero {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .preview-light .preview-hero { color: var(--navy); }
+  .preview-dark .preview-hero { color: var(--light); }
+
+  .preview-hero .highlight {
+    color: var(--orange);
+  }
+
+  .preview-sub {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .preview-light .preview-sub { color: var(--gray-500); }
+  .preview-dark .preview-sub { color: rgba(237,236,237,0.7); }
+
+  .preview-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 12px;
+  }
+
+  .preview-btn-ghost {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid;
+  }
+
+  .preview-light .preview-btn-ghost {
+    color: var(--navy);
+    border-color: var(--navy);
+  }
+
+  .preview-dark .preview-btn-ghost {
+    color: var(--light);
+    border-color: rgba(237,236,237,0.3);
+  }
+
+  /* Weights showcase */
+  .weights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-300);
+  }
+
+  .weight-item {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .weight-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gray-500);
+    margin-bottom: 4px;
+  }
+
+  .weight-sample {
+    font-size: 24px;
+    color: var(--navy);
+  }
+
+  .traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-300);
+  }
+
+  .trait {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    padding: 4px 10px;
+    background: var(--light);
+    border-radius: 6px;
+    color: var(--navy);
+  }
+
+  /* Space Grotesk */
+  .font-space .preview-hero,
+  .font-space .preview-sub,
+  .font-space .preview-btn,
+  .font-space .preview-btn-ghost,
+  .font-space .weight-sample {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  /* Inter */
+  .font-inter .preview-hero,
+  .font-inter .preview-sub,
+  .font-inter .preview-btn,
+  .font-inter .preview-btn-ghost,
+  .font-inter .weight-sample {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Outfit */
+  .font-outfit .preview-hero,
+  .font-outfit .preview-sub,
+  .font-outfit .preview-btn,
+  .font-outfit .preview-btn-ghost,
+  .font-outfit .weight-sample {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Plus Jakarta Sans */
+  .font-jakarta .preview-hero,
+  .font-jakarta .preview-sub,
+  .font-jakarta .preview-btn,
+  .font-jakarta .preview-btn-ghost,
+  .font-jakarta .weight-sample {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .recommendation {
+    margin-top: 48px;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    border-left: 4px solid var(--orange);
+  }
+
+  .rec-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .rec-text {
+    font-size: 15px;
+    color: var(--gray-500);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    body { padding: 24px 16px; }
+    .font-body { padding: 20px; }
+    .preview-light, .preview-dark { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="page-title">K-Marketing Design System</div>
+  <div class="page-subtitle">Font Comparison — I Tuoi Colori</div>
+  <div class="page-desc">Ogni font è mostrato in light mode e dark mode con i colori del brand: #060724, #ff6700, #edeced</div>
+
+  <div class="color-strip">
+    <div class="color-swatch">
+      <div class="swatch-circle" style="background: #060724;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Navy</div>
+        <div class="swatch-hex">#060724</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-circle" style="background: #ff6700;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Orange</div>
+        <div class="swatch-hex">#ff6700</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-circle" style="background: #edeced; border-color: #d1d5db;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Light Gray</div>
+        <div class="swatch-hex">#edeced</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-grid">
+
+    <!-- SPACE GROTESK -->
+    <div class="font-card font-space">
+      <div class="font-header">
+        <div class="font-name">1. Space Grotesk</div>
+        <div class="font-tag tag-tech">Geometric · Tech</div>
+      </div>
+      <div class="font-body">
+        <div class="preview-light">
+          <div class="preview-label">Light Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="preview-dark">
+          <div class="preview-label">Dark Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="weights">
+          <div class="weight-item">
+            <div class="weight-label">Regular 400</div>
+            <div class="weight-sample" style="font-weight:400;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Medium 500</div>
+            <div class="weight-sample" style="font-weight:500;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Bold 700</div>
+            <div class="weight-sample" style="font-weight:700;">Automazione AI</div>
+          </div>
+        </div>
+        <div class="traits">
+          <span class="trait">Forme geometriche</span>
+          <span class="trait">Vibe developer/tech</span>
+          <span class="trait">Personalità forte</span>
+          <span class="trait">Ottimo per titoli</span>
+          <span class="trait">Tight tracking</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTER -->
+    <div class="font-card font-inter">
+      <div class="font-header">
+        <div class="font-name">2. Inter</div>
+        <div class="font-tag tag-neutral">Neutro · Versatile</div>
+      </div>
+      <div class="font-body">
+        <div class="preview-light">
+          <div class="preview-label">Light Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="preview-dark">
+          <div class="preview-label">Dark Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="weights">
+          <div class="weight-item">
+            <div class="weight-label">Regular 400</div>
+            <div class="weight-sample" style="font-weight:400;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Semi-Bold 600</div>
+            <div class="weight-sample" style="font-weight:600;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Bold 700</div>
+            <div class="weight-sample" style="font-weight:700;">Automazione AI</div>
+          </div>
+        </div>
+        <div class="traits">
+          <span class="trait">Massima leggibilità</span>
+          <span class="trait">Usato da Vercel/Linear</span>
+          <span class="trait">Zero personalità = adattabile</span>
+          <span class="trait">Perfetto per body text</span>
+          <span class="trait">Standard industry</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUTFIT -->
+    <div class="font-card font-outfit">
+      <div class="font-header">
+        <div class="font-name">3. Outfit</div>
+        <div class="font-tag tag-friendly">Rounded · Friendly</div>
+      </div>
+      <div class="font-body">
+        <div class="preview-light">
+          <div class="preview-label">Light Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="preview-dark">
+          <div class="preview-label">Dark Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="weights">
+          <div class="weight-item">
+            <div class="weight-label">Regular 400</div>
+            <div class="weight-sample" style="font-weight:400;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Semi-Bold 600</div>
+            <div class="weight-sample" style="font-weight:600;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Bold 700</div>
+            <div class="weight-sample" style="font-weight:700;">Automazione AI</div>
+          </div>
+        </div>
+        <div class="traits">
+          <span class="trait">Forme arrotondate</span>
+          <span class="trait">Approachable</span>
+          <span class="trait">Buon per consumer/PMI</span>
+          <span class="trait">Meno "techy"</span>
+          <span class="trait">Moderno ma caldo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLUS JAKARTA SANS (bonus) -->
+    <div class="font-card font-jakarta">
+      <div class="font-header">
+        <div class="font-name">4. Plus Jakarta Sans <span style="font-size:13px;color:var(--orange);font-weight:400;">(bonus)</span></div>
+        <div class="font-tag tag-modern">Modern · Premium</div>
+      </div>
+      <div class="font-body">
+        <div class="preview-light">
+          <div class="preview-label">Light Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="preview-dark">
+          <div class="preview-label">Dark Mode</div>
+          <div class="preview-hero">Sistemi AI che fanno <span class="highlight">crescere</span> il tuo business</div>
+          <div class="preview-sub">Automazione, strategia e marketing digitale per PMI ambiziose. Zero fuffa, solo risultati misurabili.</div>
+          <span class="preview-btn">Prenota una call</span>
+          <span class="preview-btn-ghost">Vedi i risultati</span>
+        </div>
+        <div class="weights">
+          <div class="weight-item">
+            <div class="weight-label">Regular 400</div>
+            <div class="weight-sample" style="font-weight:400;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Semi-Bold 600</div>
+            <div class="weight-sample" style="font-weight:600;">Automazione AI</div>
+          </div>
+          <div class="weight-item">
+            <div class="weight-label">Bold 700</div>
+            <div class="weight-sample" style="font-weight:700;">Automazione AI</div>
+          </div>
+        </div>
+        <div class="traits">
+          <span class="trait">Geometrico ma morbido</span>
+          <span class="trait">Premium feel</span>
+          <span class="trait">Tech + accessibile</span>
+          <span class="trait">Ottimo per heading + body</span>
+          <span class="trait">Usato da startup top-tier</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="recommendation">
+    <div class="rec-title">💡 La mia raccomandazione per K-Marketing</div>
+    <div class="rec-text">
+      <strong>Space Grotesk per i titoli + Inter per il body text.</strong> Space Grotesk comunica immediatamente "tech/developer" — che è il tuo differenziatore. Inter come body mantiene la leggibilità massima per i testi lunghi (case study, servizi). Il combo è usato da molti prodotti tech di successo. In alternativa, <strong>Plus Jakarta Sans</strong> come font unico (heading + body) se vuoi un look più premium e meno "developer puro" — funziona bene con l'arancio #ff6700 e parla sia ai tech che alle PMI.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
