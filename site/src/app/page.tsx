@@ -21,7 +21,6 @@ export default function RootPage() {
     <>
       <head>
         <meta httpEquiv="refresh" content="0;url=/it/" />
-        <link rel="canonical" href="https://k-marketing.it/it/" />
       </head>
       <div className="flex min-h-screen flex-col items-center justify-center bg-[#060724] font-sans text-gray-100">
         <h1 className="mb-6 text-3xl font-bold">

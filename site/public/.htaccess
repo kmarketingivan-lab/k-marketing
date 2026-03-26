@@ -1,0 +1,16 @@
+Options -Indexes
+
+# Block direct PHP access (legacy Altervista files)
+<FilesMatch "\.php$">
+  Order Deny,Allow
+  Deny from all
+</FilesMatch>
+
+RewriteEngine On
+
+# Skip rewrite for static assets
+RewriteCond %{REQUEST_URI} ^/(_next|images|fonts|api|404|en)(/|$) [NC]
+RewriteRule ^ - [L]
+
+# 301 redirect: root → Italian locale (real HTTP redirect, not meta refresh)
+RewriteRule ^$ /it/ [R=301,L]

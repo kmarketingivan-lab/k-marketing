@@ -1,5 +1,16 @@
 /** Site-wide constants */
 
+/**
+ * Returns the URL prefix for a given locale.
+ * Static export (Altervista, localePrefix="always"): /it or /en
+ * SSR (Vercel, localePrefix="as-needed"):            ""  or /en
+ */
+export function localeBase(locale: string): string {
+  const isStatic = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
+  if (locale === "en") return "/en";
+  return isStatic ? "/it" : "";
+}
+
 export const SITE = {
   name: "K-Marketing",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://k-marketing.it",

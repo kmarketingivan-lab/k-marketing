@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, localeBase } from "@/lib/constants";
 import { ServicesPageClient } from "./client";
 
 export async function generateMetadata({
@@ -10,14 +10,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "metadata" });
   const ogLocale = locale === "it" ? "it_IT" : "en_US";
-  const path = locale === "it" ? "/servizi" : "/en/servizi";
-  const url = `${SITE.url}${path}`;
+  const url = `${SITE.url}${localeBase(locale)}/servizi`;
   return {
     title: t("servizi.title"),
     description: t("servizi.description"),
     alternates: {
       canonical: url,
-      languages: { it: `${SITE.url}/servizi`, en: `${SITE.url}/en/servizi`, "x-default": `${SITE.url}/servizi` },
+      languages: {
+        it: `${SITE.url}${localeBase("it")}/servizi`,
+        en: `${SITE.url}${localeBase("en")}/servizi`,
+        "x-default": `${SITE.url}${localeBase("it")}/servizi`,
+      },
     },
     openGraph: {
       title: t("servizi.title"),

@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, localeBase } from "@/lib/constants";
 import { caseStudies } from "@/lib/case-studies";
 import { CaseStudyDetailClient } from "./client";
 
@@ -18,8 +18,7 @@ export async function generateMetadata({
   if (!cs) return { title: "Not Found" };
   const t = await getTranslations({ locale, namespace: "caseStudiesPage" });
   const ogLocale = locale === "it" ? "it_IT" : "en_US";
-  const path = locale === "it" ? `/casi-studio/${slug}` : `/en/casi-studio/${slug}`;
-  const url = `${SITE.url}${path}`;
+  const url = `${SITE.url}${localeBase(locale)}/casi-studio/${slug}`;
   const title = `${t(`items.${slug}.title`)} | K-Marketing`;
   const description = t(`items.${slug}.desc`);
   return {
@@ -28,9 +27,9 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: {
-        it: `${SITE.url}/casi-studio/${slug}`,
-        en: `${SITE.url}/en/casi-studio/${slug}`,
-        "x-default": `${SITE.url}/casi-studio/${slug}`,
+        it: `${SITE.url}${localeBase("it")}/casi-studio/${slug}`,
+        en: `${SITE.url}${localeBase("en")}/casi-studio/${slug}`,
+        "x-default": `${SITE.url}${localeBase("it")}/casi-studio/${slug}`,
       },
     },
     openGraph: {
@@ -50,14 +49,14 @@ export async function generateMetadata({
 }
 
 function getBreadcrumbJsonLd(locale: string, slug: string, title: string) {
-  const prefix = locale === "it" ? "" : "/en";
+  const base = localeBase(locale);
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${prefix}` },
-      { "@type": "ListItem", position: 2, name: locale === "it" ? "Casi Studio" : "Case Studies", item: `${SITE.url}${prefix}/casi-studio` },
-      { "@type": "ListItem", position: 3, name: title, item: `${SITE.url}${prefix}/casi-studio/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${base}` },
+      { "@type": "ListItem", position: 2, name: locale === "it" ? "Casi Studio" : "Case Studies", item: `${SITE.url}${base}/casi-studio` },
+      { "@type": "ListItem", position: 3, name: title, item: `${SITE.url}${base}/casi-studio/${slug}` },
     ],
   };
 }

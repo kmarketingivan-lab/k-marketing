@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, localeBase } from "@/lib/constants";
 // v4 — editorial magazine + sfondi alternati (navy → arancio → bianco → navy → arancio)
 // backup v1 in: @/components/sections/
 // backup v2 in: @/components/sections-v2/
@@ -19,13 +19,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "metadata" });
   const ogLocale = locale === "it" ? "it_IT" : "en_US";
-  const url = locale === "it" ? SITE.url : `${SITE.url}/en`;
+  const base = localeBase(locale);
+  const url = `${SITE.url}${base}`;
   return {
     title: t("title"),
     description: t("description"),
     alternates: {
       canonical: url,
-      languages: { it: SITE.url, en: `${SITE.url}/en`, "x-default": SITE.url },
+      languages: {
+        it: `${SITE.url}${localeBase("it")}`,
+        en: `${SITE.url}${localeBase("en")}`,
+        "x-default": `${SITE.url}${localeBase("it")}`,
+      },
     },
     openGraph: {
       title: t("title"),

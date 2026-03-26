@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SITE } from "@/lib/constants";
+import { SITE, localeBase } from "@/lib/constants";
 import { SERVICE_SLUGS, slugToServiceKey, type ServiceSlug } from "@/lib/services";
 import { ServiceDetailClient } from "./client";
 
@@ -18,17 +18,16 @@ export async function generateMetadata({
   const key = slugToServiceKey[slug as ServiceSlug];
   const t = await getTranslations({ locale, namespace: "serviceDetail" });
   const ogLocale = locale === "it" ? "it_IT" : "en_US";
-  const prefix = locale === "it" ? "" : "/en";
-  const url = `${SITE.url}${prefix}/servizi/${slug}`;
+  const url = `${SITE.url}${localeBase(locale)}/servizi/${slug}`;
   return {
     title: t(`${key}.metaTitle`),
     description: t(`${key}.metaDesc`),
     alternates: {
       canonical: url,
       languages: {
-        it: `${SITE.url}/servizi/${slug}`,
-        en: `${SITE.url}/en/servizi/${slug}`,
-        "x-default": `${SITE.url}/servizi/${slug}`,
+        it: `${SITE.url}${localeBase("it")}/servizi/${slug}`,
+        en: `${SITE.url}${localeBase("en")}/servizi/${slug}`,
+        "x-default": `${SITE.url}${localeBase("it")}/servizi/${slug}`,
       },
     },
     openGraph: {
@@ -43,16 +42,16 @@ export async function generateMetadata({
 }
 
 function getJsonLd(locale: string, slug: string, serviceName: string) {
-  const prefix = locale === "it" ? "" : "/en";
+  const base = localeBase(locale);
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${prefix}` },
-          { "@type": "ListItem", position: 2, name: locale === "it" ? "Servizi" : "Services", item: `${SITE.url}${prefix}/servizi` },
-          { "@type": "ListItem", position: 3, name: serviceName, item: `${SITE.url}${prefix}/servizi/${slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${base}` },
+          { "@type": "ListItem", position: 2, name: locale === "it" ? "Servizi" : "Services", item: `${SITE.url}${base}/servizi` },
+          { "@type": "ListItem", position: 3, name: serviceName, item: `${SITE.url}${base}/servizi/${slug}` },
         ],
       },
       {
@@ -60,7 +59,7 @@ function getJsonLd(locale: string, slug: string, serviceName: string) {
         name: serviceName,
         provider: { "@id": `${SITE.url}/#organization` },
         areaServed: { "@type": "City", name: "Brescia" },
-        url: `${SITE.url}${prefix}/servizi/${slug}`,
+        url: `${SITE.url}${base}/servizi/${slug}`,
       },
     ],
   };

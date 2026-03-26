@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, localeBase } from "@/lib/constants";
 import { CaseStudiesListClient } from "./client";
 
 export async function generateMetadata({
@@ -10,14 +10,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "metadata" });
   const ogLocale = locale === "it" ? "it_IT" : "en_US";
-  const path = locale === "it" ? "/casi-studio" : "/en/casi-studio";
-  const url = `${SITE.url}${path}`;
+  const url = `${SITE.url}${localeBase(locale)}/casi-studio`;
   return {
     title: t("casiStudio.title"),
     description: t("casiStudio.description"),
     alternates: {
       canonical: url,
-      languages: { it: `${SITE.url}/casi-studio`, en: `${SITE.url}/en/casi-studio`, "x-default": `${SITE.url}/casi-studio` },
+      languages: {
+        it: `${SITE.url}${localeBase("it")}/casi-studio`,
+        en: `${SITE.url}${localeBase("en")}/casi-studio`,
+        "x-default": `${SITE.url}${localeBase("it")}/casi-studio`,
+      },
     },
     openGraph: {
       title: t("casiStudio.title"),

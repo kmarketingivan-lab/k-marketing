@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, localeBase } from "@/lib/constants";
 import { fetchNewsArticles } from "@/lib/news-feed";
 import { BlogListClient } from "./client";
 
@@ -11,14 +11,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "blog" });
   const ogLocale = locale === "it" ? "it_IT" : "en_US";
-  const prefix = locale === "it" ? "" : "/en";
-  const url = `${SITE.url}${prefix}/blog`;
+  const url = `${SITE.url}${localeBase(locale)}/blog`;
   return {
     title: t("metaTitle"),
     description: t("metaDesc"),
     alternates: {
       canonical: url,
-      languages: { it: `${SITE.url}/blog`, en: `${SITE.url}/en/blog`, "x-default": `${SITE.url}/blog` },
+      languages: {
+        it: `${SITE.url}${localeBase("it")}/blog`,
+        en: `${SITE.url}${localeBase("en")}/blog`,
+        "x-default": `${SITE.url}${localeBase("it")}/blog`,
+      },
     },
     openGraph: {
       title: t("metaTitle"),

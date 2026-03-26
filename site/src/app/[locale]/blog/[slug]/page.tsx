@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, localeBase } from "@/lib/constants";
 import { blogPosts, BLOG_SLUGS } from "@/lib/blog";
 import { BlogArticleClient } from "./client";
 
@@ -17,8 +17,7 @@ export async function generateMetadata({
   if (!BLOG_SLUGS.includes(slug)) return { title: "Not Found" };
   const t = await getTranslations({ locale, namespace: "blog" });
   const ogLocale = locale === "it" ? "it_IT" : "en_US";
-  const prefix = locale === "it" ? "" : "/en";
-  const url = `${SITE.url}${prefix}/blog/${slug}`;
+  const url = `${SITE.url}${localeBase(locale)}/blog/${slug}`;
   const title = `${t(`posts.${slug}.title`)} | K-Marketing`;
   const description = t(`posts.${slug}.excerpt`);
   return {
@@ -27,9 +26,9 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: {
-        it: `${SITE.url}/blog/${slug}`,
-        en: `${SITE.url}/en/blog/${slug}`,
-        "x-default": `${SITE.url}/blog/${slug}`,
+        it: `${SITE.url}${localeBase("it")}/blog/${slug}`,
+        en: `${SITE.url}${localeBase("en")}/blog/${slug}`,
+        "x-default": `${SITE.url}${localeBase("it")}/blog/${slug}`,
       },
     },
     openGraph: { title, description, url, siteName: SITE.name, locale: ogLocale, type: "article" },
@@ -37,16 +36,16 @@ export async function generateMetadata({
 }
 
 function getJsonLd(locale: string, slug: string, title: string, description: string, date: string) {
-  const prefix = locale === "it" ? "" : "/en";
+  const base = localeBase(locale);
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${prefix}` },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE.url}${prefix}/blog` },
-          { "@type": "ListItem", position: 3, name: title, item: `${SITE.url}${prefix}/blog/${slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${base}` },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE.url}${base}/blog` },
+          { "@type": "ListItem", position: 3, name: title, item: `${SITE.url}${base}/blog/${slug}` },
         ],
       },
       {
@@ -56,7 +55,7 @@ function getJsonLd(locale: string, slug: string, title: string, description: str
         datePublished: date,
         author: { "@type": "Person", name: SITE.founder },
         publisher: { "@id": `${SITE.url}/#organization` },
-        mainEntityOfPage: `${SITE.url}${prefix}/blog/${slug}`,
+        mainEntityOfPage: `${SITE.url}${base}/blog/${slug}`,
       },
     ],
   };
