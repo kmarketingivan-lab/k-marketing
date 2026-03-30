@@ -9,6 +9,7 @@ import { SetLang } from "@/components/set-lang";
 import { CookieConsentProvider } from "@/components/cookie-consent-provider";
 import { CookieBanner } from "@/components/cookie-banner";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { MicrosoftClarity } from "@/components/microsoft-clarity";
 import { Chatbot } from "@/components/chatbot";
 import { LeadMagnetPopup } from "@/components/lead-magnet-popup";
 
@@ -48,6 +49,7 @@ export default function LocaleLayout({
           <LeadMagnetPopup />
           <CookieBanner />
           <GoogleAnalytics />
+          <MicrosoftClarity />
         </CookieConsentProvider>
       </ThemeProvider>
     </NextIntlClientProvider>
