@@ -344,38 +344,66 @@
   },
   "aboutPage": {
     "overline": "Chi siamo",
-    "heroTitle": "Agenzia marketing Brescia.",
-    "heroTitleItalic": "Studio digitale.",
-    "heroSubtitle": "Agenzia di marketing e pubblicità a Brescia. Costruiamo sistemi digitali che generano risultati concreti per le PMI: siti internet, SEO, advertising e automazione.",
+    "heroTitle": "Ivan Crescini.",
+    "heroTitleItalic": "K-Marketing, Brescia.",
+    "heroSubtitle": "Fondatore di K-Marketing, agenzia di marketing digitale a Brescia. Aiuto PMI e professionisti a trovare clienti online con SEO, advertising, siti web e automazione AI â€” con risultati misurabili e zero fuffa.",
     "storyOverline": "La storia",
-    "storyTitle": "Una scelta nata dall'esperienza.",
-    "storyP1": "Nel 2020 il panorama del marketing digitale per le piccole e medie imprese presentava un problema evidente: troppe agenzie proponevano servizi standardizzati, report poco trasparenti e strategie che non producevano risultati misurabili. Le aziende investivano budget significativi senza avere visibilità reale sul ritorno dell'investimento.",
-    "storyP2": "Da questa consapevolezza è nata la nostra agenzia di marketing a Brescia, con una missione chiara: progettare siti internet, campagne pubblicitarie e sistemi di marketing digitale basati su dati, automazione e intelligenza artificiale. Un approccio dove ogni azione è tracciabile, ogni investimento è giustificato e ogni risultato è misurabile.",
-    "storyP3": "In cinque anni di attività abbiamo completato oltre 20 progetti per realtà diverse — dalla ristorazione all'automotive, dall'e-commerce artigianale all'hospitality. Ogni progetto è unico, ma il principio guida rimane invariato: se non genera un impatto misurabile sul business, non fa parte della nostra strategia.",
+    "storyTitle": "Venivo da un altro mondo. Ed Ã¨ stato un vantaggio.",
+    "storyP1": "Mi sono avvicinato al marketing digitale non da un'agenzia, ma dall'altra parte: quella di chi guarda i risultati, non le presentazioni. Venivo da un settore diverso, e quello che vedevo nel mondo del marketing per le PMI non mi convinceva. Troppe promesse generiche, troppi report pieni di numeri che non dicevano nulla su cosa stava crescendo davvero nel business del cliente.",
+    "storyP2": "Ho fondato K-Marketing a Brescia nel 2020 con un'idea precisa: costruire un sistema di marketing che funzionasse come se fossi il socio digitale dell'azienda cliente â€” non il fornitore esterno che manda un'email a fine mese. Ogni progetto parte da una domanda onesta: cosa deve cambiare nel tuo business perchÃ© questo investimento abbia senso? SEO, campagne Google e Meta, siti internet, automazione AI: sono strumenti. L'obiettivo Ã¨ sempre uno solo â€” piÃ¹ clienti, a un costo misurabile.",
+    "storyP3": "In cinque anni a Brescia e provincia ho lavorato con realtÃ  molto diverse: dalla ristorazione all'hospitality, dall'e-commerce artigianale al settore automotive. Per I PeruviÃ  abbiamo triplicato il traffico organico e portato il sito al primo posto su Google per le keyword principali. Per Villa Riviera le prenotazioni dirette sono cresciute del 390%, riducendo del 60% la dipendenza da Booking.com. Per Charme Extension e Bottega Matta abbiamo costruito da zero la presenza digitale. Ogni progetto Ã¨ diverso. Il metodo Ã¨ sempre lo stesso: dati, strategia, esecuzione, misura.",
     "approachOverline": "L'approccio",
-    "approachTitle": "Dove gli altri seguono,",
-    "approachTitleItalic": "noi anticipiamo.",
+    "approachTitle": "Il metodo K-Marketing:",
+    "approachTitleItalic": "dati prima, creativitÃ  dopo.",
     "values": {
       "automation": {
         "title": "Automazione come standard",
-        "desc": "Progettiamo sistemi che operano in modo autonomo e continuo. Chatbot AI per l'assistenza clienti, campagne pubblicitarie con ottimizzazione automatica, contenuti editoriali generati e revisionati da agenti intelligenti. L'obiettivo è un ecosistema di marketing che lavora con efficienza costante, indipendentemente dall'orario."
+        "desc": "Costruiamo automazioni AI che rispondono ai lead entro 5 minuti, qualificano i contatti, aggiornano il CRM e pubblicano sui social â€” senza che tu debba alzare un dito. Il mercato degli agenti AI cresce al 44% annuo: le PMI che li adottano oggi hanno un vantaggio che i concorrenti faranno fatica a recuperare."
       },
       "noSmoke": {
         "title": "Trasparenza totale sui risultati",
-        "desc": "Ogni attività che svolgiamo è accompagnata da metriche chiare: lead generati, costo per acquisizione, ritorno sull'investimento pubblicitario. Lavoriamo con un obiettivo minimo di ROAS 3× e forniamo report dettagliati che mostrano esattamente come viene impiegato ogni euro del budget."
+        "desc": "Ogni progetto parte con KPI definiti: costo per lead, ROAS, posizioni Google, traffico organico. Forniamo report mensili che mostrano esattamente cosa Ã¨ cambiato e perchÃ©. Non lavoriamo con obiettivi vaghi come 'aumentare la visibilitÃ ': lavoriamo con numeri. Se non li raggiungiamo, lo diciamo chiaramente e cambiamo strategia."
       },
       "modern": {
         "title": "Strategia digitale nativa",
-        "desc": "Il comportamento d'acquisto è cambiato radicalmente. Il cliente di oggi cerca soluzioni su Google, valuta le opzioni sui social media e completa decisioni attraverso canali digitali. La nostra strategia posiziona il tuo brand esattamente nei touchpoint dove il tuo pubblico target è già presente — con il messaggio più efficace, nel momento ottimale."
+        "desc": "Il 58% degli utenti italiani usa strumenti AI per cercare prodotti e servizi (Capgemini, 2025). Google AI Overviews Ã¨ presente su 1,5 miliardi di utenti mensili. Ottimizziamo i contenuti per essere trovati sia da Google che da ChatGPT, Perplexity e Google AI â€” perchÃ© la visibilitÃ  digitale nel 2026 si gioca su entrambi i fronti."
       },
       "personal": {
         "title": "Uno studio, non una catena",
-        "desc": "Ogni progetto è seguito con attenzione diretta e continuativa. Non ci sono rotazioni di account manager o passaggi di consegna interni. Questo modello di lavoro garantisce una conoscenza approfondita del business di ogni cliente e un livello di cura che le strutture più grandi difficilmente possono offrire."
+        "desc": "Ogni cliente ha un interlocutore unico: me. Non ci sono account manager junior che cambiano ogni sei mesi, non ci sono passaggi di consegne interni. Conosco il tuo business, il tuo mercato e i tuoi obiettivi perchÃ© li ho seguiti fin dal primo giorno. Questo Ã¨ il vantaggio di lavorare con uno studio invece di una grande agenzia."
       }
     },
     "ctaTitle": "Pronto a iniziare?",
     "ctaSubtitle": "Prenota una consulenza gratuita di 30 minuti. Analizziamo insieme la tua situazione e valutiamo le opportunità di crescita.",
-    "ctaCta": "Prenota una consulenza"
+    "ctaCta": "Prenota una consulenza",
+    "founderName": "Ivan Crescini",
+    "founderRole": "Fondatore e Direttore Creativo, K-Marketing Brescia",
+    "founderBio": "Specializzato in SEO, advertising online e automazione AI per PMI. Opera a Brescia e provincia dal 2020. Approccio diretto: ogni progetto Ã¨ seguito personalmente, dalla strategia all'esecuzione, con report chiari e obiettivi misurabili.",
+    "founderPhoto": "/images/ivan-crescini-fondatore-k-marketing-brescia.jpg",
+    "founderPhotoAlt": "Ivan Crescini, fondatore di K-Marketing â€” agenzia di marketing digitale a Brescia",
+    "founderLinkedIn": "https://www.linkedin.com/in/ivan-crescini-358a87248/",
+    "locationOverline": "Dove siamo",
+    "locationTitle": "Brescia, Italia.",
+    "locationBody": "K-Marketing opera a Brescia e in tutta la provincia: Brescia cittÃ , Desenzano del Garda, Montichiari, Lonato, Ghedi, Chiari, Orzinuovi. Lavoriamo anche con clienti in tutta Italia per progetti digitali che non richiedono presenza fisica. La sede operativa Ã¨ a Brescia.",
+    "statsOverline": "In numeri",
+    "statsItems": [
+      {
+        "value": "20+",
+        "label": "Progetti completati"
+      },
+      {
+        "value": "5+",
+        "label": "Anni a Brescia"
+      },
+      {
+        "value": "+390%",
+        "label": "Prenotazioni dirette Villa Riviera"
+      },
+      {
+        "value": "+300%",
+        "label": "Traffico organico I PeruviÃ "
+      }
+    ]
   },
   "process": {
     "overline": "Come lavoriamo",

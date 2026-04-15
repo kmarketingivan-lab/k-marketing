@@ -42,10 +42,30 @@ function getBreadcrumbJsonLd(locale: string) {
   const prefix = locale === "it" ? "" : "/en";
   return {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${prefix}` },
-      { "@type": "ListItem", position: 2, name: locale === "it" ? "Chi Siamo" : "About", item: `${SITE.url}${prefix}/chi-siamo` },
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}${prefix}` },
+          { "@type": "ListItem", position: 2, name: locale === "it" ? "Chi Siamo" : "About", item: `${SITE.url}${prefix}/chi-siamo` },
+        ],
+      },
+      // Person schema per Ivan Crescini — segnale E-E-A-T per Google e AI Search
+      // Collega il fondatore all'organizzazione e alle sue presenze esterne verificabili
+      {
+        "@type": "Person",
+        "@id": `${SITE.url}/#founder`,
+        name: SITE.founder,
+        jobTitle: locale === "it" ? "Fondatore e Direttore Creativo" : "Founder and Creative Director",
+        worksFor: { "@id": `${SITE.url}/#organization` },
+        url: `${SITE.url}${prefix}/chi-siamo`,
+        sameAs: [
+          "https://www.linkedin.com/in/ivan-crescini-358a87248/",
+        ],
+        knowsAbout: locale === "it"
+          ? ["SEO", "Google Ads", "Meta Ads", "Social Media Marketing", "Automazione AI", "Web Development", "Marketing Digitale"]
+          : ["SEO", "Google Ads", "Meta Ads", "Social Media Marketing", "AI Automation", "Web Development", "Digital Marketing"],
+      },
     ],
   };
 }
