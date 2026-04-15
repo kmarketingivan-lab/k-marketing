@@ -1,0 +1,39 @@
+# K-Marketing
+Agenzia di marketing digitale a Brescia (Italia). Fondata da Ivan Crescini nel 2020.
+Offre servizi di SEO, pubblicità online (Google Ads, Meta Ads), social media management,
+sviluppo siti web ed e-commerce, content marketing e automazione AI per PMI.
+
+## Informazioni sull'azienda
+- Nome: K-Marketing
+- Sede: Brescia, Lombardia, Italia
+- Fondatore: Ivan Crescini
+- Sito web: https://www.k-marketing.it
+- Email: info@k-marketing.it
+- Telefono: +39 375 739 2959
+- LinkedIn: https://www.linkedin.com/in/ivan-crescini-358a87248/
+- Instagram: https://www.instagram.com/k.marketing_brescia/
+- Google Business: https://www.k-marketing.it
+
+## Contenuti da includere
+- /it/ — Homepage italiana (overview servizi, FAQ, chi siamo)
+- /it/servizi/ — Panoramica di tutti i servizi offerti
+- /it/servizi/seo-brescia/ — SEO e posizionamento Google a Brescia
+- /it/servizi/pubblicita-online-brescia/ — Campagne Google Ads e Meta Ads
+- /it/servizi/social-media-brescia/ — Gestione social media
+- /it/servizi/automazione-ai-brescia/ — Automazione AI e chatbot per il marketing
+- /it/servizi/content-marketing-brescia/ — Content marketing, blog, newsletter
+- /it/servizi/siti-internet-brescia/ — Realizzazione siti web ed e-commerce
+- /it/casi-studio/ — Casi studio con risultati reali dei clienti
+- /it/chi-siamo/ — Team, valori e storia dello studio
+- /it/blog/ — Articoli di approfondimento su marketing digitale e SEO
+- /it/contatti/ — Modulo di contatto e prenotazione call gratuita
+
+## Contenuti da escludere
+- /api/ — Endpoint API interni
+- /it/privacy/ — Privacy policy (contenuto legale non editoriale)
+- /it/cookies/ — Cookie policy (contenuto legale non editoriale)
+- /it/termini/ — Termini di servizio (contenuto legale non editoriale)
+- /_next/ — Asset statici Next.js
+
+## Versione inglese
+I contenuti sopra elencati sono disponibili anche in lingua inglese sotto il path /en/.

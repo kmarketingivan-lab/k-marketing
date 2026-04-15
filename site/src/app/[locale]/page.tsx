@@ -74,7 +74,7 @@ const jsonLd = {
       foundingDate: String(SITE.foundedYear),
       sameAs: [
         "https://www.instagram.com/k.marketing_brescia/",
-        "https://www.linkedin.com/company/k-marketing-brescia",
+        "https://www.linkedin.com/in/ivan-crescini-358a87248/",
       ],
     },
     {
@@ -132,7 +132,7 @@ const jsonLd = {
       },
       sameAs: [
         "https://www.instagram.com/k.marketing_brescia/",
-        "https://www.linkedin.com/company/k-marketing-brescia",
+        "https://www.linkedin.com/in/ivan-crescini-358a87248/",
       ],
     },
     {

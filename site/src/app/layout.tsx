@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   verification: {
     google: "QDCG4gzIB3AjN502fm74Slw9Kf_PxwEJNPVij4NIO4k",
+    other: {
+      "msvalidate.01": "C31AFC6FFED6A449B3F9E4101527603B",
+    },
   },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
