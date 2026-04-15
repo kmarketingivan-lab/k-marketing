@@ -41,7 +41,9 @@ export async function generateMetadata({
   };
 }
 
-function getJsonLd(locale: string, slug: string, serviceName: string) {
+interface FaqItem { question: string; answer: string }
+
+function getJsonLd(locale: string, slug: string, serviceName: string, faqs: FaqItem[]) {
   const base = localeBase(locale);
   return {
     "@context": "https://schema.org",
@@ -61,6 +63,19 @@ function getJsonLd(locale: string, slug: string, serviceName: string) {
         areaServed: { "@type": "City", name: "Brescia" },
         url: `${SITE.url}${base}/servizi/${slug}`,
       },
+      // FAQPage schema — abilita rich results "Domande frequenti" in Google SERP
+      // e aumenta la probabilità di citazione in Google AI Overviews e ChatGPT (AEO/GEO)
+      ...(faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }] : []),
     ],
   };
 }
@@ -75,11 +90,12 @@ export default async function ServiceDetailPage({
   const key = slugToServiceKey[slug as ServiceSlug];
   const t = await getTranslations({ locale, namespace: "serviceDetail" });
   const serviceName = t(`${key}.heroTitle`);
+  const faqs = t.raw(`${key}.faq`) as FaqItem[];
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLd(locale, slug, serviceName)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLd(locale, slug, serviceName, faqs)) }}
       />
       <ServiceDetailClient serviceKey={key} />
     </>
