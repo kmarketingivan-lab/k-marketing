@@ -8,86 +8,39 @@ const SITE_URL = SITE.url;
 const IT = localeBase("it"); // "/it" in static export, "" in SSR
 const EN = localeBase("en"); // always "/en"
 
-const staticRoutes = [
+// Solo le route IT indicizzabili — escluse le pagine legali (non portano valore SEO)
+const indexableRoutes = [
   "",
   "/servizi",
   "/casi-studio",
   "/chi-siamo",
   "/contatti",
   "/blog",
-  "/privacy",
-  "/cookies",
-  "/termini",
 ];
-
-const legalRoutes = new Set(["/privacy", "/cookies", "/termini"]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const itPages: MetadataRoute.Sitemap = staticRoutes.map((route) => {
-    const isLegal = legalRoutes.has(route);
-    return {
-      url: `${SITE_URL}${IT}${route}`,
-      lastModified: now,
-      changeFrequency: route === "" ? "weekly" : isLegal ? "yearly" : "monthly",
-      priority: route === "" ? 1 : isLegal ? 0.3 : 0.8,
-      alternates: {
-        languages: {
-          it: `${SITE_URL}${IT}${route}`,
-          en: `${SITE_URL}${EN}${route}`,
-        },
-      },
-    };
-  });
-
-  const enPages: MetadataRoute.Sitemap = staticRoutes.map((route) => {
-    const isLegal = legalRoutes.has(route);
-    return {
-      url: `${SITE_URL}${EN}${route}`,
-      lastModified: now,
-      changeFrequency: route === "" ? "weekly" : isLegal ? "yearly" : "monthly",
-      priority: route === "" ? 0.9 : isLegal ? 0.2 : 0.7,
-      alternates: {
-        languages: {
-          it: `${SITE_URL}${IT}${route}`,
-          en: `${SITE_URL}${EN}${route}`,
-        },
-      },
-    };
-  });
-
-  const itCaseStudies: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
-    url: `${SITE_URL}${IT}/casi-studio/${cs.slug}`,
+  // Pagine statiche IT
+  const itPages: MetadataRoute.Sitemap = indexableRoutes.map((route) => ({
+    url: `${SITE_URL}${IT}${route}`,
     lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
+    changeFrequency: route === "" ? "weekly" : "monthly",
+    priority: route === "" ? 1 : route === "/servizi" ? 0.9 : 0.8,
     alternates: {
       languages: {
-        it: `${SITE_URL}${IT}/casi-studio/${cs.slug}`,
-        en: `${SITE_URL}${EN}/casi-studio/${cs.slug}`,
+        it: `${SITE_URL}${IT}${route}`,
+        en: `${SITE_URL}${EN}${route}`,
       },
     },
   }));
 
-  const enCaseStudies: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
-    url: `${SITE_URL}${EN}/casi-studio/${cs.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-    alternates: {
-      languages: {
-        it: `${SITE_URL}${IT}/casi-studio/${cs.slug}`,
-        en: `${SITE_URL}${EN}/casi-studio/${cs.slug}`,
-      },
-    },
-  }));
-
+  // Servizi IT (alta priorità — pagine target per keyword locali)
   const itServices: MetadataRoute.Sitemap = SERVICE_SLUGS.map((slug) => ({
     url: `${SITE_URL}${IT}/servizi/${slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: 0.85,
+    priority: 0.9,
     alternates: {
       languages: {
         it: `${SITE_URL}${IT}/servizi/${slug}`,
@@ -96,19 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  const enServices: MetadataRoute.Sitemap = SERVICE_SLUGS.map((slug) => ({
-    url: `${SITE_URL}${EN}/servizi/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
-    alternates: {
-      languages: {
-        it: `${SITE_URL}${IT}/servizi/${slug}`,
-        en: `${SITE_URL}${EN}/servizi/${slug}`,
-      },
-    },
-  }));
-
+  // Blog IT
   const itBlog: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
     url: `${SITE_URL}${IT}/blog/${slug}`,
     lastModified: now,
@@ -122,18 +63,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  const enBlog: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
-    url: `${SITE_URL}${EN}/blog/${slug}`,
+  // Casi Studio IT
+  const itCaseStudies: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
+    url: `${SITE_URL}${IT}/casi-studio/${cs.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: 0.6,
+    priority: 0.75,
     alternates: {
       languages: {
-        it: `${SITE_URL}${IT}/blog/${slug}`,
-        en: `${SITE_URL}${EN}/blog/${slug}`,
+        it: `${SITE_URL}${IT}/casi-studio/${cs.slug}`,
+        en: `${SITE_URL}${EN}/casi-studio/${cs.slug}`,
       },
     },
   }));
 
-  return [...itPages, ...enPages, ...itServices, ...enServices, ...itBlog, ...enBlog, ...itCaseStudies, ...enCaseStudies];
+  // Nota: versioni EN escluse dalla sitemap nella fase attuale.
+  // Il sito è primariamente italiano e il target è locale (Brescia).
+  // Le versioni EN verranno reintrodotte quando il dominio avrà più autorità.
+  return [...itPages, ...itServices, ...itBlog, ...itCaseStudies];
 }

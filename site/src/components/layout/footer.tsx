@@ -81,6 +81,16 @@ export function Footer() {
             <CookieSettingsButton />
           </div>
         </div>
+
+        {/* Portfolio clienti — crawlabile dai motori di ricerca */}
+        <div className="mt-6 border-t border-gray-100/[0.03] pt-4">
+          <p className="text-[0.6rem] text-gray-100/[0.08]">
+            Alcuni clienti:{" "}
+            <a href="https://xn--iperuvi-fwa.com/" rel="nofollow" className="text-gray-100/[0.08] hover:text-gray-100/20 transition-colors">I Peruvià Brescia</a>
+            {" · "}
+            <a href="https://charmeextension.com/" rel="nofollow" className="text-gray-100/[0.08] hover:text-gray-100/20 transition-colors">Charme Extension</a>
+          </p>
+        </div>
       </div>
     </footer>
   );
