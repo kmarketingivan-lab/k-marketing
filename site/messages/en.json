@@ -46,7 +46,16 @@
     "since": "Active since"
   },
   "ticker": {
-    "items": ["SEO & Ranking", "Social Media", "Advertising", "AI Automation", "Content Marketing", "Web Development", "Brand Identity", "Analytics & KPI"]
+    "items": [
+      "SEO & Ranking",
+      "Social Media",
+      "Advertising",
+      "AI Automation",
+      "Content Marketing",
+      "Web Development",
+      "Brand Identity",
+      "Analytics & KPI"
+    ]
   },
   "services": {
     "overline": "What we do",
@@ -57,12 +66,54 @@
     "subtitle": "Each service is part of an integrated system. We don't sell packages — we build custom solutions.",
     "cta": "See all services →",
     "items": {
-      "seo": { "title": "SEO & Ranking", "desc": "We get you found on Google with strategy, not tricks.", "tags": ["Google", "Keywords"] },
-      "social": { "title": "Social Media", "desc": "Strategic content that brings customers, not just followers.", "tags": ["Instagram", "LinkedIn"] },
-      "ads": { "title": "Advertising", "desc": "Google and Meta campaigns with measurable ROI.", "tags": ["Meta Ads", "Google Ads"] },
-      "ai": { "title": "AI & Automation", "desc": "Systems that work 24/7: chatbots, email, lead generation.", "tags": ["Chatbot", "Automation"] },
-      "content": { "title": "Content Marketing", "desc": "Blog posts, newsletters, content that educates and converts.", "tags": ["Blog", "Video"] },
-      "web": { "title": "Web & App Development", "desc": "Fast, modern websites and web apps optimized to convert.", "tags": ["Next.js", "E-commerce"] }
+      "seo": {
+        "title": "SEO & Ranking",
+        "desc": "We get you found on Google with strategy, not tricks.",
+        "tags": [
+          "Google",
+          "Keywords"
+        ]
+      },
+      "social": {
+        "title": "Social Media",
+        "desc": "Strategic content that brings customers, not just followers.",
+        "tags": [
+          "Instagram",
+          "LinkedIn"
+        ]
+      },
+      "ads": {
+        "title": "Advertising",
+        "desc": "Google and Meta campaigns with measurable ROI.",
+        "tags": [
+          "Meta Ads",
+          "Google Ads"
+        ]
+      },
+      "ai": {
+        "title": "AI & Automation",
+        "desc": "Systems that work 24/7: chatbots, email, lead generation.",
+        "tags": [
+          "Chatbot",
+          "Automation"
+        ]
+      },
+      "content": {
+        "title": "Content Marketing",
+        "desc": "Blog posts, newsletters, content that educates and converts.",
+        "tags": [
+          "Blog",
+          "Video"
+        ]
+      },
+      "web": {
+        "title": "Web & App Development",
+        "desc": "Fast, modern websites and web apps optimized to convert.",
+        "tags": [
+          "Next.js",
+          "E-commerce"
+        ]
+      }
     }
   },
   "servicesPage": {
@@ -77,60 +128,132 @@
         "title": "SEO & Search Ranking",
         "desc": "We make you visible on Google when your customers search for your services. Technical strategy and optimized content — no tricks, only lasting results.",
         "features": [
-          { "title": "Full technical audit", "desc": "We analyze structure, speed, indexing and every factor holding back your ranking." },
-          { "title": "Targeted keyword strategy", "desc": "Research focused on keywords that bring real customers, not generic traffic. Commercial intent first." },
-          { "title": "Optimized content", "desc": "We create pages and articles that answer your customers' questions and rank organically." },
-          { "title": "Monitoring and reporting", "desc": "Clear dashboard with rankings, traffic and conversions. You always know how things are going." }
+          {
+            "title": "Full technical audit",
+            "desc": "We analyze structure, speed, indexing and every factor holding back your ranking."
+          },
+          {
+            "title": "Targeted keyword strategy",
+            "desc": "Research focused on keywords that bring real customers, not generic traffic. Commercial intent first."
+          },
+          {
+            "title": "Optimized content",
+            "desc": "We create pages and articles that answer your customers' questions and rank organically."
+          },
+          {
+            "title": "Monitoring and reporting",
+            "desc": "Clear dashboard with rankings, traffic and conversions. You always know how things are going."
+          }
         ]
       },
       "social": {
         "title": "Social Media Management",
         "desc": "Social media isn't for collecting likes — it's for bringing customers. We create strategic content that builds trust and generates inquiries.",
         "features": [
-          { "title": "Strategic editorial plan", "desc": "Content designed for your target audience, not generic posts. Every piece has a clear objective." },
-          { "title": "Content creation", "desc": "Graphics, copy and video optimized for each platform. Content that stops the scroll." },
-          { "title": "Community management", "desc": "We handle comments, DMs and interactions. Your brand always responds professionally." },
-          { "title": "Analytics and optimization", "desc": "We analyze what works and what doesn't. Every month we improve strategy based on data." }
+          {
+            "title": "Strategic editorial plan",
+            "desc": "Content designed for your target audience, not generic posts. Every piece has a clear objective."
+          },
+          {
+            "title": "Content creation",
+            "desc": "Graphics, copy and video optimized for each platform. Content that stops the scroll."
+          },
+          {
+            "title": "Community management",
+            "desc": "We handle comments, DMs and interactions. Your brand always responds professionally."
+          },
+          {
+            "title": "Analytics and optimization",
+            "desc": "We analyze what works and what doesn't. Every month we improve strategy based on data."
+          }
         ]
       },
       "ads": {
         "title": "Advertising & Paid Media",
         "desc": "Google Ads and Meta Ads campaigns with one goal: positive ROI. Every euro invested must come back multiplied.",
         "features": [
-          { "title": "Advanced campaign setup", "desc": "Account structure, conversion tracking, pixels and APIs configured correctly from day one." },
-          { "title": "Surgical targeting", "desc": "We reach the right people at the right time. Lookalike, retargeting and custom audiences." },
-          { "title": "Creative that converts", "desc": "Continuous A/B testing on copy and visuals. We find the combination that performs best." },
-          { "title": "Budget optimization", "desc": "We shift budget where it performs best. Weekly reports on spend, leads and cost per acquisition." }
+          {
+            "title": "Advanced campaign setup",
+            "desc": "Account structure, conversion tracking, pixels and APIs configured correctly from day one."
+          },
+          {
+            "title": "Surgical targeting",
+            "desc": "We reach the right people at the right time. Lookalike, retargeting and custom audiences."
+          },
+          {
+            "title": "Creative that converts",
+            "desc": "Continuous A/B testing on copy and visuals. We find the combination that performs best."
+          },
+          {
+            "title": "Budget optimization",
+            "desc": "We shift budget where it performs best. Weekly reports on spend, leads and cost per acquisition."
+          }
         ]
       },
       "ai": {
         "title": "AI & Automation",
         "desc": "Intelligent systems that work 24/7 for you. Chatbots, automated emails, lead scoring and workflows that turn contacts into customers while you sleep.",
         "features": [
-          { "title": "Custom AI chatbots", "desc": "Virtual assistants that answer customers, qualify leads and book appointments automatically." },
-          { "title": "Automated email marketing", "desc": "Email sequences that nurture contacts and guide them to purchase without manual intervention." },
-          { "title": "Lead scoring and qualification", "desc": "AI evaluates every contact and flags only those ready to buy. Stop wasting time on browsers." },
-          { "title": "Custom workflows", "desc": "We automate repetitive processes: follow-ups, reminders, reports, notifications. You focus on business." }
+          {
+            "title": "Custom AI chatbots",
+            "desc": "Virtual assistants that answer customers, qualify leads and book appointments automatically."
+          },
+          {
+            "title": "Automated email marketing",
+            "desc": "Email sequences that nurture contacts and guide them to purchase without manual intervention."
+          },
+          {
+            "title": "Lead scoring and qualification",
+            "desc": "AI evaluates every contact and flags only those ready to buy. Stop wasting time on browsers."
+          },
+          {
+            "title": "Custom workflows",
+            "desc": "We automate repetitive processes: follow-ups, reminders, reports, notifications. You focus on business."
+          }
         ]
       },
       "content": {
         "title": "Content Marketing",
         "desc": "Content that educates, entertains and converts. Blogs, newsletters, video — every piece builds authority and drives qualified traffic.",
         "features": [
-          { "title": "Editorial strategy", "desc": "We plan content based on data: what your audience searches, what competitors miss, where opportunity lies." },
-          { "title": "SEO blog articles", "desc": "Optimized content that ranks on Google and answers your customers' real questions." },
-          { "title": "Newsletters and email", "desc": "Regular communications that keep contacts warm and build a relationship with your audience." },
-          { "title": "Video and visual content", "desc": "Multimedia content that increases engagement and makes your brand memorable." }
+          {
+            "title": "Editorial strategy",
+            "desc": "We plan content based on data: what your audience searches, what competitors miss, where opportunity lies."
+          },
+          {
+            "title": "SEO blog articles",
+            "desc": "Optimized content that ranks on Google and answers your customers' real questions."
+          },
+          {
+            "title": "Newsletters and email",
+            "desc": "Regular communications that keep contacts warm and build a relationship with your audience."
+          },
+          {
+            "title": "Video and visual content",
+            "desc": "Multimedia content that increases engagement and makes your brand memorable."
+          }
         ]
       },
       "web": {
         "title": "Web & App Development",
         "desc": "Fast, modern websites and applications designed to convert visitors into customers. Cutting-edge technology focused on performance and UX.",
         "features": [
-          { "title": "High-performance websites", "desc": "Built with Next.js, instant loading, responsive design. Your site is your best salesperson." },
-          { "title": "Custom e-commerce", "desc": "Online stores optimized to sell: simplified checkout, automatic upsells, secure payments." },
-          { "title": "Custom web apps", "desc": "Applications tailored to your business needs: dashboards, client portals, internal tools." },
-          { "title": "Maintenance and support", "desc": "Updates, security, backups and ongoing support. Your site is always at its best." }
+          {
+            "title": "High-performance websites",
+            "desc": "Built with Next.js, instant loading, responsive design. Your site is your best salesperson."
+          },
+          {
+            "title": "Custom e-commerce",
+            "desc": "Online stores optimized to sell: simplified checkout, automatic upsells, secure payments."
+          },
+          {
+            "title": "Custom web apps",
+            "desc": "Applications tailored to your business needs: dashboards, client portals, internal tools."
+          },
+          {
+            "title": "Maintenance and support",
+            "desc": "Updates, security, backups and ongoing support. Your site is always at its best."
+          }
         ]
       }
     }
@@ -221,48 +344,88 @@
   },
   "aboutPage": {
     "overline": "About us",
-    "heroTitle": "Marketing agency Brescia.",
-    "heroTitleItalic": "Digital studio.",
-    "heroSubtitle": "Digital marketing and advertising agency in Brescia, Italy. We build websites, SEO strategies, ad campaigns and AI automation that deliver measurable results for SMBs.",
+    "heroTitle": "Ivan Crescini.",
+    "heroTitleItalic": "K-Marketing, Brescia.",
+    "heroSubtitle": "Founder of K-Marketing, digital marketing agency in Brescia, Italy. I help SMEs and professionals find clients online with SEO, advertising, web development and AI automation â€” with measurable results and no fluff.",
     "storyOverline": "The story",
-    "storyTitle": "A choice born from experience.",
-    "storyP1": "In 2020 the digital marketing landscape for small and medium businesses had a clear problem: too many agencies offered standardised services, opaque reporting and strategies that failed to produce measurable outcomes. Companies were investing significant budgets without real visibility into their return on investment.",
-    "storyP2": "From this awareness our marketing agency in Brescia was founded, with a clear mission: to design websites, advertising campaigns and digital marketing systems built on data, automation and artificial intelligence. An approach where every action is trackable, every investment is justified and every result is measurable.",
-    "storyP3": "Over five years of operation we have completed more than 20 projects across diverse industries — from restaurants to automotive, from artisan e-commerce to hospitality. Every project is unique, but the guiding principle remains the same: if it does not generate a measurable business impact, it is not part of our strategy.",
+    "storyTitle": "I came from a different world. That was an advantage.",
+    "storyP1": "I came to digital marketing not from an agency, but from the other side: as someone who looked at results, not presentations. I came from a different sector, and what I saw in the marketing world for SMEs didn't convince me. Too many generic promises, too many reports full of numbers that said nothing about what was actually growing in the client's business.",
+    "storyP2": "I founded K-Marketing in Brescia in 2020 with a clear idea: to build a marketing system that worked as if I were a digital partner of the client company â€” not the external supplier who sends an email at the end of the month. Every project starts with an honest question: what needs to change in your business for this investment to make sense? SEO, Google and Meta campaigns, websites, AI automation â€” these are tools. The goal is always the same: more clients, at a measurable cost.",
+    "storyP3": "In five years in Brescia and province I've worked with very different realities: from restaurants to hospitality, from artisan e-commerce to the automotive sector. For I PeruviÃ  we tripled organic traffic and brought the site to first place on Google for the main keywords. For Villa Riviera direct bookings grew by 390%, reducing dependence on Booking.com by 60%. For Charme Extension and Bottega Matta we built digital presence from scratch. Every project is different. The method is always the same: data, strategy, execution, measurement.",
     "approachOverline": "The approach",
-    "approachTitle": "Where others follow,",
-    "approachTitleItalic": "we anticipate.",
+    "approachTitle": "The K-Marketing method:",
+    "approachTitleItalic": "data first, creativity second.",
     "values": {
       "automation": {
         "title": "Automation as standard",
-        "desc": "We design systems that operate autonomously and continuously. AI chatbots for customer support, advertising campaigns with automatic optimisation, editorial content generated and reviewed by intelligent agents. The goal is a marketing ecosystem that works with consistent efficiency, regardless of the hour."
+        "desc": "We build AI automations that respond to leads within 5 minutes, qualify contacts, update the CRM and publish on social media â€” without you having to lift a finger. The AI agents market grows at 44% per year: companies adopting AI automations today gain a competitive advantage that competitors will struggle to recover."
       },
       "noSmoke": {
         "title": "Complete transparency on results",
-        "desc": "Every activity we undertake is accompanied by clear metrics: leads generated, cost per acquisition, return on ad spend. We work with a minimum ROAS target of 3× and provide detailed reports that show exactly how every euro of the budget is deployed."
+        "desc": "Every project starts with defined KPIs: cost per lead, ROAS, Google rankings, organic traffic. We provide monthly reports showing exactly what changed and why. We don't work with vague goals like 'increase visibility': we work with numbers. If we don't reach them, we say so clearly and change strategy."
       },
       "modern": {
         "title": "Digital-native strategy",
-        "desc": "Purchasing behaviour has changed fundamentally. Today's customer searches for solutions on Google, evaluates options on social media and completes decisions through digital channels. Our strategy positions your brand precisely at the touchpoints where your target audience is already present — with the most effective message, at the optimal moment."
+        "desc": "58% of Italian users use AI tools to search for products and services (Capgemini, 2025). Google AI Overviews reaches 1.5 billion monthly users. We optimise content to be found by both Google and ChatGPT, Perplexity and Google AI â€” because digital visibility in 2026 is played on both fronts."
       },
       "personal": {
         "title": "A studio, not a chain",
-        "desc": "Every project receives direct and continuous attention. There are no account manager rotations or internal handoffs. This working model ensures deep knowledge of each client's business and a level of care that larger structures can rarely provide."
+        "desc": "Every client has a single point of contact: me. No junior account managers rotating every six months, no internal handovers. I know your business, your market and your goals because I've followed them from day one. This is the advantage of working with a studio instead of a large agency."
       }
     },
     "ctaTitle": "Ready to start?",
     "ctaSubtitle": "Book a free 30-minute consultation. We will analyse your situation together and assess growth opportunities.",
-    "ctaCta": "Book a consultation"
+    "ctaCta": "Book a consultation",
+    "founderName": "Ivan Crescini",
+    "founderRole": "Founder and Creative Director, K-Marketing Brescia",
+    "founderBio": "Specialised in SEO, online advertising and AI automation for SMEs. Operating in Brescia and province since 2020. Direct approach: every project is personally managed, from strategy to execution, with clear reports and measurable goals.",
+    "founderPhoto": "/images/ivan-crescini-fondatore-k-marketing-brescia.jpg",
+    "founderPhotoAlt": "Ivan Crescini, founder of K-Marketing â€” digital marketing agency in Brescia, Italy",
+    "founderLinkedIn": "https://www.linkedin.com/in/ivan-crescini-358a87248/",
+    "statsOverline": "By the numbers",
+    "statsItems": [
+      {
+        "value": "20+",
+        "label": "Completed projects"
+      },
+      {
+        "value": "5+",
+        "label": "Years in Brescia"
+      },
+      {
+        "value": "+390%",
+        "label": "Direct bookings Villa Riviera"
+      },
+      {
+        "value": "+300%",
+        "label": "Organic traffic I PeruviÃ "
+      }
+    ],
+    "locationOverline": "Where we are",
+    "locationTitle": "Brescia, Italy.",
+    "locationBody": "K-Marketing operates in Brescia and throughout the province: Brescia city, Desenzano del Garda, Montichiari, Lonato, Ghedi, Chiari, Orzinuovi. We also work with clients across Italy for digital projects that don't require physical presence. Our operational base is in Brescia."
   },
   "process": {
     "overline": "How we work",
     "title": "Our",
     "titleItalic": "process",
     "steps": {
-      "1": { "title": "Analysis", "desc": "We analyse your current situation: website, SEO, social media, advertising. We identify real problems and opportunities." },
-      "2": { "title": "Strategy", "desc": "We define a custom plan with clear goals, timeline and budget. No surprises." },
-      "3": { "title": "Implementation", "desc": "We build and activate the systems: SEO, content, advertising, AI automations. All connected." },
-      "4": { "title": "Growth", "desc": "We monitor, optimise and scale. Transparent reports, regular calls, measurable results." }
+      "1": {
+        "title": "Analysis",
+        "desc": "We analyse your current situation: website, SEO, social media, advertising. We identify real problems and opportunities."
+      },
+      "2": {
+        "title": "Strategy",
+        "desc": "We define a custom plan with clear goals, timeline and budget. No surprises."
+      },
+      "3": {
+        "title": "Implementation",
+        "desc": "We build and activate the systems: SEO, content, advertising, AI automations. All connected."
+      },
+      "4": {
+        "title": "Growth",
+        "desc": "We monitor, optimise and scale. Transparent reports, regular calls, measurable results."
+      }
     },
     "studioLabel": "The studio",
     "manifesto1start": "We're not the agency that churns out volume. We're a studio that",
@@ -272,10 +435,26 @@
     "manifesto2bold": "honest question",
     "manifesto2end": ": what does your customer really want?",
     "stats": {
-      "projects": { "value": "20", "suffix": "+", "label": "Projects" },
-      "experience": { "value": "5", "suffix": "yr", "label": "Experience" },
-      "growth": { "value": "3", "suffix": "×", "label": "Avg. growth" },
-      "automations": { "value": "24", "suffix": "/7", "label": "Automations" }
+      "projects": {
+        "value": "20",
+        "suffix": "+",
+        "label": "Projects"
+      },
+      "experience": {
+        "value": "5",
+        "suffix": "yr",
+        "label": "Experience"
+      },
+      "growth": {
+        "value": "3",
+        "suffix": "×",
+        "label": "Avg. growth"
+      },
+      "automations": {
+        "value": "24",
+        "suffix": "/7",
+        "label": "Automations"
+      }
     }
   },
   "ctaSection": {
@@ -426,9 +605,18 @@
       "heroSub": "We help you get found on Google when your customers search for your services. Technical SEO strategy and optimised content to position your business on page one.",
       "body": "Organic ranking on Google is the most effective and sustainable customer acquisition channel for SMBs in Brescia. Unlike paid advertising, SEO results compound over time: every month your site gains more authority, more traffic and more leads. Businesses that invest in SEO today build a competitive advantage that competitors will struggle to close tomorrow. In a market like the province of Brescia, where online competition is growing rapidly, being visible on Google is no longer optional — it is a necessity.\n\n## Full technical SEO audit\n\nOur approach to SEO in Brescia starts with a full technical audit of your website. We analyse structure, load speed, indexing and every factor that could be holding back your ranking. We check for crawl errors, broken redirects, duplicate content, JavaScript rendering issues and compliance with Google's Core Web Vitals. The technical audit is the foundation without which any content strategy would be ineffective: if your site has structural problems, Google will not reward it regardless of text quality.\n\nWe identify strategic keywords your potential customers use — not generic terms, but queries with commercial intent that bring qualified contacts. For local businesses in Brescia, this means finding the right balance between high-volume keywords and niche terms specific to the territory and sector.\n\n## Content strategy and editorial plan\n\nAfter the initial analysis, we build an SEO editorial plan with optimised content to answer your customers' questions. Every page, every article is designed to rank on Google and convert visitors into leads. We do not just write text: we create comprehensive resources that cover topics in depth, using semantic structure with hierarchical headings, bullet lists, comparison tables and integrated FAQs.\n\nWe constantly monitor positions, traffic and conversions with clear monthly reports. Every report includes an analysis of keywords that are growing, those that need attention and new opportunities identified. You will always know exactly where your site ranks and what return your SEO investment is generating.\n\n## Local SEO for businesses in Brescia and province\n\nFor Brescia businesses operating in local markets, local SEO is essential. We optimise your Google Business Profile with accurate information, professional photos, regular posts and proactive review management. We build consistent citations on authoritative directories and work on reviews to position you in the Local Pack — the top three Google Maps positions that capture 44% of clicks in local searches.\n\nLocal SEO for businesses in the province of Brescia also includes creating localised pages for every service offered across the area. If you operate in multiple towns — Brescia, Desenzano, Montichiari, Lonato, Ghedi — we create specific pages that capture user searches in each zone.\n\n## Our SEO process in 6 phases\n\nOur process is structured in six clear phases:\n\n- **Phase 1 — Audit and analysis**: full technical audit, competitor analysis, in-depth keyword research\n- **Phase 2 — Strategy**: goal setting, editorial plan creation, keyword prioritisation\n- **Phase 3 — On-page optimisation**: rewriting title tags, meta descriptions, headings, existing content, URL structure\n- **Phase 4 — Content creation**: production of SEO articles, landing pages, in-depth guides\n- **Phase 5 — Link building and off-page**: acquiring authoritative backlinks, digital PR, local citations\n- **Phase 6 — Monitoring and optimisation**: position tracking, data analysis, continuous strategy adjustments\n\n## Tools we use\n\nWe use the best professional tools in the industry to ensure precise and measurable results:\n\n- **Google Search Console and Google Analytics 4** to monitor traffic, impressions and user behaviour\n- **SEMrush and Ahrefs** for keyword research, competitor analysis and backlink monitoring\n- **Screaming Frog** for in-depth technical audits and structural error identification\n- **PageSpeed Insights and GTmetrix** for performance and Core Web Vitals analysis\n- **Surfer SEO** for on-page optimisation based on SERP competition analysis\n\n## Why choose K-Marketing for SEO in Brescia\n\nWe are not a large agency managing hundreds of clients in a standardised way. We are a specialised studio working with a limited number of local businesses, dedicating the attention each one needs to achieve concrete results. We know the business fabric of Brescia and its province: we understand how local businesses communicate, what the specific market challenges are and how to position effectively.\n\nEvery SEO strategy we create is customised. We do not sell pre-packaged plans: we analyse your sector, your competitors and your goals, and build a tailored plan. We work with total transparency: you always know what we are doing, why we are doing it and what results it is delivering.\n\n## Expected results\n\nWith a well-executed SEO strategy, SMBs in Brescia can expect:\n\n- **Months 1-3**: technical site improvements, initial keyword growth, increased impressions on Google\n- **Months 3-6**: page-one rankings for low and medium competition keywords, 50-100% increase in organic traffic\n- **Months 6-12**: stable rankings even for competitive keywords, significant organic traffic, steady flow of qualified leads\n- **After 12 months**: the site becomes a business asset generating contacts in a predictable and sustainable way, reducing dependence on paid advertising\n\nOrganic traffic has enormous value over time: unlike advertising campaigns, SEO results do not stop when you stop paying. A well-ranked article can generate leads for years. Investing in SEO in Brescia today means building the foundations for your business's future growth.\n\n## SEO for specific sectors in Brescia\n\nWe have direct experience with SEO across multiple sectors present in the Brescia business landscape: restaurants and hospitality, e-commerce and craftsmanship, automotive and dealerships, professional firms and B2B services. Each sector has its own specifics in terms of keywords, search intent and user behaviour, and our strategy adapts accordingly. For restaurants we focus on Google Maps and local searches with emphasis on hours, menus and reservations. For e-commerce we build optimised category architectures and product pages that capture transactional searches. For professionals and B2B companies we create authoritative content that positions the brand as the go-to reference in the sector. Whatever your field, our goal remains the same: bringing you qualified customers through Google, with an acquisition cost that decreases over time. The diversity of our portfolio strengthens every project, because insights gained in one sector often unlock opportunities in another.",
       "faq": [
-        { "question": "How much does SEO cost in Brescia?", "answer": "Our SEO packages start from €500/month for basic activities (audit + on-page optimisation) up to €2,000+/month for complete strategies with content marketing and link building. The cost depends on sector competitiveness and goals." },
-        { "question": "How long before I see SEO results?", "answer": "Initial improvements typically appear within 3-4 months. For competitive keywords, stable results require 6-12 months. For local and less competitive keywords, results can arrive in 2-3 months." },
-        { "question": "Can I do SEO and Google Ads together?", "answer": "Absolutely, and we recommend it. Google Ads delivers immediate results while SEO builds long-term organic traffic. The two strategies reinforce each other." }
+        {
+          "question": "How much does SEO cost in Brescia?",
+          "answer": "Our SEO packages start from €500/month for basic activities (audit + on-page optimisation) up to €2,000+/month for complete strategies with content marketing and link building. The cost depends on sector competitiveness and goals."
+        },
+        {
+          "question": "How long before I see SEO results?",
+          "answer": "Initial improvements typically appear within 3-4 months. For competitive keywords, stable results require 6-12 months. For local and less competitive keywords, results can arrive in 2-3 months."
+        },
+        {
+          "question": "Can I do SEO and Google Ads together?",
+          "answer": "Absolutely, and we recommend it. Google Ads delivers immediate results while SEO builds long-term organic traffic. The two strategies reinforce each other."
+        }
       ]
     },
     "ads": {
@@ -439,9 +627,18 @@
       "heroSub": "Google Ads and Meta Ads campaigns with one goal: positive ROI. Every euro invested must come back multiplied.",
       "body": "Online advertising is the fastest way to generate leads and customers for your business in Brescia. With Google Ads you reach people actively searching for your services. With Meta Ads (Facebook and Instagram) you target potential customers based on interests, behaviours and demographics. While SEO takes months to produce results, online advertising campaigns can deliver the first qualified contacts within days of launch. For local businesses in Brescia that need immediate results, digital advertising is the most logical choice.\n\n## Analysis and initial strategy\n\nOur approach to digital advertising in Brescia always starts with analysing your market and competitors. We study who your competitors are, how much they spend, which keywords they target and how they structure their campaigns. This competitive analysis allows us to find untapped opportunities and build a strategy that maximises the return on your investment.\n\nWe configure conversion tracking from day one, because without accurate data, optimisation is impossible. We install the Meta pixel, Google Ads tag, configure Google Analytics 4 with conversion events and, where necessary, implement server-side tracking to ensure maximum data accuracy even with privacy restrictions.\n\n## Campaign structure\n\nWe structure campaigns with full funnels that accompany potential customers through every stage of the buying journey:\n\n- **Awareness (top of funnel)**: campaigns designed to introduce your brand to your target audience in the province of Brescia and beyond. Video, informative content and messages that capture attention from people who do not know you yet\n- **Consideration (middle of funnel)**: campaigns that build interest and trust. Testimonials, case studies, educational content that demonstrates your expertise\n- **Conversion (bottom of funnel)**: campaigns targeting people who have already shown interest. Specific offers, urgency, personalised messages that drive action\n- **Retargeting**: dedicated campaigns for people who have visited your site, interacted with your content or started a purchase process without completing it\n\n## Google Ads for SMBs in Brescia\n\nGoogle Ads is the ideal tool for capturing conscious demand: people actively searching for your products or services. For local businesses in Brescia, we manage Search, Display, Shopping and Performance Max campaigns. Search campaigns are particularly effective for local services: when someone searches for \"plumber Brescia\" or \"restaurant centre Brescia\", your ad appears at the top of results.\n\nWe optimise every aspect of Google Ads campaigns: account structure with well-organised campaigns and ad groups, exact match and phrase match keywords to maximise relevance, negative keywords to exclude irrelevant searches, complete ad extensions and landing pages optimised for conversion.\n\n## Meta Ads for Brescia businesses\n\nMeta Ads (Facebook and Instagram) is the ideal platform for generating demand and reaching potential customers who are not yet actively searching. With over 30 million active users in Italy, Meta offers unmatched targeting capabilities: interests, behaviours, demographics, professions and much more.\n\nFor businesses in the province of Brescia, we create campaigns with precise geographic targeting combined with behavioural and demographic criteria. We produce scroll-stopping creatives — professional images, short engaging videos, storytelling carousels — and constantly test variants to identify the best performers.\n\n## Our optimisation process\n\nTargeting is surgical. We do not waste budget on generic audiences. We use lookalike audiences based on your best customers, personalised retargeting with different messages for each funnel stage and intent-based audiences to reach the right people at the right time.\n\nEvery week we analyse performance and optimise: shift budget where it performs best, test new creatives, adjust targeting and experiment with new audiences. Optimisation is not a one-time event — it is a continuous process that improves results week after week.\n\n## Tools we use\n\nTo manage and optimise advertising campaigns for local businesses we use:\n\n- **Google Ads Manager** for complete management of Search, Display and Shopping campaigns\n- **Meta Business Suite and Ads Manager** for Facebook and Instagram campaigns\n- **Google Analytics 4** for post-click user behaviour analysis\n- **Google Tag Manager** for centralised tag and tracking management\n- **A/B testing tools** to optimise landing pages and creatives\n- **Custom dashboards** with Looker Studio for real-time reporting\n\n## Why choose us for online advertising in Brescia\n\nWe provide weekly reports with clear metrics: spend, impressions, clicks, leads generated and cost per acquisition. Our minimum target is 3x ROAS — for every euro invested, at least three come back. If a campaign underperforms, we stop it and reinvest where it works. We do not ask you to \"be patient\" with campaigns that burn budget — the numbers speak and we listen.\n\nUnlike many agencies that charge a fixed fee regardless of results, our model is built on performance. Our success depends on yours: if your campaigns do not generate a positive return, we are not satisfied either.\n\n## Expected results\n\nWith professional campaign management, SMBs in Brescia can expect:\n\n- **Week 1-2**: launch of initial campaigns, early data collection, first conversions\n- **Month 1**: data-driven optimisation, cost per lead reduction, identification of best audiences\n- **Month 2-3**: optimised campaigns with stable cost per acquisition, scaling of top performers, rising ROAS\n- **Month 3+**: a proven advertising system that generates leads predictably and scalably, with increasingly efficient costs\n\nOnline advertising is an investment, not an expense. When managed with expertise and transparency, it becomes the most predictable and scalable growth engine for your business in Brescia.\n\n## Campaigns for specific sectors in the province of Brescia\n\nWe have managed advertising campaigns for multiple sectors in the Brescia business landscape: restaurants, hospitality, e-commerce, car dealerships, professional firms and service businesses. Each sector requires a different approach in terms of platform, creative format, targeting and conversion funnel. For a restaurant in Brescia we use local campaigns with tight geographic targeting and appetite-stimulating creatives. For an e-commerce we build complete funnels with Shopping campaigns, dynamic retargeting and cart recovery emails. For a B2B professional we focus on LinkedIn Ads and Google Search with high commercial-intent keywords. This cross-sector experience allows us to apply proven best practices and avoid costly mistakes from the very first month of managing your campaigns. Whether you are launching your first campaign or looking to improve the performance of existing ones, we bring the data-driven expertise and hands-on management that transform advertising spend into predictable, scalable revenue growth for your business.",
       "faq": [
-        { "question": "How much budget do I need for advertising campaigns?", "answer": "The minimum recommended budget is €500-1,000/month for Google Ads and €300-800/month for Meta Ads, plus our management fee. The optimal budget depends on your sector and keyword competitiveness." },
-        { "question": "How much does a lead cost with online campaigns?", "answer": "Cost per lead varies significantly by sector: from €5-15 for low-competition local services to €30-80 for highly competitive sectors. Our goal is always to lower the cost per lead month over month." },
-        { "question": "Google Ads or Meta Ads: which should I choose?", "answer": "It depends on your business. Google Ads is ideal for services with high search intent. Meta Ads is better for visual products, brand awareness and retargeting. Often the best strategy combines both." }
+        {
+          "question": "How much budget do I need for advertising campaigns?",
+          "answer": "The minimum recommended budget is €500-1,000/month for Google Ads and €300-800/month for Meta Ads, plus our management fee. The optimal budget depends on your sector and keyword competitiveness."
+        },
+        {
+          "question": "How much does a lead cost with online campaigns?",
+          "answer": "Cost per lead varies significantly by sector: from €5-15 for low-competition local services to €30-80 for highly competitive sectors. Our goal is always to lower the cost per lead month over month."
+        },
+        {
+          "question": "Google Ads or Meta Ads: which should I choose?",
+          "answer": "It depends on your business. Google Ads is ideal for services with high search intent. Meta Ads is better for visual products, brand awareness and retargeting. Often the best strategy combines both."
+        }
       ]
     },
     "web": {
@@ -452,9 +649,18 @@
       "heroSub": "Fast, modern websites and applications designed to convert visitors into customers. Cutting-edge technology focused on performance and UX.",
       "body": "A professional website is the foundation of any digital marketing strategy in Brescia. It is your best salesperson: working 24 hours a day, 7 days a week, and often the first point of contact with your potential customers. In a market where 90% of consumers search online before making a purchase or contacting a provider, not having a website that meets expectations means losing opportunities every day. For local businesses in Brescia, the website is the base on which every other digital marketing activity is built.\n\n## Websites designed to convert\n\nThe websites we build in Brescia are not simple brochures. They are business tools designed to convert: modern design that communicates professionalism, SEO-optimised structure, excellent loading speed and UX designed to guide visitors toward action — whether that is filling out a form, booking an appointment or purchasing a product.\n\nEvery element of the site is designed with a precise goal. The copy is written to persuade and rank on Google. Calls-to-action are strategically placed to maximise conversions. Navigation is intuitive because a confused visitor is a lost visitor. The design communicates your brand values and builds immediate trust — because you only have a few seconds to convince a visitor to stay.\n\n## Cutting-edge technology\n\nWe use Next.js as our primary framework, the same technology used by Netflix, Nike and TikTok. This means sites that load instantly, perform perfectly on mobile and score excellently on Google's Core Web Vitals — an important ranking factor. Unlike sites built with WordPress or page builders, our sites are clean, optimised code without heavy plugins that slow loading.\n\nThe choice of technology is not an irrelevant technical detail. Site speed directly impacts three areas fundamental to your business:\n\n- **SEO**: Google rewards fast sites with better positions in search results\n- **Conversions**: every second of loading delay reduces conversions by 7%\n- **User experience**: visitors abandon sites that take more than 3 seconds to load\n\nFor SMBs in the province of Brescia, this technological advantage makes a concrete difference compared to competitors using slower, outdated solutions.\n\n## Types of websites we build\n\nWe offer customised solutions for every need of businesses in Brescia:\n\n### Brochure and corporate sites\n\nProfessional sites that present your company, your services and your strengths. Ideal for professionals, firms, service businesses and local activities in Brescia. Clear structure, persuasive content, optimised contact forms and Google Maps integration for local visibility.\n\n### E-commerce\n\nFor e-commerce, we design simplified checkouts that reduce cart abandonment, automatic upsell and cross-sell systems, product pages optimised for SEO and integrations with major payment gateways (Stripe, PayPal, Satispay). We also configure automated email systems for abandoned carts, order confirmations and post-purchase follow-ups.\n\n### Landing pages and funnels\n\nHigh-conversion single pages designed for specific advertising campaigns. Each landing page is built for a single goal — generating a lead or a sale — with focused design, persuasive copy and zero distractions.\n\n### Custom web applications\n\nBespoke web applications for specific needs: client portals, booking systems, product configurators, management dashboards. Solutions built with modern technologies that streamline your business processes.\n\n## Our development process\n\nEvery project follows a structured five-phase process:\n\n- **Phase 1 — Discovery**: we analyse your business, goals, target audience and competitors. Together we define the site structure and required features\n- **Phase 2 — Design**: we create wireframes and mockups. Every page is designed to guide visitors toward conversion. We present the design for your approval before proceeding\n- **Phase 3 — Development**: we build the site with clean, optimised code. We implement all features, configure the CMS for autonomous content management and optimise performance\n- **Phase 4 — Testing and launch**: we test the site on every device and browser. We verify speed, SEO, accessibility and functionality. We configure analytics and tracking before launch\n- **Phase 5 — Ongoing support**: after launch, we provide maintenance, security updates, regular backups and technical support\n\n## Tools and technologies\n\nFor website development in Brescia we use the best available technologies:\n\n- **Next.js and React** for fast, modern interfaces\n- **TypeScript** for robust, maintainable code\n- **Tailwind CSS** for responsive, customised design\n- **Vercel** for hosting with global CDN and automatic deploys\n- **Sanity or headless CMS** for autonomous content management\n- **Framer Motion** for smooth, professional animations\n\n## Why choose us for your website in Brescia\n\nWe do not use pre-made templates. Every site we build for local businesses is designed from scratch based on the client's specific needs. This means a unique site that truly reflects your brand and stands out from the competition.\n\nWe include in the price what many agencies charge extra for: basic SEO optimisation, analytics configuration, responsive design, content management training and post-launch support. No hidden costs, no surprises.\n\n## Expected results\n\nA professional website built with the right technologies and the right strategy delivers concrete results for businesses in Brescia:\n\n- **Loading speed under 2 seconds** on any device and connection\n- **Score of 90+ on Google's Core Web Vitals**, improving SEO positioning\n- **30-50% increase in conversion rate** compared to outdated sites or generic templates\n- **Reduced bounce rate** thanks to intuitive UX and relevant content\n- **Solid foundation for SEO and advertising campaigns** that multiply the effectiveness of every euro invested in marketing\n\nYour website is the heart of your digital presence. Every advertising campaign, every social post, every email sent drives potential customers back to your site. If the site falls short — slow, confusing, unprofessional — you are undermining every other marketing investment. A website built with modern technologies, thoughtful design and a clear conversion strategy is the results multiplier that every SMB in Brescia needs to compete in today's digital market. We build sites that not only look exceptional but perform as true business assets, generating measurable returns for years to come. Whether you need a sleek corporate presence, a high-converting e-commerce store, or a custom web application, our team in Brescia delivers solutions that combine outstanding design with the technical performance your business deserves.",
       "faq": [
-        { "question": "How much does a website cost in Brescia?", "answer": "A professional brochure website starts from €2,000-3,000. For e-commerce, costs range from €5,000 to €15,000+ depending on complexity. We offer free personalised quotes." },
-        { "question": "How long does it take to build a website?", "answer": "A brochure site takes 3-6 weeks. A full e-commerce takes 6-12 weeks. Timelines depend on project complexity and how quickly you provide content and feedback." },
-        { "question": "Will the site be mobile and SEO optimised?", "answer": "Absolutely. All our sites are responsive and SEO-optimised from day one: semantic structure, meta tags, loading speed, sitemap and schema markup." }
+        {
+          "question": "How much does a website cost in Brescia?",
+          "answer": "A professional brochure website starts from €2,000-3,000. For e-commerce, costs range from €5,000 to €15,000+ depending on complexity. We offer free personalised quotes."
+        },
+        {
+          "question": "How long does it take to build a website?",
+          "answer": "A brochure site takes 3-6 weeks. A full e-commerce takes 6-12 weeks. Timelines depend on project complexity and how quickly you provide content and feedback."
+        },
+        {
+          "question": "Will the site be mobile and SEO optimised?",
+          "answer": "Absolutely. All our sites are responsive and SEO-optimised from day one: semantic structure, meta tags, loading speed, sitemap and schema markup."
+        }
       ]
     },
     "social": {
@@ -465,9 +671,18 @@
       "heroSub": "Strategic content that brings customers, not just followers. We manage your social media with a clear goal: generate business.",
       "body": "Social media is the daily touchpoint between your brand and potential customers in Brescia. But posting is not enough — you need a strategy that turns followers into customers. In Italy over 43 million people actively use social media, and your potential customers in the province of Brescia are among them. The question is not whether your business should be on social media, but how to be there in the right way to generate concrete business results.\n\n## Strategic analysis and editorial planning\n\nOur social media marketing service in Brescia starts with analysing your target audience and competitors. We study who your ideal customers are, where they spend time online, what content they consume and which messages they respond to. We also analyse what your competitors are doing on social: what works for them, where they leave gaps and how we can differentiate you.\n\nWe define a strategic editorial plan where every piece of content has a clear objective: awareness, engagement, website traffic or lead generation. We do not publish generic posts — we create content that stops the scroll and drives action. The editorial plan is organised into thematic categories alternating educational, promotional, entertaining and social proof content, maintaining a balance that keeps audience attention without being overly commercial.\n\n## Professional content creation\n\nWe create content for Instagram, Facebook, LinkedIn and other relevant platforms. Each platform has its own language and optimal formats, and we adapt the strategy accordingly:\n\n- **Instagram**: educational carousels, engaging Reels, interactive stories with polls and quizzes, behind-the-scenes content that humanises the brand\n- **Facebook**: informative posts, local events in Brescia and province, community content, engagement campaigns\n- **LinkedIn**: thought leadership articles, professional company updates, B2B content that generates qualified leads\n- **TikTok**: short, authentic videos to reach younger audiences and increase brand visibility\n\nProfessional graphics, persuasive copy, short videos and Reels that capture attention. Every piece is designed to communicate your brand positioning and build trust over time. We do not rely on generic stock content: we create custom visuals that reflect your company's visual identity.\n\n## Community management\n\nWe manage the community with professional, timely responses to comments and direct messages. Community management is an often overlooked but fundamental aspect: every unanswered comment is a missed opportunity, every ignored message is a potential customer turning elsewhere.\n\nFor local businesses in Brescia, community management also includes managing reviews and local interactions, answering questions about hours, services and availability, and building relationships with other local accounts and influencers in the area.\n\n## Paid social campaigns\n\nBeyond organic management, we integrate paid social campaigns to amplify the reach of your best content and reach new potential customers in the province of Brescia. Paid social campaigns complement the organic strategy: content that achieves the best organic performance gets promoted to reach a broader, qualified audience.\n\nWe manage awareness, engagement, traffic and conversion campaigns on Meta Ads (Facebook and Instagram) and LinkedIn Ads, with precise geographic and demographic targeting to maximise return on investment.\n\n## Our process\n\nOur social media management process for businesses in Brescia follows clear phases:\n\n- **Phase 1 — Audit and strategy**: analysis of existing profiles, target audience and competitors. Goal setting and strategy definition\n- **Phase 2 — Profile setup and optimisation**: optimising bios, images, links and information across all social profiles\n- **Phase 3 — Editorial plan**: creation of the monthly editorial calendar with defined categories, formats and themes\n- **Phase 4 — Content production**: creation of graphics, copy, video and stories according to the approved editorial plan\n- **Phase 5 — Publishing and community**: publishing at optimal days and times, managing comments and messages\n- **Phase 6 — Analysis and optimisation**: monthly report with performance analysis and strategy optimisation\n\n## Tools we use\n\nFor social media management of local businesses we use professional tools:\n\n- **Meta Business Suite** for managing and scheduling Facebook and Instagram content\n- **Canva Pro and Adobe Creative Suite** for creating professional graphics\n- **CapCut and Adobe Premiere** for video and Reel editing\n- **Later or Hootsuite** for cross-platform scheduling and analytics\n- **Google Analytics 4** to track traffic from social to the website\n- **Notion** for collaborative editorial plan management\n\n## Why choose us for social media in Brescia\n\nWe constantly monitor performance with detailed analytics: reach, engagement rate, website clicks and conversions. Every month we optimise the strategy based on real data, not gut feelings. We do not chase vanity metrics like likes: we focus on metrics that directly impact your business — website traffic, leads generated and conversions.\n\nWe know the local market of Brescia and its province. We know which content works for the local audience, what the local events and occasions are that can be leveraged and how to build a community rooted in the territory.\n\n## Expected results\n\nWith professional social media management, SMBs in Brescia can expect:\n\n- **Month 1-2**: profile optimisation, visual identity definition, first strategic content, initial organic growth\n- **Month 2-4**: growing engagement, active community, first leads from social, increased website traffic\n- **Month 4-6**: social profiles as an established customer acquisition channel, recognisable brand in the Brescia area, steady flow of interactions and enquiries\n- **After 6 months**: social media becomes a business asset generating visibility, trust and customers organically and continuously\n\nSocial media is not an expense: it is an investment in the relationship with your audience. Managed with strategy and expertise, it becomes the most powerful channel for building a strong brand and generating business in Brescia and province.\n\n## Social media for specific sectors in Brescia\n\nEvery sector has its own communication nuances on social media. For restaurants and food businesses in Brescia we focus on visual content that stimulates appetite: professional food photography, preparation videos, behind-the-scenes kitchen stories. For B2B companies we concentrate on LinkedIn with thought leadership content, case studies and strategic networking. For e-commerce we create product carousels, demonstrative Reels and user-generated content. For professional firms we develop educational content that builds sector authority. This multi-sector experience allows us to apply the most effective strategies for your specific business area, accelerating results by drawing on proven frameworks from across industries.",
       "faq": [
-        { "question": "How many posts do you publish per month?", "answer": "The standard plan includes 12-16 posts per month (3-4 per week) across the most effective formats. The exact volume depends on the platform and sector." },
-        { "question": "Do social media really matter for B2B?", "answer": "Yes, especially LinkedIn. For B2B, social media builds authority, enables networking and generates qualified leads. 75% of B2B decision makers use social media in the purchasing process." },
-        { "question": "How do you measure social media results?", "answer": "With concrete metrics: reach, engagement rate, website clicks, leads generated and conversions. We provide detailed monthly reports showing the real business impact." }
+        {
+          "question": "How many posts do you publish per month?",
+          "answer": "The standard plan includes 12-16 posts per month (3-4 per week) across the most effective formats. The exact volume depends on the platform and sector."
+        },
+        {
+          "question": "Do social media really matter for B2B?",
+          "answer": "Yes, especially LinkedIn. For B2B, social media builds authority, enables networking and generates qualified leads. 75% of B2B decision makers use social media in the purchasing process."
+        },
+        {
+          "question": "How do you measure social media results?",
+          "answer": "With concrete metrics: reach, engagement rate, website clicks, leads generated and conversions. We provide detailed monthly reports showing the real business impact."
+        }
       ]
     },
     "ai": {
@@ -478,9 +693,18 @@
       "heroSub": "Intelligent systems working 24/7 for you. Chatbots, automated emails, lead scoring and workflows that turn contacts into customers.",
       "body": "Artificial intelligence is revolutionising digital marketing and SMBs in Brescia can benefit enormously. Our AI automation systems work around the clock to qualify leads, respond to customers, send personalised communications and optimise campaigns. At a time when businesses in Brescia compete not only locally but also nationally and internationally, AI automation is the competitive advantage that allows you to do more with fewer resources.\n\n## Intelligent AI chatbots\n\nThe AI chatbots we develop are not simple auto-responders with pre-set answers. They are intelligent virtual assistants powered by advanced language models that understand customer questions in natural language, provide accurate and contextual answers and can qualify leads, book appointments and collect information — all without human intervention.\n\nFor SMBs in the province of Brescia, an AI chatbot on your website means:\n\n- **24/7 availability**: your potential customers can get answers outside business hours, on weekends and during holidays\n- **Automatic qualification**: the chatbot asks the right questions to determine whether the visitor is a potential customer and what type of service they need\n- **Reduced workload**: repetitive questions (hours, pricing, availability) are handled automatically, freeing your team\n- **Structured data collection**: every interaction generates useful data to improve your marketing strategy and better understand your audience\n\nThe chatbots we develop are trained with your company's specific information: services, pricing, policies, FAQs. They respond in your brand's tone of voice and know when it is time to hand the conversation to a human operator.\n\n## Automated email marketing\n\nAutomated email marketing is another pillar of our systems. We create email sequences that nurture contacts over time: from first interaction to purchase and beyond. Every email is personalised based on user behaviour and sent at the right moment to maximise opens and conversions.\n\nThe sequences we create for businesses in Brescia include:\n\n- **Welcome emails**: a series of 3-5 emails that introduce your company, your values and your main services to new contacts\n- **Educational sequences**: emails that educate potential customers about your sector, building authority and trust over time\n- **Abandoned cart reminders**: for e-commerce, automated sequences that recover up to 15% of abandoned carts\n- **Post-purchase follow-ups**: thank-you emails, review requests, automatic cross-sell and upsell\n- **Re-engagement sequences**: emails for inactive contacts that reignite interest and drive traffic back to the site\n\nEvery sequence is constantly monitored and optimised: we test subject lines, content, send times and calls-to-action to improve open and conversion rates.\n\n## AI-powered lead scoring\n\nAI lead scoring automatically evaluates every contact based on their behaviour: pages visited, emails opened, content interactions, time spent on site and actions taken. It assigns a score to each lead and flags only those ready to buy, so your sales team does not waste time with browsers and focuses on concrete opportunities.\n\nFor SMBs in Brescia with small sales teams, lead scoring is particularly valuable: it maximises the effectiveness of every hour invested in sales activity, contacting prospects at the moment they are most likely to buy.\n\n## Automated workflows\n\nWe automate the repetitive processes that slow your business down and consume valuable time:\n\n- **Automatic follow-ups**: after a form submission, a quote request or a demo, the contact automatically receives relevant information\n- **Sales team notifications**: when a lead reaches a critical score or takes a significant action, the team is alerted in real time\n- **Automated reports**: dashboards and reports generated automatically with key marketing metrics, eliminating hours of manual work\n- **CRM synchronisation**: lead data is automatically synchronised between the website, email marketing and your company CRM\n- **Dynamic segmentation**: contacts are automatically segmented based on behaviour, enabling increasingly personalised communications\n\n## Our implementation process\n\nAI automation implementation for local businesses follows a structured process:\n\n- **Phase 1 — Process analysis**: we map your current marketing and sales processes, identifying repetitive tasks and automation opportunities\n- **Phase 2 — Design**: we design workflows, email sequences and chatbot logic. We define lead scoring rules and required integrations\n- **Phase 3 — Development and configuration**: we implement the systems, configure integrations, create email content and train the chatbot\n- **Phase 4 — Testing and launch**: we test every workflow, every email and every chatbot response before launch. We verify all integrations work correctly\n- **Phase 5 — Monitoring and optimisation**: after launch, we monitor performance and continuously optimise. AI systems improve over time thanks to collected data\n\n## Tools we use\n\nFor AI automation for SMBs in Brescia we use the most reliable platforms:\n\n- **OpenAI and Anthropic APIs** for chatbots with advanced artificial intelligence\n- **Make (formerly Integromat) and n8n** for workflow automation and cross-platform integrations\n- **Brevo (formerly Sendinblue) or ActiveCampaign** for automated email marketing and CRM\n- **Voiceflow or Botpress** for chatbot design and deployment\n- **Zapier** for rapid integrations between hundreds of applications\n- **Google Analytics 4 and Tag Manager** for tracking conversions generated by automation\n\n## Why choose us for AI automation in Brescia\n\nArtificial intelligence applied to marketing is not a trend: it is a structural transformation in how businesses acquire and manage customers. Local businesses in Brescia that adopt these systems today gain a significant competitive advantage over those who continue with manual processes.\n\nWe do not propose oversized solutions: we start from your company's concrete problems and implement automations that generate measurable returns. Every system we create is designed to be scalable — it starts simple and grows with your business.\n\n## Expected results\n\nWith AI automation systems, SMBs in Brescia can expect:\n\n- **60-80% reduction in time** spent on repetitive tasks such as follow-ups and FAQ responses\n- **20-40% increase in conversion rate** thanks to personalised, timely communications\n- **10-15% recovery of abandoned carts** for e-commerce, with direct additional revenue\n- **Improved lead quality** passed to the sales team, with an increased close rate\n- **15-25 hours saved per month** of manual work that your team can reinvest in high-value activities\n\nThe businesses that embrace AI automation today are the ones that will lead their markets tomorrow. For local businesses in Brescia and across the province, the opportunity to gain a first-mover advantage is still wide open. We help you seize it with systems that deliver measurable impact from the very first month.",
       "faq": [
-        { "question": "What is an AI chatbot and how does it work?", "answer": "An AI chatbot is a virtual assistant on your website that intelligently answers visitor questions. It uses artificial intelligence to understand queries and provide accurate responses. It can qualify leads, book appointments and collect information 24/7." },
-        { "question": "Will automation replace my team?", "answer": "No, it empowers them. Automation handles repetitive, low-value tasks (FAQ responses, follow-ups, initial qualification) freeing your team for high-value activities." },
-        { "question": "How much does AI automation cost?", "answer": "A basic system (chatbot + email automation) starts from €1,500-2,500 setup plus €500-800/month management. Complex systems with advanced AI and custom integrations may require greater investment." }
+        {
+          "question": "What is an AI chatbot and how does it work?",
+          "answer": "An AI chatbot is a virtual assistant on your website that intelligently answers visitor questions. It uses artificial intelligence to understand queries and provide accurate responses. It can qualify leads, book appointments and collect information 24/7."
+        },
+        {
+          "question": "Will automation replace my team?",
+          "answer": "No, it empowers them. Automation handles repetitive, low-value tasks (FAQ responses, follow-ups, initial qualification) freeing your team for high-value activities."
+        },
+        {
+          "question": "How much does AI automation cost?",
+          "answer": "A basic system (chatbot + email automation) starts from €1,500-2,500 setup plus €500-800/month management. Complex systems with advanced AI and custom integrations may require greater investment."
+        }
       ]
     },
     "content": {
@@ -491,9 +715,18 @@
       "heroSub": "Content that educates, entertains and converts. Blogs, newsletters, video — every piece builds authority and drives qualified traffic.",
       "body": "Content marketing transforms your business from unknown to authoritative in your sector in Brescia. By creating valuable content — articles, guides, videos, newsletters — you attract qualified traffic, build trust and generate leads without paying for every click. Unlike advertising, content continues working for you over time: a well-ranked article on Google can generate leads for years, with a cost per acquisition that decreases month after month. For local businesses in Brescia looking to build a solid, lasting online presence, content marketing is a fundamental strategic investment.\n\n## Data-driven strategy\n\nOur content marketing approach in Brescia is data-driven. We analyse what your audience searches on Google using professional keyword research tools. We identify gaps in competitor content — topics your competitors do not cover or cover superficially — and create a strategic editorial plan that positions you as the go-to resource in your sector.\n\nEvery piece of content has a precise goal and a target keyword: we do not write to fill pages, but to rank on Google and answer the real questions of your potential customers in the province of Brescia and beyond. The content strategy integrates with other marketing channels — SEO, social media, email — creating an ecosystem where every piece amplifies the effectiveness of the others.\n\n## SEO articles and company blog\n\nThe SEO articles we create rank on Google and bring consistent organic traffic over time. Every article is optimised with in-depth keyword research, semantic structure with hierarchical headings, strategic internal links, optimised meta tags and schema markup for rich snippets.\n\nWe write in-depth, useful content that solves real problems — content that Google rewards with better positions. Our articles are not generic 300-word texts: they are comprehensive guides of 1,500-2,500 words that cover topics in depth, with data, practical examples and immediately applicable advice.\n\nFor businesses in Brescia, we also create localised content that captures territory-specific searches: guides to services in the province of Brescia, insights into local regulations, analysis of the Brescia market and content that connects your sector to the local context.\n\n## Newsletters and email content\n\nNewsletters and email marketing keep contacts warm. Regular communications build a relationship with your audience and naturally guide them toward purchase. A well-crafted newsletter is not spam: it is an appointment your contacts look forward to because it provides real value.\n\nWe create newsletters with exclusive content, previews, practical tips and industry updates. Every newsletter is designed to:\n\n- **Keep your brand top-of-mind**: when the contact is ready to buy, they will think of you\n- **Educate the audience**: content that solves problems and demonstrates your expertise\n- **Drive traffic**: every newsletter brings readers back to your website, feeding the conversion cycle\n- **Segment the audience**: we analyse who opens, who clicks and on what, to personalise future communications\n\n## Multimedia content\n\nMultimedia content — video, infographics, case studies, podcasts — increases engagement and makes your brand memorable. Video in particular is the format with the highest engagement rate: video content generates 200% more interactions than text and is increasingly important for SEO.\n\nFor SMBs in Brescia we create:\n\n- **Brand videos**: company, service and team presentations\n- **Reels and short videos**: social content optimised for Instagram, TikTok and LinkedIn\n- **Tutorial and how-to videos**: educational content that demonstrates your expertise\n- **Video testimonials**: your customers' words are the most powerful form of social proof\n- **Infographics**: complex data and processes transformed into easy-to-understand, shareable visuals\n- **Detailed case studies**: documented success stories that demonstrate results achieved\n\n## Our content marketing process\n\nOur content marketing process for businesses in Brescia is structured and repeatable:\n\n- **Phase 1 — Research and analysis**: keyword research, competitor analysis, audience study, topic cluster identification\n- **Phase 2 — Strategy and editorial plan**: goal definition, quarterly editorial calendar creation, keyword assignment to each piece of content\n- **Phase 3 — Production**: article writing, graphic and video creation, review and SEO optimisation\n- **Phase 4 — Publishing and distribution**: blog publication, social sharing, newsletter delivery, promotion of top-performing content\n- **Phase 5 — Analysis and iteration**: performance monitoring, ranking analysis, updating existing content, strategy optimisation\n\n## Tools we use\n\nFor content marketing for local businesses we use professional tools:\n\n- **SEMrush and Ahrefs** for keyword research, competitor analysis and ranking monitoring\n- **Surfer SEO** for on-page optimisation based on SERP competition analysis\n- **Google Search Console and Analytics 4** to monitor organic traffic and user behaviour\n- **Grammarly and editing tools** to ensure linguistic quality\n- **Canva Pro and Adobe Creative Suite** for infographics and visual content\n- **Brevo or Mailchimp** for newsletter management and delivery\n\n## Why choose us for content marketing in Brescia\n\nWe are not generic copywriters: we are content marketing specialists who combine SEO expertise, persuasive writing skills and knowledge of the local Brescia market. Every piece of content we create has a dual objective: rank on Google and convert the reader into a potential customer.\n\nWe work with a limited number of clients to guarantee the quality and depth every piece of content deserves. We do not produce articles in bulk: every piece is researched, written and optimised with care. We know the business fabric of Brescia and understand how to communicate with the local audience effectively and authentically.\n\n## Expected results\n\nWith a professional content marketing strategy, SMBs in Brescia can expect:\n\n- **Months 1-3**: first content published, indexed on Google, initial keywords growing\n- **Months 3-6**: articles beginning to rank on page one, 50-100% increase in organic traffic, first leads generated from content\n- **Months 6-12**: company blog as a significant source of traffic and leads, growing domain authority, ranking for increasingly competitive keywords\n- **After 12 months**: content marketing becomes the most cost-efficient acquisition channel in terms of cost per lead, with a content archive generating traffic and contacts continuously\n\nContent marketing requires patience and consistency, but the results are lasting and cumulative. Unlike advertising, you do not pay for every click: once a piece of content ranks on Google, it continues to bring traffic and leads at no additional cost.",
       "faq": [
-        { "question": "How many articles per month do I need for SEO?", "answer": "For an effective strategy we recommend 2-4 quality articles per month, 1,500-2,500 words each. Quality matters more than quantity: one well-crafted article that ranks on Google is worth more than ten generic ones." },
-        { "question": "How long before content generates traffic?", "answer": "A well-optimised SEO article starts ranking on Google after 2-4 months from publication. The effect is cumulative: the more quality content you publish, the more authority your site gains." },
-        { "question": "Do you create video content?", "answer": "Yes, we offer video content marketing services: brand videos, social Reels, tutorials and testimonials. Video increases engagement by 200% versus text content." }
+        {
+          "question": "How many articles per month do I need for SEO?",
+          "answer": "For an effective strategy we recommend 2-4 quality articles per month, 1,500-2,500 words each. Quality matters more than quantity: one well-crafted article that ranks on Google is worth more than ten generic ones."
+        },
+        {
+          "question": "How long before content generates traffic?",
+          "answer": "A well-optimised SEO article starts ranking on Google after 2-4 months from publication. The effect is cumulative: the more quality content you publish, the more authority your site gains."
+        },
+        {
+          "question": "Do you create video content?",
+          "answer": "Yes, we offer video content marketing services: brand videos, social Reels, tutorials and testimonials. Video increases engagement by 200% versus text content."
+        }
       ]
     }
   },
@@ -585,7 +818,11 @@
     "badge": "Free",
     "title": "10 Marketing Mistakes Costing Your SMB Customers",
     "subtitle": "Download the free checklist and find out what you're doing wrong.",
-    "benefits": ["Instant checklist via email", "Practical, immediately actionable tips", "Bonus: 2026 marketing plan template"],
+    "benefits": [
+      "Instant checklist via email",
+      "Practical, immediately actionable tips",
+      "Bonus: 2026 marketing plan template"
+    ],
     "namePlaceholder": "Your name",
     "emailPlaceholder": "Your email",
     "cta": "Download Free",
