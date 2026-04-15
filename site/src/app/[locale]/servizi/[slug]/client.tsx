@@ -8,6 +8,60 @@ import { FaqSection, faqJsonLd, type FaqItem } from "@/components/ui/faq";
 import { ParticleField } from "@/components/ui/particle-field";
 import { SITE } from "@/lib/constants";
 
+/** Renderizza testo con markdown minimo: ##, ###, - lista, **grassetto** */
+function BodyRenderer({ text, className }: { text: string; className?: string }) {
+  const blocks = text.split("\n\n").filter(Boolean);
+
+  function parseInline(str: string): React.ReactNode[] {
+    const parts = str.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, i) =>
+      part.startsWith("**") && part.endsWith("**")
+        ? <strong key={i} className="font-semibold text-navy-800 dark:text-gray-100">{part.slice(2, -2)}</strong>
+        : part
+    );
+  }
+
+  return (
+    <div className={className}>
+      {blocks.map((block, i) => {
+        if (block.startsWith("## ")) {
+          return (
+            <h2 key={i} className="mb-4 mt-10 text-[clamp(1.2rem,2.5vw,1.5rem)] font-semibold leading-tight tracking-tight text-navy-800 first:mt-0 dark:text-gray-100">
+              {block.slice(3)}
+            </h2>
+          );
+        }
+        if (block.startsWith("### ")) {
+          return (
+            <h3 key={i} className="mb-3 mt-8 text-[clamp(1rem,2vw,1.2rem)] font-semibold leading-tight text-navy-800 dark:text-gray-100">
+              {block.slice(4)}
+            </h3>
+          );
+        }
+        // Blocco lista: righe che iniziano con "- "
+        const lines = block.split("\n");
+        if (lines.every(l => l.trim().startsWith("- "))) {
+          return (
+            <ul key={i} className="mb-6 space-y-2 pl-4">
+              {lines.map((line, j) => (
+                <li key={j} className="flex gap-2 text-[clamp(0.9rem,1.4vw,1rem)] font-light leading-[1.8] text-navy-700/60 dark:text-gray-100/50">
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
+                  <span>{parseInline(line.replace(/^- /, ""))}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        return (
+          <p key={i} className="mb-6 text-[clamp(0.95rem,1.5vw,1.1rem)] font-light leading-[1.85] text-navy-700/60 dark:text-gray-100/50">
+            {parseInline(block)}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
 export function ServiceDetailClient({ serviceKey }: { serviceKey: string }) {
   const t = useTranslations("serviceDetail");
   const faqItems = t.raw(`${serviceKey}.faq`) as FaqItem[];
@@ -50,16 +104,8 @@ export function ServiceDetailClient({ serviceKey }: { serviceKey: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="prose-navy prose prose-lg dark:prose-invert"
           >
-            {t(`${serviceKey}.body`).split("\n\n").map((paragraph, i) => (
-              <p
-                key={i}
-                className="mb-6 text-[clamp(0.95rem,1.5vw,1.1rem)] font-light leading-[1.85] text-navy-700/60 dark:text-gray-100/50"
-              >
-                {paragraph}
-              </p>
-            ))}
+            <BodyRenderer text={t(`${serviceKey}.body`)} />
           </motion.div>
         </div>
       </section>
