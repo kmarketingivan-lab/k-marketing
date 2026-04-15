@@ -1,5 +1,10 @@
 Options -Indexes
 
+# Forza charset UTF-8 nell'header HTTP per tutti i file
+# Necessario perché Altervista di default non dichiara charset,
+# causando la lettura errata dei caratteri accentati (Ã¨ invece di è)
+AddDefaultCharset UTF-8
+
 # Block direct PHP access (legacy Altervista files)
 <FilesMatch "\.php$">
   Order Deny,Allow
