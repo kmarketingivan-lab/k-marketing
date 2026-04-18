@@ -2,24 +2,38 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Link } from "@/../../navigation";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { FaqSection, faqJsonLd, type FaqItem } from "@/components/ui/faq";
 import { ParticleField } from "@/components/ui/particle-field";
 import { SITE } from "@/lib/constants";
 
-/** Renderizza testo con markdown minimo: ##, ###, - lista, **grassetto** */
+/** Parsea inline: **bold**, [testo](url) */
+function parseInline(str: string): React.ReactNode[] {
+  // Split su bold e link
+  const parts = str.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} className="font-semibold text-navy-800 dark:text-gray-100">{part.slice(2, -2)}</strong>;
+    }
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      const label = linkMatch[1] ?? "";
+      const href = linkMatch[2] ?? "/";
+      return (
+        <Link key={i} href={href} className="font-medium text-orange-500 underline-offset-2 hover:underline">
+          {label}
+        </Link>
+      );
+    }
+    return part;
+  });
+}
+
+/** Renderizza testo con markdown minimo: ##, ###, - lista, **grassetto**, [link](url) */
 function BodyRenderer({ text, className }: { text: string; className?: string }) {
   const blocks = text.split("\n\n").filter(Boolean);
-
-  function parseInline(str: string): React.ReactNode[] {
-    const parts = str.split(/(\*\*[^*]+\*\*)/g);
-    return parts.map((part, i) =>
-      part.startsWith("**") && part.endsWith("**")
-        ? <strong key={i} className="font-semibold text-navy-800 dark:text-gray-100">{part.slice(2, -2)}</strong>
-        : part
-    );
-  }
 
   return (
     <div className={className}>
@@ -38,7 +52,6 @@ function BodyRenderer({ text, className }: { text: string; className?: string })
             </h3>
           );
         }
-        // Blocco lista: righe che iniziano con "- "
         const lines = block.split("\n");
         if (lines.every(l => l.trim().startsWith("- "))) {
           return (

@@ -6,6 +6,27 @@ import { Link } from "@/../../navigation";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { blogPosts } from "@/lib/blog";
 
+/** Parsea inline: **bold**, [testo](url) */
+function parseInline(str: string): React.ReactNode[] {
+  const parts = str.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} className="font-semibold text-navy-800 dark:text-gray-100">{part.slice(2, -2)}</strong>;
+    }
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      const label = linkMatch[1] ?? "";
+      const href = linkMatch[2] ?? "/";
+      return (
+        <Link key={i} href={href} className="font-medium text-orange-500 underline-offset-2 hover:underline">
+          {label}
+        </Link>
+      );
+    }
+    return part;
+  });
+}
+
 export function BlogArticleClient({ slug }: { slug: string }) {
   const t = useTranslations("blog");
   const post = blogPosts.find((p) => p.slug === slug)!;
@@ -82,7 +103,7 @@ export function BlogArticleClient({ slug }: { slug: string }) {
               return (
                 <ul key={i} className="mb-6 list-disc space-y-2 pl-6 text-[0.95rem] font-light leading-[1.75] text-navy-700/60 dark:text-gray-100/50">
                   {block.split("\n").map((li, j) => (
-                    <li key={j}>{li.replace("- ", "")}</li>
+                    <li key={j}>{parseInline(li.replace("- ", ""))}</li>
                   ))}
                 </ul>
               );
@@ -92,7 +113,7 @@ export function BlogArticleClient({ slug }: { slug: string }) {
                 key={i}
                 className="mb-6 text-[clamp(0.95rem,1.5vw,1.1rem)] font-light leading-[1.85] text-navy-700/60 dark:text-gray-100/50"
               >
-                {block}
+                {parseInline(block)}
               </p>
             );
           })}
