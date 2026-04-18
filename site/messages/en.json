@@ -346,19 +346,19 @@
     "overline": "About us",
     "heroTitle": "Ivan Crescini.",
     "heroTitleItalic": "K-Marketing, Brescia.",
-    "heroSubtitle": "Founder of K-Marketing, digital marketing agency in Brescia, Italy. I help SMEs and professionals find clients online with SEO, advertising, web development and AI automation \u00e2\u20ac\u201d with measurable results and no fluff.",
+    "heroSubtitle": "Founder of K-Marketing, digital marketing agency in Brescia, Italy. I help SMEs and professionals find clients online with SEO, advertising, web development and AI automation — with measurable results and no fluff.",
     "storyOverline": "The story",
     "storyTitle": "I came from a different world. That was an advantage.",
     "storyP1": "I came to digital marketing not from an agency, but from the other side: as someone who looked at results, not presentations. I came from a different sector, and what I saw in the marketing world for SMEs didn't convince me. Too many generic promises, too many reports full of numbers that said nothing about what was actually growing in the client's business.",
-    "storyP2": "I founded K-Marketing in Brescia in 2020 with a clear idea: to build a marketing system that worked as if I were a digital partner of the client company \u00e2\u20ac\u201d not the external supplier who sends an email at the end of the month. Every project starts with an honest question: what needs to change in your business for this investment to make sense? SEO, Google and Meta campaigns, websites, AI automation \u00e2\u20ac\u201d these are tools. The goal is always the same: more clients, at a measurable cost.",
-    "storyP3": "In five years in Brescia and province I've worked with very different realities: from restaurants to hospitality, from artisan e-commerce to the automotive sector. For I Peruvi\u00c3\u00a0 we tripled organic traffic and brought the site to first place on Google for the main keywords. For Villa Riviera direct bookings grew by 390%, reducing dependence on Booking.com by 60%. For Charme Extension and Bottega Matta we built digital presence from scratch. Every project is different. The method is always the same: data, strategy, execution, measurement.",
+    "storyP2": "I founded K-Marketing in Brescia in 2020 with a clear idea: to build a marketing system that worked as if I were a digital partner of the client company — not the external supplier who sends an email at the end of the month. Every project starts with an honest question: what needs to change in your business for this investment to make sense? SEO, Google and Meta campaigns, websites, AI automation — these are tools. The goal is always the same: more clients, at a measurable cost.",
+    "storyP3": "In five years in Brescia and province I've worked with very different realities: from restaurants to hospitality, from artisan e-commerce to the automotive sector. For I Peruvià we tripled organic traffic and brought the site to first place on Google for the main keywords. For Villa Riviera direct bookings grew by 390%, reducing dependence on Booking.com by 60%. For Charme Extension and Bottega Matta we built digital presence from scratch. Every project is different. The method is always the same: data, strategy, execution, measurement.",
     "approachOverline": "The approach",
     "approachTitle": "The K-Marketing method:",
     "approachTitleItalic": "data first, creativity second.",
     "values": {
       "automation": {
         "title": "Automation as standard",
-        "desc": "We build AI automations that respond to leads within 5 minutes, qualify contacts, update the CRM and publish on social media \u00e2\u20ac\u201d without you having to lift a finger. The AI agents market grows at 44% per year: companies adopting AI automations today gain a competitive advantage that competitors will struggle to recover."
+        "desc": "We build AI automations that respond to leads within 5 minutes, qualify contacts, update the CRM and publish on social media — without you having to lift a finger. The AI agents market grows at 44% per year: companies adopting AI automations today gain a competitive advantage that competitors will struggle to recover."
       },
       "noSmoke": {
         "title": "Complete transparency on results",
@@ -366,7 +366,7 @@
       },
       "modern": {
         "title": "Digital-native strategy",
-        "desc": "58% of Italian users use AI tools to search for products and services (Capgemini, 2025). Google AI Overviews reaches 1.5 billion monthly users. We optimise content to be found by both Google and ChatGPT, Perplexity and Google AI \u00e2\u20ac\u201d because digital visibility in 2026 is played on both fronts."
+        "desc": "58% of Italian users use AI tools to search for products and services (Capgemini, 2025). Google AI Overviews reaches 1.5 billion monthly users. We optimise content to be found by both Google and ChatGPT, Perplexity and Google AI — because digital visibility in 2026 is played on both fronts."
       },
       "personal": {
         "title": "A studio, not a chain",
@@ -380,7 +380,7 @@
     "founderRole": "Founder and Creative Director, K-Marketing Brescia",
     "founderBio": "Specialised in SEO, online advertising and AI automation for SMEs. Operating in Brescia and province since 2020. Direct approach: every project is personally managed, from strategy to execution, with clear reports and measurable goals.",
     "founderPhoto": "/images/ivan-crescini-fondatore-k-marketing-brescia.jpg",
-    "founderPhotoAlt": "Ivan Crescini, founder of K-Marketing \u00e2\u20ac\u201d digital marketing agency in Brescia, Italy",
+    "founderPhotoAlt": "Ivan Crescini, founder of K-Marketing — digital marketing agency in Brescia, Italy",
     "founderLinkedIn": "https://www.linkedin.com/in/ivan-crescini-358a87248/",
     "statsOverline": "By the numbers",
     "statsItems": [
@@ -398,7 +398,7 @@
       },
       {
         "value": "+300%",
-        "label": "Organic traffic I Peruvi\u00c3\u00a0"
+        "label": "Organic traffic I Peruvià"
       }
     ],
     "locationOverline": "Where we are",
